@@ -1,0 +1,25 @@
+/* IE */
+.ie header .newsletter .toggle { font-weight: normal; }
+.ie header nav li a {  font-weight: normal; }
+.ie a { background: url('../img/blank.png') repeat; }
+
+/* IE 8 */
+.ie8 header .newsletter .toggle { font-size: 14px; padding-left: 15px; padding-right: 37px; width: 134px; font-weight: normal; }
+
+.ie8 header nav li a { font-size: 18px; letter-spacing: 1px; font-weight: normal; }
+.ie8 header nav li ul { position: absolute; width: 180px; display: none; left: -40%; }
+.ie8 header nav li ul[rel=responsabilidade] { left: -8%; }
+.ie8 header nav li ul li { width: 150px; }
+.ie8 header nav li ul li a { font-size: 14px; letter-spacing: 1px; }
+
+
+/* IE 7 */
+.ie8 header .newsletter .toggle { font-size: 14px; padding-left: 15px; padding-right: 37px; width: 134px; font-weight: normal; }
+.ie7 header .newsletter .box { height: 54px; }
+
+.ie7 header nav li a { font-size: 18px; letter-spacing: 1px; font-weight: normal; }
+.ie7 header nav li ul { position: absolute; width: 180px; display: none; left: -40%; top: 30px; }
+.ie7 header nav li ul[rel=responsabilidade] { left: -8%; }
+.ie7 header nav li ul li { width: 150px; }
+.ie7 header nav li ul li a { letter-spacing: 1px; }
+

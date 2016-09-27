@@ -1,0 +1,26 @@
+body { color: #fff; font-family: 'Open Sans'; font-weight: 300; }
+
+.background { background: url('../img/background.jpg') no-repeat top center; height: 1541px; }
+
+header .container { height: 490px; position: relative; }
+header nav { position: absolute; top: 12px; right: 200px; white-space: nowrap; }
+header nav a { letter-spacing: 2px; width: 176px; height: 33px; line-height: 33px; background-color: rgba(255, 255, 255, 0.5); display: block; float: left; margin-left: 10px; text-align: center; text-transform: none; color: #fff; }
+header nav a:hover { color: #fff; text-decoration: none; background-color: rgba(255, 255, 255, 0.8); }
+header .texto { position: absolute; bottom: 68px; left: 0; }
+header .texto p { float: left; display: block; text-align: justify; width: 300px; margin-left: 30px; font-size: 15px; line-height: 16px; }
+
+.faq { height: 741px; overflow-x: hidden; overflow-y: auto; margin: 0 30px; position: relative; display: block; padding-right: 10px; }
+.faq .lista { margin: 0; }
+.faq .lista li { display: block; position: relative; margin-right: 150px; margin-bottom: 30px; }
+.faq .lista li .header .numero { font-size: 24px; font-weight: bold; border: solid #fff 4px; color: #fff; width: 46px; height: 46px; line-height: 38px; border-radius: 23px; text-align: center; position: absolute; left: 0; top: 0; }
+.faq .lista li .header .titulo { font-size: 25px; line-height: 27px; display: block; color: #fff; cursor: pointer; padding: 7px 0 0 55px; }
+.faq .lista li .header .titulo:hover { text-decoration: none; }
+
+.faq .lista li .conteudo { padding: 0 10px 0 70px; display: none; }
+.faq .lista li .conteudo p { font-size: 17px; }
+.faq .lista li .conteudo .compartilhar { display: block; background-color: #0db04b; width: 218px; height: 18px; line-height: 18px; font-weight: 400; font-size: 12px; color: #fff; text-align: center; }
+.faq .lista li .conteudo .compartilhar:hover { text-decoration: none; }
+
+@media (min-width: 768px) { .container { width: 970px; } }
+@media (min-width: 992px) { .container { width: 970px; } }
+@media (min-width: 1200px) { .container { width: 970px; } }

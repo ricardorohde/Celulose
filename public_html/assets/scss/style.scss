@@ -1,0 +1,52 @@
+
+$verde: #64AF53;
+$fonte: 'Raleway', sans-serif;
+$cinza-claro: #4D4D4D;
+$cinza-escuro: #808080;
+
+
+/**{outline: 1px solid #c1a2c9;}*/
+
+input{
+	height: 30px;
+	font-family: $fonte;
+	color: $cinza-claro;
+	font-size: 12px;
+	border: 1px solid $verde; 
+}
+
+label{
+	color: $cinza-escuro;
+	font-size: 16px;
+	font-family: $fonte;
+
+}
+
+p{
+	color: $cinza-escuro;
+	font-family: $fonte;
+	font-size: 16px;
+
+}
+
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+
+input[type="radio"] + label span {
+     background-color: transparent;
+}
+
+input[type="radio"]:checked + label span{
+     background-color:$verde;
+}

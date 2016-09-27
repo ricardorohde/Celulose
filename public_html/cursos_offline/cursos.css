@@ -1,0 +1,17 @@
+body { display: block; }
+
+a { background: url('blank.png'); position: absolute; top: 0px; width: 104px; height: 140px; }
+
+a[rel=cursos] { left: 213px; }
+a[rel=pronatec] { left: 100px; }
+a[rel=cursos-link] { left: 610px; top: 580px; width: 275px; height: 20px; }
+
+.container { width: 960px; position: relative; margin: 0px auto; display: block; }
+
+.home { background: #fff url('home.jpg') center top no-repeat !important; }
+.cursos { background: #fff url('cursos.jpg') center top no-repeat !important; }
+.pronatec { background: #fff url('pronatec.jpg') center top no-repeat !important; }
+
+.home .container { height: 1070px; }
+.cursos .container { height: 1943px; }
+.pronatec .container { height: 1095px; }
