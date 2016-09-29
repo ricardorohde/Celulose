@@ -1,0 +1,345 @@
+@import "form.scss";
+@import "mixin.scss";
+
+$verde: #64AF53;
+$fonte: 'Raleway', sans-serif;
+$cinza-escuro: #4D4D4D;
+$cinza-claro: #808080;
+
+//*{outline: 1px solid #daa;}
+
+//----------------------------------------------//
+//                      Set                     //
+//----------------------------------------------//
+.mobile-hide{
+	display: none;
+}
+
+@mixin selected-image(){
+	background-color: lighten($verde,10%);
+	@include border-radius(50%);
+}
+
+
+//----------------------------------------------//
+//                     Reset                    //
+//----------------------------------------------//
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+//----------------------------------------------//
+//                     Body                     //
+//----------------------------------------------//
+
+body { 
+	font-family: $fonte; 
+	font-size: 12px; 
+	color: #000; 
+	background: #fff url('../img/body-background.jpg') repeat-x 0px 100px;
+}
+
+//----------------------------------------------//
+//                    Header                    //
+//----------------------------------------------//
+
+header { 
+	background-color: #fff; 
+	height: 100vh; 
+	width: 0;
+	position: fixed; 
+	z-index: 200; 
+	font-family: $fonte;
+	font-size: 16px; 
+	top: 0;
+	overflow: hidden;
+	@include transition(all ease .3s);
+
+	.logo {
+		height: 100px;
+		width: 100vw;
+		margin-top: 20px;
+		display: block;
+		position: relative;
+		top: 0;
+		z-index: 500;
+		cursor: pointer;
+		background: url("../img/logo-sm-color.png") no-repeat 50% 50%;
+		background-size:contain;
+		text-align: center;
+	}
+	.container{
+		padding: 0;
+
+		nav { 
+			position: relative; 
+			z-index: 480; 
+
+			ul { 
+				margin: 20px 0 0 0;  
+
+				li { 
+					height: 55px;
+					width: 100vw;
+					text-align: center;
+					border-top: 1px solid $verde;
+					line-height: 55px;
+					cursor: pointer;
+					@include transition(all ease .3s);
+
+					&:hover{
+						background-color: $verde;
+
+						>a{
+							color: #fff;
+						}
+					}
+
+					&:last-child{
+						border-bottom: 1px solid $verde;
+					}
+
+					a { 
+						color: #39b34a; 
+						text-transform: uppercase;  
+						font-weight: 900; 
+						height: 53px;
+						width: 100%;
+						color: $cinza-claro;
+						@include transition(all ease .3s);
+
+						&:hover, {
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+$button-size: 65px;
+.menu-button{
+	position: fixed;
+	height: $button-size;
+	width: $button-size;
+	background-color: $verde;
+	@include border-radius(50%);
+
+	text-align: center;
+	line-height: $button-size;
+
+	right: 0;
+	bottom: 0;
+	margin: 0 15px 15px 0;
+	z-index: 1000;
+
+	cursor: pointer;
+
+	@include box-shadow(-2px, 0, 5px, rgba(0, 0, 0, 0.25), false);
+
+	img{
+		height: 50%;
+		width: auto;
+
+	}
+
+}
+
+
+#menu.move{
+	width: 100vw;
+}
+
+//----------------------------------------------//
+//                    Footer                    //
+//----------------------------------------------//
+
+footer { 
+	margin-top: 50px; 
+	display: block; 
+	position: relative; 
+
+	.copy { 
+		background-color: $verde; 
+		padding: 10px 0 0 0;
+
+		.container { 
+			text-align: center; 
+			color: #fff; 
+			line-height: 30px; 
+			font-size: 16px; 
+
+
+			.select{
+
+				&:hover{
+					img{@include selected-image();}
+				}
+			}
+
+
+
+
+			.active{
+				img{@include selected-image();}
+			}
+
+
+
+			img { 
+				display: inline-block; 
+				margin-right: 5px; 
+				height: 46px;
+				width: auto;
+				padding:3px;
+			}
+
+
+			a:not(.mobile-hide) { 
+				display: inline-block; 
+				color: #fff;
+			}
+			
+			.info{
+				line-height: 20px;
+				margin-bottom: 20px;
+			}
+		}
+		.border{
+			background: url("../img/footer-border.png") repeat-x;
+			height: 22px;
+			width: 100%;
+		}
+	}
+	.incendioflorestal { 
+		left: 50%; 
+		position: absolute; 
+		margin: auto; 
+		bottom: 220px; 
+		right: 0; 
+		margin-left: -169px; 
+	}
+}
+
+@media (min-width: 768px) {
+
+//----------------------------------------------//
+//                      Set                     //
+//----------------------------------------------//
+.mobile-hide{
+	display: block;
+}
+
+//----------------------------------------------//
+//                    Header                    //
+//----------------------------------------------//
+header { 
+
+	.container{
+		margin: 0;
+	}
+}
+
+
+}
+
+@media (min-width: 992px) {
+//----------------------------------------------//
+//                    Header                    //
+//----------------------------------------------//
+$menu-height: 120px;
+header{
+	width: 100vw;
+	height: $menu-height;
+	background-color: transparent;
+
+	.logo{
+		width: 120px;
+		float: left;
+		margin: 10px;
+		background: url("../img/logo-sm.png") no-repeat 50% 50%;
+		background-size:contain;
+	}
+
+	.container{
+		margin-right: auto;
+		margin-left: auto;
+
+		nav{
+			float: right;
+
+			ul{
+				margin: 0;
+				li{
+					display: inline-block;
+					border: none;
+					height: $menu-height;
+					width: auto;
+					line-height: $menu-height;
+
+					&:last-child{
+						border: none;					
+					}
+
+					&:hover{
+						background-color: transparent;
+
+						>a{
+							color: $cinza-claro;
+						}
+
+					}
+
+					a{
+						padding: 0px 10px 10px 10px; 
+						font-size: 14px;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+
+.act{
+	background-color: #fff;
+	@include box-shadow(-2px, 0, 5px, rgba(0, 0, 0, 0.25), false);
+
+	.logo{
+		background: url("../img/logo-sm-color.png") no-repeat 50% 50%;
+		background-size:contain;
+	}
+
+	.container{
+		nav{
+			ul{
+				li{
+					&:hover{
+
+						background-color: #F2F2F2;
+						>a{
+							color: $cinza-escuro;
+						}
+					}
+					a{
+						color: $cinza-claro;
+					}
+				}
+			}
+		}
+	}
+}
+
+.menu-button{
+	display:none;
+}
+
+
+}
+
+@media (min-width: 1200px) {
+
+}

@@ -1,0 +1,340 @@
+/**{outline: 1px solid #c1a2c9;}*/
+input {
+  height: 30px;
+  font-family: "Raleway", sans-serif;
+  color: #808080;
+  font-size: 12px;
+  padding-left: 15px;
+  border: 1px solid #64AF53;
+  font-weight: 500; }
+  input:focus {
+    outline: 2px solid #64AF53; }
+
+label {
+  color: #4D4D4D;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500; }
+
+p {
+  color: #4D4D4D;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 500; }
+
+.radio label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  font-size: 13px;
+  font-weight: 500; }
+.radio input[type=radio] {
+  display: none; }
+.radio label:before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: transparent;
+  border: 1px solid #64AF53; }
+.radio label:before {
+  border-radius: 50%; }
+.radio input[type=radio]:checked + label:before {
+  background-color: #64AF53; }
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+.inputfile + label {
+  color: #4D4D4D;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  border: 1px solid #64AF53;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  outline: 1px solid #64AF53; }
+
+.inputfile + label {
+  cursor: pointer; }
+
+.inputfile:focus + label {
+  outline: 1px solid #64AF53; }
+
+textarea {
+  font-family: "Raleway", sans-serif;
+  color: #808080;
+  font-size: 12px;
+  padding: 5px;
+  border: 1px solid #64AF53;
+  font-weight: 500; }
+  textarea:focus {
+    outline: 1px solid #64AF53; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "Raleway", sans-serif;
+  color: #808080;
+  font-size: 12px;
+  padding: 5px;
+  border: 1px solid #64AF53;
+  background: url("../img/select-bg.png") no-repeat;
+  padding-left: 8px;
+  height: 30px;
+  background-position: 90% 10px;
+  width: 100%;
+  max-width: 200px;
+  text-indent: 0.01px;
+  text-overflow: "";
+  cursor: pointer; }
+  select:focus {
+    outline: 2px solid #64AF53; }
+
+button {
+  background: #fff;
+  color: #808080;
+  border: 1px solid #64AF53;
+  height: 50px;
+  width: 100%;
+  max-width: 200px;
+  color: #4D4D4D;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer; }
+  button:active, button:focus {
+    outline: 2px solid #64AF53; }
+
+.mobile-hide {
+  display: none; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  color: #000;
+  background: #fff url("../img/body-background.jpg") repeat-x 0px 100px; }
+
+header {
+  background-color: #fff;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 200;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  top: 0;
+  overflow: hidden;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  transition: all ease 0.3s; }
+  header .logo {
+    height: 100px;
+    width: 100vw;
+    margin-top: 20px;
+    display: block;
+    position: relative;
+    top: 0;
+    z-index: 500;
+    cursor: pointer;
+    background: url("../img/logo-sm-color.png") no-repeat 50% 50%;
+    background-size: contain;
+    text-align: center; }
+  header .container {
+    padding: 0; }
+    header .container nav {
+      position: relative;
+      z-index: 480; }
+      header .container nav ul {
+        margin: 20px 0 0 0; }
+        header .container nav ul li {
+          height: 55px;
+          width: 100vw;
+          text-align: center;
+          border-top: 1px solid #64AF53;
+          line-height: 55px;
+          cursor: pointer;
+          -webkit-transition: all ease 0.3s;
+          -moz-transition: all ease 0.3s;
+          -o-transition: all ease 0.3s;
+          -ms-transition: all ease 0.3s;
+          transition: all ease 0.3s; }
+          header .container nav ul li:hover {
+            background-color: #64AF53; }
+            header .container nav ul li:hover > a {
+              color: #fff; }
+          header .container nav ul li:last-child {
+            border-bottom: 1px solid #64AF53; }
+          header .container nav ul li a {
+            color: #39b34a;
+            text-transform: uppercase;
+            font-weight: 900;
+            height: 53px;
+            width: 100%;
+            color: #808080;
+            -webkit-transition: all ease 0.3s;
+            -moz-transition: all ease 0.3s;
+            -o-transition: all ease 0.3s;
+            -ms-transition: all ease 0.3s;
+            transition: all ease 0.3s; }
+            header .container nav ul li a:hover {
+              color: #fff; }
+
+.menu-button {
+  position: fixed;
+  height: 65px;
+  width: 65px;
+  background-color: #64AF53;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 65px;
+  right: 0;
+  bottom: 0;
+  margin: 0 15px 15px 0;
+  z-index: 1000;
+  cursor: pointer;
+  -webkit-box-shadow: -2px 0 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: -2px 0 5px rgba(0, 0, 0, 0.25);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.25); }
+  .menu-button img {
+    height: 50%;
+    width: auto; }
+
+#menu.move {
+  width: 100vw; }
+
+footer {
+  margin-top: 50px;
+  display: block;
+  position: relative; }
+  footer .copy {
+    background-color: #64AF53;
+    padding: 10px 0 0 0; }
+    footer .copy .container {
+      text-align: center;
+      color: #fff;
+      line-height: 30px;
+      font-size: 16px; }
+      footer .copy .container .select:hover img {
+        background-color: #83bf76;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%; }
+      footer .copy .container .active img {
+        background-color: #83bf76;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%; }
+      footer .copy .container img {
+        display: inline-block;
+        margin-right: 5px;
+        height: 46px;
+        width: auto;
+        padding: 3px; }
+      footer .copy .container a:not(.mobile-hide) {
+        display: inline-block;
+        color: #fff; }
+      footer .copy .container .info {
+        line-height: 20px;
+        margin-bottom: 20px; }
+    footer .copy .border {
+      background: url("../img/footer-border.png") repeat-x;
+      height: 22px;
+      width: 100%; }
+  footer .incendioflorestal {
+    left: 50%;
+    position: absolute;
+    margin: auto;
+    bottom: 220px;
+    right: 0;
+    margin-left: -169px; }
+
+@media (min-width: 768px) {
+  .mobile-hide {
+    display: block; }
+
+  header .container {
+    margin: 0; } }
+@media (min-width: 992px) {
+  header {
+    width: 100vw;
+    height: 120px;
+    background-color: transparent; }
+    header .logo {
+      width: 120px;
+      float: left;
+      margin: 10px;
+      background: url("../img/logo-sm.png") no-repeat 50% 50%;
+      background-size: contain; }
+    header .container {
+      margin-right: auto;
+      margin-left: auto; }
+      header .container nav {
+        float: right; }
+        header .container nav ul {
+          margin: 0; }
+          header .container nav ul li {
+            display: inline-block;
+            border: none;
+            height: 120px;
+            width: auto;
+            line-height: 120px; }
+            header .container nav ul li:last-child {
+              border: none; }
+            header .container nav ul li:hover {
+              background-color: transparent; }
+              header .container nav ul li:hover > a {
+                color: #808080; }
+            header .container nav ul li a {
+              padding: 0px 10px 10px 10px;
+              font-size: 14px;
+              color: #fff; }
+
+  .act {
+    background-color: #fff;
+    -webkit-box-shadow: -2px 0 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: -2px 0 5px rgba(0, 0, 0, 0.25);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.25); }
+    .act .logo {
+      background: url("../img/logo-sm-color.png") no-repeat 50% 50%;
+      background-size: contain; }
+    .act .container nav ul li:hover {
+      background-color: #F2F2F2; }
+      .act .container nav ul li:hover > a {
+        color: #4D4D4D; }
+    .act .container nav ul li a {
+      color: #808080; }
+
+  .menu-button {
+    display: none; } }
+
+/*# sourceMappingURL=custom.css.map */

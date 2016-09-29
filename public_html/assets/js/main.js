@@ -262,19 +262,3 @@ var Celulose = {
 	}
 }
 
-$(window).scroll(function() {
-
-  if ($("header").offset().top > 0) {
- 
-    $('#bg').css("opacity","1");
-    $('header nav li a ').addClass("act");
-    $('.logo').css('background-image',' url(assets/img/logo-sm-color.png)');
-    
-  }else{
-
-     $('#bg').css("opacity","0");
-     $('header nav li a ').removeClass("act");
-     $('.logo').css('background-image','url(assets/img/logo-sm.png)');
-
-  }
-});

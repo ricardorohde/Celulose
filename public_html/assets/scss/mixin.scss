@@ -1,0 +1,59 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin clip-path($path...) {
+    -webkit-clip-path: $path;
+    -moz-clip-path: $path;
+    -ms-clip-path: $path;
+    -o-clip-path: $path;
+    clip-path: $path;
+}
+
+@mixin transform($comando) {
+    -webkit-transform: $comando translate3d(0, 0, 0);
+    -moz-transform: $comando translate3d(0, 0, 0);
+    -webkit-transform: $comando translate3d(0, 0, 0);
+    -o-transform: $comando translate3d(0, 0, 0);
+    -ms-transform: $comando translate3d(0, 0, 0);
+    transform: $comando translate3d(0, 0, 0);
+}
+
+@mixin rotate($rotate) {
+    @include transform(rotate($rotate));
+}
+
+@mixin background-opacity($color, $opacity: 0.7) {
+    background-color: $color;
+    background-color: rgba(red($color), green($color), blue($color), $opacity);
+}
+
+@mixin background-size($size) {
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    -o-background-size: $size;
+    background-size: $size;
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
+    transition: $transition;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
