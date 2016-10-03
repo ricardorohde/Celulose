@@ -6,6 +6,7 @@ class Home extends CI_Controller {
 		$this->load->model('home_model','model');
 		$this->load->helper('text');
 
+
 		$imgs = array();
 		$noticias = array();
 
@@ -52,8 +53,11 @@ class Home extends CI_Controller {
 				'keywords' => '' 
 			),
 			'slider' => $imgs,
-			'noticias' => $noticias
+			'noticias' 	=> $noticias,
+			'agende'	=> '1'
 		));
+
+
 	}
 
 	public function lang(){

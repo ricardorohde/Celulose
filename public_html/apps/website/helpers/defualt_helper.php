@@ -2,11 +2,11 @@
 
 
 function getMax( $array, $param ){
-    $max = 0;
-    foreach( $array as $k => $v ){
-        $max = max( array( $max, $v[$param] ) );
-    }
-    return $max;
+	$max = 0;
+	foreach( $array as $k => $v ){
+		$max = max( array( $max, $v[$param] ) );
+	}
+	return $max;
 }
 
 function post($key,$def = false){
@@ -47,10 +47,20 @@ function views(&$object,$key,$vars = array()){
 			$vars['header'] = array('title' => '', 'description' => '', 'keywords' => '');
 		} if(!isset($vars['footer'])){
 			$vars['footer'] = array();
-		}
+		} 
 
 		$object->load->view('tpl/header',$vars['header']);
 		$object->load->view($key,$vars);
+
+		if(isset($vars['agende'])){
+			
+			
+			if($vars['agende'] == '1'){
+				$object->load->view('tpl/agende');
+			}
+		}
+
+		
 		$object->load->view('tpl/footer',$vars['footer']);
 	}
 }
@@ -66,7 +76,7 @@ function alert($texto,$cor = 'error'){
 	$_SESSION['error_site'] = array(
 		'color' => $cor,
 		'texto' => $texto
-	);
+		);
 }
 function get_display_error(){
 	if(isset($_SESSION['error_site'])){
