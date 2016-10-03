@@ -22,7 +22,7 @@ h2 {
 	text-transform: uppercase;
 	font-size: 13px;
 	letter-spacing: 5px;
-	width: 70%;
+	width: 100%;
 	margin: .7em auto;
 	overflow: hidden;
 	text-align: center;
@@ -285,6 +285,26 @@ footer {
 	
 }
 
+//----------------------------------------------//
+//                     Home                     //
+//----------------------------------------------//
+$thumb-altura: 42vw;
+#home{
+	.container{
+		.noticias{
+			text-align: center;
+			.thumbnail{
+				margin: 3px;
+				@include border-radius(0);
+
+				img{
+				}
+			}
+		}
+	}
+}
+
+
 @media (min-width: 768px) {
 
 //----------------------------------------------//
@@ -350,6 +370,22 @@ footer {
 	}
 	.incendioflorestal { 
 		bottom: 145px; 
+	}
+}
+
+//----------------------------------------------//
+//                     Home                     //
+//----------------------------------------------//
+$thumb-altura: 42vw;
+#home{
+	.container{
+		.noticias{
+			text-align: center;
+			.thumbnail{
+				margin: 3px;
+				@include border-radius(0);
+			}
+		}
 	}
 }
 

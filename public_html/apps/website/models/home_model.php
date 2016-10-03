@@ -39,7 +39,7 @@ class Home_model extends CI_Model {
 				'noticias.visible = ' => '1'
 		))
 		->order_by('noticias.data','desc')
-		->limit(3,0)
+		->limit(8,0)
 		->get()->result();
 
 	}

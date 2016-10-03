@@ -17,14 +17,41 @@
 	</div>
 	<script type="text/javascript">
 		
-			$('#slider').nivoSlider();
+		$('#slider').nivoSlider();
 
 	</script>
 </section>
 <section id="home">
 	<div class="container">
-		<div class="noticias">
-			<h2>Noticias</h2>
+
+		<div class="col-md-offset-1 col-md-10">
+			<div class="row">
+				<div class="noticias">
+					<h2>Noticias</h2>
+
+					<?php
+					$i = 1;
+					foreach($noticias as $rows){
+						echo'<div class="col-xs-6 col-md-3">
+							<div class="row">
+								<a href="',$rows['link'],'" class="thumbnail">
+									<img src="',$rows['img'],'" alt="',$rows['titulo'],'">
+								</a>
+							</div>
+						</div>';
+
+						
+					}
+					?>
+
+				</div>
+
+				<div class="projetos-sociais">
+					<h2>Projetos Sociais</h2>
+				</div>
+
+				
+			</div>
 		</div>
 	</div>
 </section>

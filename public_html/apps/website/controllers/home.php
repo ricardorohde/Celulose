@@ -34,13 +34,13 @@ class Home extends CI_Controller {
 				'titulo' => $rows->titulo,
 				'link' => site_url('noticias/'.$rows->url),
 				'texto' => character_limiter(strip_tags($rows->html),120,"..."),
-				'img' => false
+				'img' => true
 			);
 			
 			if($displayImg){
 				if($img = $this->parseHTML($rows->html)){
 					$noticias[$i]['img'] = ($img);
-					$displayImg = false;
+					$displayImg = true;
 				}
 			}
 			$i++;
