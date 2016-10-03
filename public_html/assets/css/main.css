@@ -4,7 +4,11 @@
 
 
 
-
+section h1.title { margin: 0 0 6px 0; letter-spacing: 0px; font-size: 24px; padding: 0px; color: #1e674c; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
+section img.banner { display: block; }
+section h2 { margin: 0 0 6px 0; letter-spacing: 0px; font-size: 20px; padding: 0px; color: #39B14A; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
+section h3 { margin: 0; letter-spacing: 0px; font-size: 20px; padding: 0px; color: #1e674c; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
+section h4 { margin: 15px 0 5px 0; letter-spacing: 0px; font-size: 20px; padding: 0px; color: #4d4d4d; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
 
 .green { background-color: #89C33F; }
 

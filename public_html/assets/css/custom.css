@@ -123,33 +123,8 @@ button {
   button:active, button:focus {
     outline: 2px solid #64AF53; }
 
-h2 {
-  color: #64AF53;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 5px;
-  width: 70%;
-  margin: .7em auto;
-  overflow: hidden;
-  text-align: center; }
-  h2:before, h2:after {
-    content: "";
-    display: inline-block;
-    width: 50%;
-    margin: 0 .5em 0 -55%;
-    border-bottom: 1px solid; }
-  h2:after {
-    margin: 0 -55% 0 .5em; }
-
-p {
-  color: #4D4D4D;
-  font-size: 16px; }
-
 .mobile-hide {
   display: none; }
-
-.container {
-  text-align: center; }
 
 * {
   box-sizing: border-box;
@@ -158,8 +133,9 @@ p {
 
 body {
   font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  color: #4D4D4D; }
+  font-size: 12px;
+  color: #000;
+  background: #fff url("../img/body-background.jpg") repeat-x 0px 100px; }
 
 header {
   background-color: #fff;
@@ -244,9 +220,9 @@ header {
   margin: 0 15px 15px 0;
   z-index: 1000;
   cursor: pointer;
-  -webkit-box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25); }
+  -webkit-box-shadow: -2px 0 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: -2px 0 5px rgba(0, 0, 0, 0.25);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.25); }
   .menu-button img {
     height: 50%;
     width: auto; }
@@ -255,6 +231,7 @@ header {
   width: 100vw; }
 
 footer {
+  margin-top: 50px;
   display: block;
   position: relative; }
   footer .copy {
@@ -286,17 +263,9 @@ footer {
       footer .copy .container a:not(.mobile-hide) {
         display: inline-block;
         color: #fff; }
-      footer .copy .container .redes a:hover:not(:last-child) img {
-        background-color: #83bf76;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        border-radius: 50%; }
       footer .copy .container .info {
         line-height: 20px;
-        margin: 20px 0; }
-        footer .copy .container .info a {
-          margin-top: 20px; }
+        margin-bottom: 20px; }
     footer .copy .border {
       background: url("../img/footer-border.png") repeat-x;
       height: 22px;
@@ -309,56 +278,12 @@ footer {
     right: 0;
     margin-left: -169px; }
 
-#agende .container {
-  text-align: center;
-  margin: 80px auto 200px auto; }
-  #agende .container p {
-    margin: 50px; }
-  #agende .container input {
-    height: 50px;
-    width: 500px;
-    min-width: 200px;
-    -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5); }
-
 @media (min-width: 768px) {
   .mobile-hide {
     display: block; }
 
   header .container {
-    margin: 0; }
-
-  footer {
-    margin-top: 50px;
-    display: block;
-    position: relative; }
-    footer .copy {
-      padding: 10px 0 0 0; }
-      footer .copy .container {
-        line-height: 30px;
-        font-size: 16px; }
-        footer .copy .container .redes {
-          display: inline-block;
-          margin-top: 30px; }
-          footer .copy .container .redes img {
-            height: 43px;
-            width: auto;
-            padding: 3px; }
-        footer .copy .container .info {
-          line-height: 20px;
-          margin: 20px 0;
-          font-size: 14px; }
-          footer .copy .container .info a {
-            margin-top: 20px; }
-          footer .copy .container .info img {
-            position: absolute;
-            height: 80px;
-            width: auto;
-            right: -50px;
-            top: 10px; }
-    footer .incendioflorestal {
-      bottom: 145px; } }
+    margin: 0; } }
 @media (min-width: 992px) {
   header {
     width: 100vw;
@@ -396,9 +321,9 @@ footer {
 
   .act {
     background-color: #fff;
-    -webkit-box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25);
-    box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25); }
+    -webkit-box-shadow: -2px 0 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: -2px 0 5px rgba(0, 0, 0, 0.25);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.25); }
     .act .logo {
       background: url("../img/logo-sm-color.png") no-repeat 50% 50%;
       background-size: contain; }

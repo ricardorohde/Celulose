@@ -48,11 +48,26 @@ if(!isset($js)){ $js = array(); }
 
 	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/browser.css'); ?>">
 	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/lang/'.$_SESSION['celulose_lang'].'.css'); ?>">
+	<link type="text/css" href="<?=base_url('assets/css/plugins/jquery.bbslider.css'); ?>" rel="stylesheet" />
 
-	
+
+	<script type="text/javascript">var URL = {base: '<?=base_url(); ?>',site: '<?=site_url(); ?>',current: '<?=current_url(); ?>'};</script>
+	<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&language=<?=getLangTerm(); ?>"></script>
+	<script type="text/javascript" src="<?=base_url('assets/js/jquery.js'); ?>"></script>
+	<script type="text/javascript" src="<?=base_url('assets/js/lang/'.getLangTerm().'.js'); ?>"></script>
+	<script type="text/javascript" src="<?=base_url('assets/js/validate.js'); ?>"></script>
+	<script type="text/javascript" src="<?=base_url('assets/js/mask.js'); ?>"></script>
+	<script type="text/javascript" src="<?=base_url('assets/js/maps.js'); ?>"></script>
+
 	<?php foreach($js as $rows){
 		echo '<script type="text/javascript" src="',base_url('assets/js/'.$rows),'"></script>' . PHP_EOL;
 	} ?>
+	
+	<script type="text/javascript" src="<?=base_url('assets/js/main.js'); ?>"></script>
+	<script type="text/javascript" src="<?=base_url('assets/js/onload.js'); ?>"></script>
+	<script type="text/javascript" src="<?=base_url('assets/js/plugins/jquery-3.1.0.min.js'); ?>"></script>
+	<script type="text/javascript" src="<?=base_url('assets/js/plugins/jquery.bbslider.js'); ?>"></script>
+	<script type="text/javascript" src="<?=base_url('assets/js/plugins/menu.js'); ?>"></script>
 
 <!--[if lt IE 9]>
 	<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
