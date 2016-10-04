@@ -23,24 +23,21 @@
 </section>
 <section id="home">
 	<div class="container">
-
 		<div class="col-md-offset-1 col-md-10">
 			<div class="row">
 				<div class="noticias">
-					<h2>Noticias</h2>
+					<h2>Notícias</h2>
 
 					<?php
 					$i = 1;
 					foreach($noticias as $rows){
-						echo'<div class="col-xs-6 col-md-3">
+						echo'<div class="col-xs-6 col-sm-3">
 							<div class="row">
-								<a href="',$rows['link'],'" class="thumbnail">
+								<a href="',$rows['link'],'" class="item">
 									<img src="',$rows['img'],'" alt="',$rows['titulo'],'">
 								</a>
 							</div>
-						</div>';
-
-						
+						</div>';						
 					}
 					?>
 
@@ -48,8 +45,16 @@
 
 				<div class="projetos-sociais">
 					<h2>Projetos Sociais</h2>
-				</div>
 
+					<div class="col-xs-12">
+						<div class="home-projetos">
+							
+						</div>
+					</div>
+					<div class="col-xs-12">
+						
+					</div>
+				</div>
 				
 			</div>
 		</div>

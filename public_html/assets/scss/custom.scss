@@ -95,7 +95,7 @@ header {
 	@include transition(all ease .3s);
 
 	.logo {
-		height: 100px;
+		height: 12vh;
 		width: 100vw;
 		margin-top: 20px;
 		display: block;
@@ -118,11 +118,11 @@ header {
 				margin: 20px 0 0 0;  
 
 				li { 
-					height: 55px;
+					height: 9vh;
 					width: 100vw;
 					text-align: center;
 					border-top: 1px solid $verde;
-					line-height: 55px;
+					line-height: 9vh;
 					cursor: pointer;
 					@include transition(all ease .3s);
 
@@ -157,7 +157,7 @@ header {
 	}
 }
 
-$button-size: 65px;
+$button-size: 4em;
 .menu-button{
 	position: fixed;
 	height: $button-size;
@@ -170,7 +170,7 @@ $button-size: 65px;
 
 	right: 0;
 	bottom: 0;
-	margin: 0 15px 15px 0;
+	margin: 0 20px 20px 0;
 	z-index: 1000;
 
 	cursor: pointer;
@@ -273,12 +273,12 @@ footer {
 		text-align: center;
 		margin: 80px auto 200px auto;
 		p{
-			margin: 50px;
+			margin: 50px 0;
+			text-align: justify;
 		}
 		input{
 			height: 50px;
-			width: 500px;
-			min-width: 200px;
+			width: 100%;
 			@include box-shadow(0, 0, 30px, 0, rgba(0,0,0,0.5),false);
 		}
 	}
@@ -288,16 +288,30 @@ footer {
 //----------------------------------------------//
 //                     Home                     //
 //----------------------------------------------//
-$thumb-altura: 42vw;
+
 #home{
+	margin: 40px 0 60px;
+
 	.container{
 		.noticias{
 			text-align: center;
-			.thumbnail{
-				margin: 3px;
+			margin: 50px 0 60px 0;
+
+			.item{
+				padding: 3px;
 				@include border-radius(0);
 
+				&:hover{
+					opacity: .6;
+				}
+
 				img{
+					height: $item-altura;
+					width: 100%;
+					padding: 5px;
+				}
+				.text{
+
 				}
 			}
 		}
@@ -376,19 +390,34 @@ footer {
 //----------------------------------------------//
 //                     Home                     //
 //----------------------------------------------//
-$thumb-altura: 42vw;
+
 #home{
+
 	.container{
 		.noticias{
 			text-align: center;
-			.thumbnail{
-				margin: 3px;
-				@include border-radius(0);
+			.item{
+
+				
+				.text{
+
+				}
 			}
 		}
 	}
 }
 
+//----------------------------------------------//
+//                    Agende                    //
+//----------------------------------------------//
+#agende{
+	.container{
+		p{
+			margin: 50px 40px;
+		}
+	}
+	
+}
 
 
 }
@@ -406,7 +435,7 @@ header{
 	.logo{
 		width: 120px;
 		float: left;
-		margin: 10px;
+		margin: 20px;
 		background: url("../img/logo-sm.png") no-repeat 50% 50%;
 		background-size:contain;
 	}
@@ -483,6 +512,27 @@ header{
 .menu-button{
 	display:none;
 }
+
+//----------------------------------------------//
+//                     Home                     //
+//----------------------------------------------//
+
+#home{
+
+	.container{
+		.noticias{
+			text-align: center;
+			
+			.item{
+
+				.text{
+
+				}
+			}
+		}
+	}
+}
+
 
 
 }

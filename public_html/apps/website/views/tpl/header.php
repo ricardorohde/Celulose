@@ -16,6 +16,7 @@ if(!isset($js)){ $js = array(); }
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="imagetoolbar" content="no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="google" content="notranslate">
 	<meta name="description" content="<?=$description; ?>">
 	<meta name="keywords" content="<?=$keywords; ?>">
