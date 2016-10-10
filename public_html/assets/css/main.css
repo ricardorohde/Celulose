@@ -191,7 +191,6 @@ section.produtos.papel {}
 section.empresa {}
 section.empresa .header { margin: 30px 0 15px 0; }
 section.empresa .descricao { text-align: justify; color: #A4A5A7; font-size: 14px; display: block; }
-section.empresa .esquema { position: absolute; top: 500px; right: 0; display: block; }
 
 section.empresa.valores ul { list-style-type: disc; list-style-position: inside; margin: 10px 0px 10px 10px;display: block; }
 section.empresa.valores ul li { line-height: 20px; }

@@ -8,7 +8,7 @@
 		<div class="col-md-offset-1 col-md-10">
 
 
-			<section class="sobre">
+			<section id="sobre">
 
 				<h2><?=lang('defualt_menu_sobre'); ?></h2>
 
@@ -19,7 +19,7 @@
 
 				<h3>Diferenciais</h3>
 
-				<p>	99,7% dos resíduos resultantes do processo de fabricação da celulose são reciclados.</p>
+<!-- 				<p>	99,7% dos resíduos resultantes do processo de fabricação da celulose são reciclados.</p>
 
 
 				<h4>Avançado tratamento de efluentes</h4>
@@ -35,7 +35,27 @@
 				<h4>Cogeração de energia</h4>
 				<p>
 					80% da energia necessária para produção da celulose é gerada pela própria fábrica.
-				</p>
+				</p> -->
+				<div class="diferencial">
+					<div class="col-md-offset-1 col-md-10">
+						<?php for ($i=1; $i <= 4; $i++) { ?>
+
+
+						<div class="col-xs-6 col-sm-3">
+							<div class="item">
+								<div class="content">
+
+									<img src="<?=base_url('assets/img/brazilian/diferencial'.$i.'.jpg'); ?>" alt="">
+
+								</div>
+							</div>
+
+						</div>
+
+						<?php } ?>
+					</div>
+					
+				</div>
 
 				<h3>Processos de Fabricação</h3>
 
@@ -61,10 +81,12 @@
 					A Celulose Riograndense dispõe de uma unidade de produção de papéis com capacidade de gerar 60 mil toneladas por ano, que atende um mercado diversificado nos segmentos de impressão e escrita.
 				</p>
 
+				<div class="col-md-offset-2 col-md-8">
+					<div class="esquema">
+						<img alt="" src="<?=base_url('assets/img/'.getLang().'/esquema.png'); ?>"> 
+					</div>
+				</div>
 
-				<img alt="" src="<?=base_url('assets/img/'.getLang().'/esquema.png'); ?>"> 
-
-				<div class="clear"></div>
 			</section>
 
 
