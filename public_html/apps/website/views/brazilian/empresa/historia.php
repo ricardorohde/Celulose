@@ -1,7 +1,5 @@
 <?php
 
-$this->load->view(getLang().'/empresa/aba');
-
 $historia = array(
 	'15 de Março de 1966' => 'Constituição da Indústria de Celulose Borregaard S.A., que propõe-se a fornecer matéria-prima vegetal renovável para uma fábrica do grupo localizada na Noruega.',
 	'1968' => 'A Borregaard tem seu primeiro plantio de eucaliptos, executado pela comissão técnica da Noreno do Brasil.',
@@ -32,40 +30,42 @@ $historia = array(
 	'Julho de 2013' => 'Início das obras do Projeto Guaíba 2, que elevará a produção de 450 mil toneladas por ano para 1,75 milhão de toneladas anuais de celulose de fibra curta de mercado.',
 	'Agosto de 2013' => 'Lançamento da Pedra Fundamental do Projeto Guaíba 2',
 	'03 de maio de 2015' => 'Inicio das operações da segunda linha de produção de celulose.'
-);
+	);
 
 
 
-?>
-<section class="container empresa historia">
-	<h1 class="title"><?=lang('defualt_menu_historia'); ?></h1>
+	?>
+	<section id="historia">
+		<div class="container">
+			<div class="col-md-offset-1 col-md-10">
+				<h2><?=lang('defualt_menu_historia'); ?></h2>
 
-	<img class="banner" alt="" src="<?=base_url('assets/img/banners/banner-empresa-historia.jpg'); ?>">
+				<p>
+					A CMPC, pioneira na fabricação de celulose e papel no Chile, iniciou suas atividades em 1920, quando entrou em atividade na cidade de Puente Alto. Hoje, é uma das principais empresas na área florestal na América Latina e está presente em mais de 50 países nos 5 continentes.
+				</p>
+				<p>
+					Com mais de 25 fábricas, conta com aproximadamente 8 mil colaboradores operando em 5 áreas de negócios, através das seguintes empresas: CMPC Florestal, CMPC Celulose, CMPC Papéis, CMPC Tissue e CMPC Produtos de Papel.
+				</p>
+				<p>
+					A Companhia possui fortes laços com seus mercados ao redor do mundo e tem uma rede de comercialização de exportação diversificada, que atinge mais de 200 clientes em 30 países.
+				</p>
+				<p>
+					A CMPC tem como premissa desenvolver um trabalho de maneira comprometida e responsável, através da geração de empregos, proporcionando rentabilidade aos seus acionistas, fabricando produtos de qualidade, educando e capacitando seus colaboradores e parceiros, sem nunca descuidar do meio ambiente.
+				</p>
+				<p>
+					No Brasil, iniciou suas operações em 2009, quando  a Unidade Guaíba da Aracruz Celulose assinou o compromisso de venda para a CMPC, originando assim, a CMPC Celulose Riograndense. Todos estes aspectos fazem da CMPC uma empresa desejada e muito respeitada em todos os países onde atua.
+				</p>
 
-	<h2>História da CMPC</h2>
+				<h2>História da Celulose Riograndense</h2>
 
-	<div class="descricao">
-		A CMPC, pioneira na fabricação de celulose e papel no Chile, iniciou suas atividades em 1920, quando entrou em atividade na cidade de Puente Alto. Hoje, é uma das principais empresas na área florestal na América Latina e está presente em mais de 50 países nos 5 continentes.
-		<br><br>
-		Com mais de 25 fábricas, conta com aproximadamente 8 mil colaboradores operando em 5 áreas de negócios, através das seguintes empresas: CMPC Florestal, CMPC Celulose, CMPC Papéis, CMPC Tissue e CMPC Produtos de Papel.
-		<br><br>
-		A Companhia possui fortes laços com seus mercados ao redor do mundo e tem uma rede de comercialização de exportação diversificada, que atinge mais de 200 clientes em 30 países.
-		<br><br>
-		A CMPC tem como premissa desenvolver um trabalho de maneira comprometida e responsável, através da geração de empregos, proporcionando rentabilidade aos seus acionistas, fabricando produtos de qualidade, educando e capacitando seus colaboradores e parceiros, sem nunca descuidar do meio ambiente.
-		<br><br>
-		No Brasil, iniciou suas operações em 2009, quando  a Unidade Guaíba da Aracruz Celulose assinou o compromisso de venda para a CMPC, originando assim, a CMPC Celulose Riograndense. Todos estes aspectos fazem da CMPC uma empresa desejada e muito respeitada em todos os países onde atua.
-	</div>
-
-	<h2>História da Celulose Riograndense</h2>
-
-	<div class="time-line">
-		<?php
-		foreach($historia as $ano => $texto){
-			echo '<h3>',$ano,'</h3><div class="descricao">',$texto,'</div><br>' . PHP_EOL;
-		}
-		?>
-	</div>
-
-	
-	<div class="clear"></div>
-</section>
+				<div class="time-line">
+					<?php
+					foreach($historia as $ano => $texto){
+						echo '<h3>',$ano,'</h3><p>',$texto,'</p>' . PHP_EOL;
+					}
+					?>
+				</div>
+			</div>
+		</div>
+		
+	</section>

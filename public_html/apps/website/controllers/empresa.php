@@ -3,63 +3,26 @@
 class Empresa extends CI_Controller {
 
 	public function index(){
-		views($this,getLang().'/empresa/sobre',array(
-			'header' => array(
-				'title' => lang('defualt_menu_sobre'),
-				'description' => '',
-				'keywords' => '' 
-			)
-		));
-	}
 
-	public function valores(){
-		views($this,getLang().'/empresa/valores',array(
-			'header' => array(
-				'title' => lang('defualt_menu_valores'),
-				'description' => '',
-				'keywords' => '' 
-			)
-		));
-	}
+		$this->load->model('Empresa_model', 'empresa');
 
-	public function certificacoes(){
-		views($this,getLang().'/empresa/certificacoes',array(
-			'header' => array(
-				'title' => lang('defualt_menu_certificacoes'),
-				'description' => '',
-				'keywords' => '' 
-			)
-		));
-	}
+		$this->load->view('tpl/header',[
+			'title' => lang('default_menu_sobre'),
+		 	'description' => '',
+		 	'keywords' => '' 
+			]);
+		
+		$this->load->view(getLang().'/empresa/empresa',[
+			'certificacoes' => $this->empresa->getCertificacoes()
+			]);
+		$this->load->view(getLang().'/empresa/valores');
+		$this->load->view(getLang().'/empresa/certificacoes');
+		$this->load->view(getLang().'/empresa/cmpc');
+		$this->load->view(getLang().'/empresa/guaiba2');
+		$this->load->view(getLang().'/empresa/historia');
 
-	public function certificacoes2(){
-		views($this,getLang().'/empresa/certificacoes2',array(
-			'header' => array(
-				'title' => lang('defualt_menu_certificacoes'),
-				'description' => '',
-				'keywords' => '' 
-			)
-		));
-	}
 
-	public function cmpc(){
-		views($this,getLang().'/empresa/cmpc',array(
-			'header' => array(
-				'title' => lang('defualt_menu_cmpc'),
-				'description' => '',
-				'keywords' => '' 
-			)
-		));
-	}
+		$this->load->view('tpl/footer');
 
-	public function historia(){
-		views($this,getLang().'/empresa/historia',array(
-			'header' => array(
-				'title' => lang('defualt_menu_historia'),
-				'description' => '',
-				'keywords' => '' 
-			)
-		));
 	}
-
 }

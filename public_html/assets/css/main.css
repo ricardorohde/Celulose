@@ -3,11 +3,6 @@
 #main-frame { position: relative; margin: 0px; padding: 0; top: 0px; left: 0px; min-height: 350px; display: block; }
 
 
-
-
-
-.green { background-color: #89C33F; }
-
 /* Tabs */
 
 section.page-tab { display: block; margin-top: 55px; }
@@ -186,26 +181,6 @@ section.produtos .fluxograma li img { display: block; margin-bottom: 5px; }
 
 section.produtos.papel {}
 
-/* Empresa Area */
-
-section.empresa {}
-section.empresa .header { margin: 30px 0 15px 0; }
-section.empresa .descricao { text-align: justify; color: #A4A5A7; font-size: 14px; display: block; }
-
-section.empresa.valores ul { list-style-type: disc; list-style-position: inside; margin: 10px 0px 10px 10px;display: block; }
-section.empresa.valores ul li { line-height: 20px; }
-
-section.empresa.certificacoes ul { display: block; margin: 30px 0; }
-section.empresa.certificacoes ul li { float: left; width: 300px; height: 295px; display: block; position: relative; margin: 0px 40px 40px 0px; }
-section.empresa.certificacoes ul li.last { margin-right: 0px; }
-section.empresa.certificacoes ul li .titulo { top: 0px; left: 120px; letter-spacing: 0px; font-size: 20px; padding: 0px; color: #1e674c; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; position: absolute; }
-section.empresa.certificacoes ul li .texto { top: 23px; left: 120px; text-align: justify; color: #A4A5A7; font-size: 14px; position: absolute; }
-section.empresa.certificacoes ul li img { display: block; border: solid 1px #ccc; }
-section.empresa.certificacoes .links { top: 150px; left: 0px; position: absolute; width: 102px; }
-section.empresa.certificacoes .links a { font-size: 16px; padding: 2px 7px; margin-bottom: 5px; color: #fff; text-align: c1nter; border: solid 2px #c8c8c8; background-color: #c8c8c8; display: block; -webkit-border-radius: 5px; border-radius: 5px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.empresa.certificacoes .links a:hover { border: solid 1px #666; background-color: #666; }
-section.empresa.certificacoes .links a.inverse { color: #c8c8c8; border: solid 1px #c8c8c8; background-color: #fff; }
-section.empresa.certificacoes .links a.inverse:hover { color: #666; border: solid 1px #666; background-color: #fff; }
 
 /* Noticias Area */
 
@@ -266,8 +241,7 @@ section.column .parse ul li.green { color: #1e674c !important; }
 
 section.column .right .banner-bndes { display: block; background-color: #fff; padding: 10px 0px; height: 38px; }
 
-.link { cursor: pointer; background: url('../img/mais.jpg') no-repeat right top; padding-right: 25px; font-size: 16px; color: #A4A5A7; display: block; text-align: right; margin-top: 5px; line-height: 17px; height: 17px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-.link:hover, a:hover .link { color: #000; background-position: right -17px; }
+
 
 #box { display: none; z-index: 500; left: 50%; top: 50%; position: fixed; margin: -203px 0px 0px -361px; width: 720px; height: 405px; background-color: #fff; border: 1px solid #1e674c; -webkit-box-shadow: 0px 0px 20px 0px #1e674c; box-shadow: 0px 0px 20px 0px #1e674c; -webkit-border-radius: 5px 0px 5px 5px; border-radius: 5px 0px 5px 5px; }
 #box .close { padding: 0px 5px; background-color: #1e674c; position: absolute; top: -26px; right: -1px; display: block; font-size: 16px; color: #fff; text-align: right; line-height: 25px; height: 25px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; -webkit-border-radius: 5px 5px 0px 0px; border-radius: 5px 5px 0px 0px; }

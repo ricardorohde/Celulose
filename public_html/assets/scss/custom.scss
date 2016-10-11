@@ -44,6 +44,7 @@ h3{
 	color: $verde;
 	text-transform: uppercase;
 	font-size: 17px; 
+	margin-bottom: 15px;
 }
 
 h4{
@@ -402,9 +403,45 @@ footer {
 		text-align: center;
 		img{
 			margin: 40px auto 40px auto;
+			width: 100%;
+			height: 100%;
+
 		}
 	}
 }
+
+#certificacoes{
+	
+	img{
+		margin-bottom: 10px;
+	}
+
+	
+
+	.pdf{
+		color: #000;
+		border: 1px solid $verde;
+		font-size: 10px;
+		text-transform: uppercase;
+		padding: 8px;
+		font-weight: 700;
+		width: 100%;
+		height: 20px;
+		margin: 3px;
+
+	}
+
+	h5{
+		margin: 10px;
+	}
+
+	p{
+		padding: 10px;
+		font-size: 12px;
+	}
+}
+
+
 
 @media (min-width: 768px) {
 
@@ -503,6 +540,20 @@ footer {
 		}
 	}
 	
+}
+
+//----------------------------------------------//
+//                    Sobre                     //
+//----------------------------------------------//
+#sobre{
+	
+	.esquema{
+		img{
+			width: 60%;
+			height: 60%;
+			
+		}
+	}
 }
 
 
@@ -620,6 +671,21 @@ header{
 		}
 	}
 }
+
+//----------------------------------------------//
+//                    Sobre                     //
+//----------------------------------------------//
+#sobre{
+	
+	.esquema{
+		img{
+			width: 40%;
+			height: 40%;
+			
+		}
+	}
+}
+
 
 
 

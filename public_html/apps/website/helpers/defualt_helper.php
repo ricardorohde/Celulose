@@ -43,13 +43,13 @@ function views(&$object,$key,$vars = array()){
 	if(get('method') == "api"){
 		$object->load->view($key,$vars);
 	} else {
-		if(!isset($vars['header'])){
-			$vars['header'] = array('title' => '', 'description' => '', 'keywords' => '');
-		} if(!isset($vars['footer'])){
-			$vars['footer'] = array();
-		} 
+		// if(!isset($vars['header'])){
+		// 	$vars['header'] = array('title' => '', 'description' => '', 'keywords' => '');
+		// } if(!isset($vars['footer'])){
+		// 	$vars['footer'] = array();
+		// } 
 
-		$object->load->view('tpl/header',$vars['header']);
+		//$object->load->view('tpl/header',$vars['header']);
 		$object->load->view($key,$vars);
 
 		if(isset($vars['agende'])){
@@ -61,7 +61,7 @@ function views(&$object,$key,$vars = array()){
 		}
 
 		
-		$object->load->view('tpl/footer',$vars['footer']);
+		//$object->load->view('tpl/footer',$vars['footer']);
 	}
 }
 
