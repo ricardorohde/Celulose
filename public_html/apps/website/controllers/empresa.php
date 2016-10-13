@@ -7,7 +7,7 @@ class Empresa extends CI_Controller {
 		$this->load->model('Empresa_model', 'empresa');
 
 		$this->load->view('tpl/header',[
-			'title' => lang('default_menu_sobre'),
+			'title' => lang('defualt_menu_sobre'),
 		 	'description' => '',
 		 	'keywords' => '' 
 			]);

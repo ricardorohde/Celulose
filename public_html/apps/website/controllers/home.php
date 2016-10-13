@@ -46,16 +46,20 @@ class Home extends CI_Controller {
 			$i++;
 		}
 
-		views($this,getLang().'/home',array(
-			'header' => array(
-				'title' => 'Celulose Riograndense - Compromisso com o Rio Grande &eacute; a nossa marca.',
-				'description' => '',
-				'keywords' => '' 
-			),
+		$this->load->view('tpl/header',[
+			'title' => lang('defualt_menu_home'),
+		 	'description' => '',
+		 	'keywords' => '' 
+			]);
+		
+		$this->load->view(getLang().'/home',[
 			'slider' => $imgs,
 			'noticias' 	=> $noticias,
 			'agende'	=> '1'
-		));
+			]);
+
+
+		$this->load->view('tpl/footer');
 
 
 	}

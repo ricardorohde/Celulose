@@ -16,7 +16,6 @@ h1{
 }
 
 
-
 h2 {
 	color: $verde;
 	text-transform: uppercase;
@@ -413,35 +412,53 @@ footer {
 #certificacoes{
 	
 	img{
-		margin-bottom: 10px;
+		margin-top: 40px;
 	}
 
 	
 
 	.pdf{
-		color: #000;
-		border: 1px solid $verde;
-		font-size: 10px;
-		text-transform: uppercase;
-		padding: 8px;
-		font-weight: 700;
-		width: 100%;
-		height: 20px;
-		margin: 3px;
+		position:absolute;
+		top:190px;
+		left:10px;
+		margin:0px;
+		padding:0px;
+		
+
+
+		&:hover{
+			outline: 1px solid $verde;
+		}
+
+		a, a:visited{
+			padding:0px;
+			text-decoration: none;
+			text-align:center;
+			color:#000;
+			width:80px;  
+			height:20px;	
+			display:block;
+
+			font-size: 10px;	
+			font-weight: 700;
+			text-transform: uppercase;
+			line-height: 20px;
+			border: 1px solid $verde;
+			margin-bottom: 20px;
+		}
 
 	}
 
 	h5{
-		margin: 10px;
+		margin-top: 60px;
+		margin-bottom: 10px;
+
 	}
 
 	p{
-		padding: 10px;
 		font-size: 12px;
 	}
 }
-
-
 
 @media (min-width: 768px) {
 
@@ -553,6 +570,56 @@ footer {
 			height: 60%;
 			
 		}
+	}
+}
+
+#certificacoes{
+	
+	img{
+		margin-top: 0;
+	}
+
+	
+
+	.pdf{
+		position:absolute;
+		top:150px;
+		left:10px;
+		margin:0px;
+		padding:0px;
+		margin-bottom: 20px;
+		
+		a{
+			padding:0px;
+			text-decoration: none;
+			text-align:center;
+			color:#000;
+			width:80px; 
+			height:20px;
+			display:block;
+
+			font-size: 10px;
+			font-weight: 700;
+			text-transform: uppercase;
+			line-height: 20px;
+			border: 1px solid $verde;
+			margin-bottom: 0;	
+
+			&:hover{
+				outline: 1px solid $verde;
+			}
+		}
+
+	}
+
+	h5{
+		margin: 0 0 10px 10px;
+
+	}
+
+	p{	
+		margin: 10px;
+		font-size: 12px;
 	}
 }
 

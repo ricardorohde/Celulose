@@ -14,10 +14,10 @@
 								<div class="row">
 									
 									<img src="<?=base_url('assets/img/thumbs/'.$row->img); ?>">
-									
-									
-									<a class="pdf" href="<?=site_url('docs/dl/'.$row->link); ?>"><?=lang('defualt_download_pdf'); ?></a>
-
+									<div class="pdf">
+										<a href="<?=site_url('docs/dl/'.$row->link); ?>"><?=lang('defualt_download_pdf'); ?></a>
+										
+									</div>
 								</div>
 							</div>
 
