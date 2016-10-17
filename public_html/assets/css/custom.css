@@ -492,36 +492,38 @@ footer {
     width: 60%;
     height: 60%; }
 
-  #certificacoes img {
-    margin-top: 0; }
-  #certificacoes .pdf {
-    position: absolute;
-    top: 150px;
-    left: 10px;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 20px; }
-    #certificacoes .pdf a {
+  #certificacoes .item {
+    margin: 0 5px 10px 0; }
+    #certificacoes .item img {
+      margin-top: 0; }
+    #certificacoes .item .pdf {
+      position: absolute;
+      top: 150px;
+      left: 10px;
+      margin: 0px;
       padding: 0px;
-      text-decoration: none;
-      text-align: center;
-      color: #000;
-      width: 80px;
-      height: 20px;
-      display: block;
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      line-height: 20px;
-      border: 1px solid #64AF53;
-      margin-bottom: 0; }
-      #certificacoes .pdf a:hover {
-        outline: 1px solid #64AF53; }
-  #certificacoes h5 {
-    margin: 0 0 10px 10px; }
-  #certificacoes p {
-    margin: 10px;
-    font-size: 12px; } }
+      margin-bottom: 20px; }
+      #certificacoes .item .pdf a {
+        padding: 0px;
+        text-decoration: none;
+        text-align: center;
+        color: #000;
+        width: 80px;
+        height: 20px;
+        display: block;
+        font-size: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 20px;
+        border: 1px solid #64AF53;
+        margin-bottom: 0; }
+        #certificacoes .item .pdf a:hover {
+          outline: 1px solid #64AF53; }
+    #certificacoes .item h5 {
+      margin: 0 0 10px 10px; }
+    #certificacoes .item p {
+      margin: 10px;
+      font-size: 12px; } }
 @media (min-width: 992px) {
   header {
     width: 100vw;
