@@ -3,23 +3,22 @@
 class Produtos extends CI_Controller {
 
 	public function index(){
-		views($this,getLang().'/produtos/celulose',array(
-			'header' => array(
-				'title' => lang('defualt_menu_celulose'),
-				'description' => '',
-				'keywords' => '' 
-			)
-		));
-	}
 
-	public function papel(){
-		views($this,getLang().'/produtos/papel',array(
-			'header' => array(
-				'title' => lang('defualt_menu_papel'),
-				'description' => '',
-				'keywords' => '' 
-			)
-		));
-	}
 
+
+		//$this->load->model('Produtos_model', 'produtos');
+
+		$this->load->view('tpl/header',[
+			'title' => lang('defualt_menu_celulose'),
+		 	'description' => '',
+		 	'keywords' => '' 
+			]);
+		
+		$this->load->view(getLang().'/produtos/celulose');
+		$this->load->view(getLang().'/produtos/papel');
+
+		$this->load->view('/tpl/agende');
+		$this->load->view('tpl/footer');
+
+	}
 }

@@ -5,13 +5,16 @@ class Responsabilidade extends CI_Controller {
 	const year = 2002;
 
 	public function index(){
-		views($this,getLang().'/responsabilidade/publicacoes',array(
-			'header' => array(
-				'title' => lang('defualt_menu_publicacoes'),
-				'description' => '',
-				'keywords' => '' 
-			)
-		));
+
+		$this->load->view('tpl/header',[
+			'title' => lang('defualt_menu_publicacoes'),
+		 	'description' => '',
+		 	'keywords' => '' 
+			]);
+		$this->load->view(getLang().'/responsabilidade/publicacoes');
+
+		$this->load->view('tpl/agende');
+		$this->load->view('tpl/footer');
 	}
 
 	public function florestal(){

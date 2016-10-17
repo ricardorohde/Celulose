@@ -1,342 +1,2071 @@
+/**{outline: 1px solid #c1a2c9;}*/
+input {
+  height: 30px;
+  font-family: "Raleway", sans-serif;
+  color: #808080;
+  font-size: 12px;
+  padding-left: 15px;
+  border: 1px solid #64AF53;
+  font-weight: 500; }
+  input:focus {
+    outline: 2px solid #64AF53; }
 
+label {
+  color: #4D4D4D;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500; }
 
-#main-frame { position: relative; margin: 0px; padding: 0; top: 0px; left: 0px; min-height: 350px; display: block; }
+p {
+  color: #4D4D4D;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 500; }
 
+.radio label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  font-size: 13px;
+  font-weight: 500; }
+.radio input[type=radio] {
+  display: none; }
+.radio label:before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: transparent;
+  border: 1px solid #64AF53; }
+.radio label:before {
+  border-radius: 50%; }
+.radio input[type=radio]:checked + label:before {
+  background-color: #64AF53; }
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+.inputfile + label {
+  color: #4D4D4D;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  border: 1px solid #64AF53;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  outline: 1px solid #64AF53; }
+
+.inputfile + label {
+  cursor: pointer; }
+
+.inputfile:focus + label {
+  outline: 1px solid #64AF53; }
+
+textarea {
+  font-family: "Raleway", sans-serif;
+  color: #808080;
+  font-size: 12px;
+  padding: 5px;
+  border: 1px solid #64AF53;
+  font-weight: 500; }
+  textarea:focus {
+    outline: 1px solid #64AF53; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "Raleway", sans-serif;
+  color: #808080;
+  font-size: 12px;
+  padding: 5px;
+  border: 1px solid #64AF53;
+  background: url("../img/select-bg.png") no-repeat;
+  padding-left: 8px;
+  height: 30px;
+  background-position: 90% 10px;
+  width: 100%;
+  max-width: 200px;
+  text-indent: 0.01px;
+  text-overflow: "";
+  cursor: pointer; }
+  select:focus {
+    outline: 2px solid #64AF53; }
+
+button {
+  background: #fff;
+  color: #808080;
+  border: 1px solid #64AF53;
+  height: 50px;
+  width: 100%;
+  max-width: 200px;
+  color: #4D4D4D;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer; }
+  button:active, button:focus {
+    outline: 2px solid #64AF53; }
+
+h2 {
+  color: #64AF53;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 5px;
+  width: 100%;
+  margin: 100px auto 60px;
+  overflow: hidden;
+  text-align: center;
+  font-weight: 300; }
+  h2:before, h2:after {
+    content: "";
+    display: inline-block;
+    width: 50%;
+    margin: 0 .5em 0 -55%;
+    border-bottom: 1px solid; }
+  h2:after {
+    margin: 0 -55% 0 .5em; }
+
+h3 {
+  color: #64AF53;
+  text-transform: uppercase;
+  font-size: 17px;
+  margin-bottom: 15px; }
+
+h4 {
+  color: #4D4D4D;
+  font-size: 16px;
+  padding-top: 20px;
+  margin-bottom: 10px; }
+
+h5 {
+  color: #64AF53;
+  font-size: 16px; }
+
+p {
+  color: #4D4D4D;
+  font-size: 15px;
+  text-align: justify;
+  font-weight: 700; }
+
+.mobile-hide {
+  display: none; }
+
+.banner {
+  width: 100vw;
+  height: 300px; }
+  .banner img {
+    width: 100%;
+    height: 100%; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #4D4D4D; }
+
+header {
+  background-color: #fff;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 200;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  top: 0;
+  overflow: hidden;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  transition: all ease 0.3s; }
+  header .logo {
+    height: 12vh;
+    width: 100vw;
+    margin-top: 20px;
+    display: block;
+    position: relative;
+    top: 0;
+    z-index: 500;
+    cursor: pointer;
+    background: url("../img/logo-sm-color.png") no-repeat 50% 50%;
+    background-size: contain;
+    text-align: center; }
+  header .container {
+    padding: 0; }
+    header .container nav {
+      position: relative;
+      z-index: 480; }
+      header .container nav ul {
+        margin: 20px 0 0 0; }
+        header .container nav ul li {
+          height: 9vh;
+          width: 100vw;
+          text-align: center;
+          border-top: 1px solid #64AF53;
+          line-height: 9vh;
+          cursor: pointer;
+          -webkit-transition: all ease 0.3s;
+          -moz-transition: all ease 0.3s;
+          -o-transition: all ease 0.3s;
+          -ms-transition: all ease 0.3s;
+          transition: all ease 0.3s; }
+          header .container nav ul li:hover {
+            background-color: #64AF53; }
+            header .container nav ul li:hover > a {
+              color: #fff; }
+          header .container nav ul li:last-child {
+            border-bottom: 1px solid #64AF53; }
+          header .container nav ul li a {
+            color: #39b34a;
+            text-transform: uppercase;
+            font-weight: 900;
+            height: 53px;
+            width: 100%;
+            color: #808080;
+            -webkit-transition: all ease 0.3s;
+            -moz-transition: all ease 0.3s;
+            -o-transition: all ease 0.3s;
+            -ms-transition: all ease 0.3s;
+            transition: all ease 0.3s; }
+            header .container nav ul li a:hover {
+              color: #fff; }
+
+.menu-button {
+  position: fixed;
+  height: 4em;
+  width: 4em;
+  background-color: #64AF53;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 4em;
+  right: 0;
+  bottom: 0;
+  margin: 0 20px 20px 0;
+  z-index: 1000;
+  cursor: pointer;
+  -webkit-box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25); }
+  .menu-button img {
+    height: 50%;
+    width: auto; }
+
+#menu.move {
+  width: 100vw; }
+
+footer {
+  display: block;
+  position: relative; }
+  footer .copy {
+    background-color: #64AF53;
+    padding: 10px 0 0 0; }
+    footer .copy .container {
+      text-align: center;
+      color: #fff;
+      line-height: 30px;
+      font-size: 16px; }
+      footer .copy .container .select:hover img {
+        background-color: #83bf76;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%; }
+      footer .copy .container .active img {
+        background-color: #83bf76;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%; }
+      footer .copy .container img {
+        display: inline-block;
+        margin-right: 5px;
+        height: 46px;
+        width: auto;
+        padding: 3px; }
+      footer .copy .container a:not(.mobile-hide) {
+        display: inline-block;
+        color: #fff; }
+      footer .copy .container .redes a:hover:not(:last-child) img {
+        background-color: #83bf76;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%; }
+      footer .copy .container .info {
+        line-height: 20px;
+        margin: 20px 0; }
+        footer .copy .container .info a {
+          margin-top: 20px; }
+    footer .copy .border {
+      background: url("../img/footer-border.png") repeat-x;
+      height: 22px;
+      width: 100%; }
+  footer .incendioflorestal {
+    left: 50%;
+    position: absolute;
+    margin: auto;
+    bottom: 220px;
+    right: 0;
+    margin-left: -169px; }
+
+@media (min-width: 768px) {
+  .mobile-hide {
+    display: block; }
+
+  header .container {
+    margin: 0; }
+
+  footer {
+    margin-top: 50px;
+    display: block;
+    position: relative; }
+    footer .copy {
+      padding: 10px 0 0 0; }
+      footer .copy .container {
+        line-height: 30px;
+        font-size: 16px; }
+        footer .copy .container .redes {
+          display: inline-block;
+          margin-top: 30px; }
+          footer .copy .container .redes img {
+            height: 43px;
+            width: auto;
+            padding: 3px; }
+        footer .copy .container .info {
+          line-height: 20px;
+          margin: 20px 0;
+          font-size: 14px; }
+          footer .copy .container .info a {
+            margin-top: 20px; }
+          footer .copy .container .info img {
+            position: absolute;
+            height: 80px;
+            width: auto;
+            right: -50px;
+            top: 10px; }
+    footer .incendioflorestal {
+      bottom: 145px; } }
+@media (min-width: 992px) {
+  header {
+    width: 100vw;
+    height: 120px;
+    background-color: transparent; }
+    header .logo {
+      width: auto;
+      height: 100px;
+      float: left;
+      margin: 10px;
+      background: url("../img/logo-sm.png") no-repeat 50% 50%;
+      background-size: contain; }
+    header .container {
+      margin-right: auto;
+      margin-left: auto; }
+      header .container nav {
+        float: right; }
+        header .container nav ul {
+          margin: 0; }
+          header .container nav ul li {
+            display: inline-block;
+            border: none;
+            height: 120px;
+            width: auto;
+            line-height: 120px; }
+            header .container nav ul li:last-child {
+              border: none; }
+            header .container nav ul li:hover {
+              background-color: transparent; }
+              header .container nav ul li:hover > a {
+                color: #808080; }
+            header .container nav ul li a {
+              padding: 0px 10px 10px 10px;
+              font-size: 14px;
+              color: #fff; }
+
+  .act {
+    background-color: #fff;
+    -webkit-box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25); }
+    .act .logo {
+      background: url("../img/logo-sm-color.png") no-repeat 50% 50%;
+      background-size: contain; }
+    .act .container nav ul li:hover {
+      background-color: #F2F2F2; }
+      .act .container nav ul li:hover > a {
+        color: #4D4D4D; }
+    .act .container nav ul li a {
+      color: #808080; }
+
+  .menu-button {
+    display: none; } }
+#home {
+  margin: 40px 0 60px; }
+  #home .container .noticias {
+    text-align: center;
+    margin: 50px 0 60px 0; }
+    #home .container .noticias .item {
+      padding: 3px;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      border-radius: 0;
+      position: relative;
+      width: 100%;
+      /* desired width */ }
+      #home .container .noticias .item:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+        /* ratio of 1:1*/ }
+      #home .container .noticias .item:hover {
+        opacity: .6; }
+      #home .container .noticias .item .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        padding: 2px; }
+        #home .container .noticias .item .content img {
+          width: 100%;
+          height: 100%; }
+
+@media (min-width: 768px) {
+  #home .container .noticias {
+    text-align: center; } }
+@media (min-width: 992px) {
+  #home .container .noticias {
+    text-align: center; } }
+#sobre .diferencial {
+  margin: 40px auto 40px; }
+  #sobre .diferencial .item {
+    padding: 3px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    position: relative;
+    width: 100%;
+    /* desired width */ }
+    #sobre .diferencial .item:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+      /* ratio of 1:1*/ }
+    #sobre .diferencial .item .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      padding: 2px; }
+      #sobre .diferencial .item .content img {
+        width: 100%;
+        height: 100%; }
+#sobre .esquema {
+  text-align: center; }
+  #sobre .esquema img {
+    margin: 40px auto 40px auto;
+    width: 100%;
+    height: 100%; }
+
+#certificacoes img {
+  margin-top: 40px; }
+#certificacoes .pdf {
+  position: absolute;
+  top: 190px;
+  left: 10px;
+  margin: 0px;
+  padding: 0px; }
+  #certificacoes .pdf:hover {
+    outline: 1px solid #64AF53; }
+  #certificacoes .pdf a, #certificacoes .pdf a:visited {
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    width: 80px;
+    height: 20px;
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 20px;
+    border: 1px solid #64AF53;
+    margin-bottom: 20px; }
+#certificacoes h5 {
+  margin-top: 60px;
+  margin-bottom: 10px; }
+#certificacoes p {
+  font-size: 12px; }
+
+@media (min-width: 768px) {
+  #sobre .esquema img {
+    width: 60%;
+    height: 60%; }
+
+  #certificacoes img {
+    margin-top: 0; }
+  #certificacoes .pdf {
+    position: absolute;
+    top: 150px;
+    left: 10px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px; }
+    #certificacoes .pdf a {
+      padding: 0px;
+      text-decoration: none;
+      text-align: center;
+      color: #000;
+      width: 80px;
+      height: 20px;
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 20px;
+      border: 1px solid #64AF53;
+      margin-bottom: 0; }
+      #certificacoes .pdf a:hover {
+        outline: 1px solid #64AF53; }
+  #certificacoes h5 {
+    margin: 0 0 10px 10px; }
+  #certificacoes p {
+    margin: 10px;
+    font-size: 12px; } }
+@media (min-width: 992px) {
+  #sobre .esquema img {
+    width: 40%;
+    height: 40%; } }
+#main-frame {
+  position: relative;
+  margin: 0px;
+  padding: 0;
+  top: 0px;
+  left: 0px;
+  min-height: 350px;
+  display: block; }
 
 /* Tabs */
+section.page-tab {
+  display: block;
+  margin-top: 55px; }
 
-section.page-tab { display: block; margin-top: 55px; }
-section.page-tab nav { display: block; text-align: center; background: url('../img/tabs-background.png') repeat-x 0px 0px; position: relative; }
-section.page-tab nav a { position: relative; margin: 0px -4px; display: inline-block; height: 33px; background: url('../img/tabs.png') no-repeat left -165px; z-index: 5; }
-section.page-tab nav a span { font-size: 16px; color: #006f52; line-height: 25px; margin-left: 7px; padding: 8px 17px 0px 10px; display: block; background: url('../img/tabs.png') no-repeat right -132px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; }
-section.page-tab nav a.active, section.page-tab nav a.active:hover { background-position: left -33px; z-index: 10; }
-section.page-tab nav a.active span, section.page-tab nav a.active:hover span { color: #fff; background-position: right -0px; }
-section.page-tab nav a:hover { background-position: left -99px; }
-section.page-tab nav a:hover span { background-position: right -66px; }
+section.page-tab nav {
+  display: block;
+  text-align: center;
+  background: url("../img/tabs-background.png") repeat-x 0px 0px;
+  position: relative; }
 
-section.page-tab.extra nav a span { padding: 8px 117px 0px 110px; }
-section.page-tab.big nav a span { padding: 8px 57px 0px 50px; }
-section.page-tab.medium nav a span { padding: 8px 47px 0px 40px; }
-section.page-tab .white-bar { display: block; height: 25px; background-color: #fff; }
+section.page-tab nav a {
+  position: relative;
+  margin: 0px -4px;
+  display: inline-block;
+  height: 33px;
+  background: url("../img/tabs.png") no-repeat left -165px;
+  z-index: 5; }
+
+section.page-tab nav a span {
+  font-size: 16px;
+  color: #006f52;
+  line-height: 25px;
+  margin-left: 7px;
+  padding: 8px 17px 0px 10px;
+  display: block;
+  background: url("../img/tabs.png") no-repeat right -132px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif; }
+
+section.page-tab nav a.active, section.page-tab nav a.active:hover {
+  background-position: left -33px;
+  z-index: 10; }
+
+section.page-tab nav a.active span, section.page-tab nav a.active:hover span {
+  color: #fff;
+  background-position: right -0px; }
+
+section.page-tab nav a:hover {
+  background-position: left -99px; }
+
+section.page-tab nav a:hover span {
+  background-position: right -66px; }
+
+section.page-tab.extra nav a span {
+  padding: 8px 117px 0px 110px; }
+
+section.page-tab.big nav a span {
+  padding: 8px 57px 0px 50px; }
+
+section.page-tab.medium nav a span {
+  padding: 8px 47px 0px 40px; }
+
+section.page-tab .white-bar {
+  display: block;
+  height: 25px;
+  background-color: #fff; }
 
 /* Docs */
+section.docs {
+  margin: 40px auto; }
 
-section.docs { margin: 40px auto; }
-section.docs iframe { height: 700px; width: 980px; display: block; border: solid 1px #1d7d0d; background-color: #fff; }
+section.docs iframe {
+  height: 700px;
+  width: 980px;
+  display: block;
+  border: solid 1px #1d7d0d;
+  background-color: #fff; }
 
 /* Contatos Area */
+.formulario label {
+  font-size: 12px;
+  color: #666666;
+  line-height: 20px;
+  position: relative; }
 
-.formulario label { font-size: 12px; color: #666666; line-height: 20px; position: relative; }
-.formulario table { width: 100%; }
-.formulario table td { vertical-align: top; }
-.formulario input[type=submit] { float: right; color: #666666; border: solid 1px #666666; display: block; background-color: #eeeeee; font-size: 14px; height: 32px; line-height: 32px; padding: 0px 10px; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease; }
-.formulario input[type=submit]:hover { border-color: #000; color: #000; cursor: pointer; transform: scale(1.1, 1.1); -webkit-transform: scale(1.1, 1.1); -moz-transform: scale(1.1, 1.1); -o-transform: scale(1.1, 1.1); -ms-transform: scale(1.1, 1.1); }
-.formulario input[type=text], .formulario select, .formulario textarea { height: 26px; border: solid 1px #666666; font-size: 12px; color: #666666;	line-height: 26px; vertical-align: middle; padding:0 0 0 5px; resize: none; }
-.formulario textarea { height: 110px; }
-.formulario .row { display: block; height: 40px; width: 858px; }
-.formulario .error { color: #931818; font-size: 12px; display: block; }
-.formulario .span1 { width: 865px; }
-.formulario select.span1 { width: 872px; }
-.formulario .span2 { width: 410px; }
-.formulario select.span2 { width: 417px; }
-.formulario .span3 { width: 264px; }
-.formulario .radio { margin: 0px 5px 3px 3px; }
+.formulario table {
+  width: 100%; }
 
-.formulario .legenda { color: #666666; }
-.formulario .legenda a { color: #666666; text-decoration: underline; }
-.formulario .success { font-size: 16px; line-height: 25px; color: #39b34a; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
+.formulario table td {
+  vertical-align: top; }
 
-section.contato .texto { text-align: justify; color: #A4A5A7; font-size: 14px; display: block; }
-section.contato .formulario { margin: 30px 50px; display: block; }
-section.contato	.formulario .row { width: 875px; margin-top: 12px; }
-section.trabalhe-conosco { margin-top: 50px; }
-section.trabalhe-conosco .descricao { color: #a4a5a7; font-size: 14px; text-align: justify; display: block; margin-top: 20px; }
-section.trabalhe-conosco .formulario { margin: 30px 50px; display: block; }
-section.trabalhe-conosco .formulario strong { font-weight: bold; }
+.formulario input[type=submit] {
+  float: right;
+  color: #666666;
+  border: solid 1px #666666;
+  display: block;
+  background-color: #eeeeee;
+  font-size: 14px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0px 10px;
+  transition: All 0.2s ease;
+  -webkit-transition: All 0.2s ease;
+  -moz-transition: All 0.2s ease;
+  -o-transition: All 0.2s ease; }
 
+.formulario input[type=submit]:hover {
+  border-color: #000;
+  color: #000;
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1); }
 
-section.contato-telefones {}
-section.contato-telefones .lista-left, .lista-right  { float: left; margin-left: 146px; width: 270px; }
-section.contato-telefones .lista-left, .lista-right { margin-top: 20px; display: block; }
-section.contato-telefones .lista-left li, .lista-right li { font-size: 16px; line-height: 25px; color: #a4a5a7; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.contato-telefones .lista-left li span, .lista-right li span { font-size: 20px; }
+.formulario input[type=text], .formulario select, .formulario textarea {
+  height: 26px;
+  border: solid 1px #666666;
+  font-size: 12px;
+  color: #666666;
+  line-height: 26px;
+  vertical-align: middle;
+  padding: 0 0 0 5px;
+  resize: none; }
 
-section.contato-localizacao {}
-section.contato-localizacao .google-maps { width: 978px; height: 313px; border: solid 1px #1d7d0d; display: block; margin: 10px auto 15px auto; }
-section.contato-localizacao .box-google-maps { font-size: 12px; }
-section.contato-localizacao .box-google-maps h1 { letter-spacing: 0px; font-size: 15px; padding: 0px; margin: 0px 0px 3px 0px; color: #39b34a; text-transform: uppercase; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.contato-localizacao .descricao { color: #a4a5a7; font-size: 14px; text-align: left; display: block; margin-bottom: 20px; }
+.formulario textarea {
+  height: 110px; }
+
+.formulario .row {
+  display: block;
+  height: 40px;
+  width: 858px; }
+
+.formulario .error {
+  color: #931818;
+  font-size: 12px;
+  display: block; }
+
+.formulario .span1 {
+  width: 865px; }
+
+.formulario select.span1 {
+  width: 872px; }
+
+.formulario .span2 {
+  width: 410px; }
+
+.formulario select.span2 {
+  width: 417px; }
+
+.formulario .span3 {
+  width: 264px; }
+
+.formulario .radio {
+  margin: 0px 5px 3px 3px; }
+
+.formulario .legenda {
+  color: #666666; }
+
+.formulario .legenda a {
+  color: #666666;
+  text-decoration: underline; }
+
+.formulario .success {
+  font-size: 16px;
+  line-height: 25px;
+  color: #39b34a;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal; }
+
+section.contato .texto {
+  text-align: justify;
+  color: #A4A5A7;
+  font-size: 14px;
+  display: block; }
+
+section.contato .formulario {
+  margin: 30px 50px;
+  display: block; }
+
+section.contato .formulario .row {
+  width: 875px;
+  margin-top: 12px; }
+
+section.trabalhe-conosco {
+  margin-top: 50px; }
+
+section.trabalhe-conosco .descricao {
+  color: #a4a5a7;
+  font-size: 14px;
+  text-align: justify;
+  display: block;
+  margin-top: 20px; }
+
+section.trabalhe-conosco .formulario {
+  margin: 30px 50px;
+  display: block; }
+
+section.trabalhe-conosco .formulario strong {
+  font-weight: bold; }
+
+section.contato-telefones .lista-left, .lista-right {
+  float: left;
+  margin-left: 146px;
+  width: 270px; }
+
+section.contato-telefones .lista-left, .lista-right {
+  margin-top: 20px;
+  display: block; }
+
+section.contato-telefones .lista-left li, .lista-right li {
+  font-size: 16px;
+  line-height: 25px;
+  color: #a4a5a7;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal; }
+
+section.contato-telefones .lista-left li span, .lista-right li span {
+  font-size: 20px; }
+
+section.contato-localizacao .google-maps {
+  width: 978px;
+  height: 313px;
+  border: solid 1px #1d7d0d;
+  display: block;
+  margin: 10px auto 15px auto; }
+
+section.contato-localizacao .box-google-maps {
+  font-size: 12px; }
+
+section.contato-localizacao .box-google-maps h1 {
+  letter-spacing: 0px;
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px 0px 3px 0px;
+  color: #39b34a;
+  text-transform: uppercase;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal; }
+
+section.contato-localizacao .descricao {
+  color: #a4a5a7;
+  font-size: 14px;
+  text-align: left;
+  display: block;
+  margin-bottom: 20px; }
 
 /* Responsabilidade Area */
+section.responsabilidade-sociais .lista {
+  display: block;
+  margin: 50px 0px 30px 0px; }
 
-section.responsabilidade-sociais {}
-section.responsabilidade-sociais .lista { display: block; margin: 50px 0px 30px 0px; }
-section.responsabilidade-sociais .lista li { height: 350px; width: 200px; color: #a4a5a7; font-size: 14px; margin: 0 60px 10px 0; display: block; float: left; text-align: justify; }
-section.responsabilidade-sociais .lista li.last { margin-right: 0; }
-section.responsabilidade-sociais .lista h2 { vertical-align: bottom; height: 44px; margin: 5px 0; line-height: 22px; display: block; color: #39b14a; font-size: 20px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; text-align: left; }
-section.responsabilidade-sociais .lista img { display: block; margin-bottom: 5px; }
-section.responsabilidade-sociais p { font-size: 16px; color: #a4a5a7; text-align: justify; }
+section.responsabilidade-sociais .lista li {
+  height: 350px;
+  width: 200px;
+  color: #a4a5a7;
+  font-size: 14px;
+  margin: 0 60px 10px 0;
+  display: block;
+  float: left;
+  text-align: justify; }
 
-section.responsabilidade-publicacoes { text-align: justify; color: #A4A5A7; font-size: 14px; }
-section.responsabilidade-publicacoes .descricao { display: block; position: relative; margin: 35px 0px; }
-section.responsabilidade-publicacoes .texto { top: 0px; left: 120px; color: #A4A5A7; font-size: 14px; text-align: justify; position: absolute; }
-section.responsabilidade-publicacoes .thumb { display: block; }
-section.responsabilidade-publicacoes .links { bottom: 5px; left: 120px; right: 0px; position: absolute; }
-section.responsabilidade-publicacoes .links a { font-size: 16px; padding: 2px 7px; margin-right: 7px; color: #fff; border: solid 1px #c8c8c8; background-color: #c8c8c8; display: inline-block; -webkit-border-radius: 5px; border-radius: 5px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.responsabilidade-publicacoes .links a:hover { border: solid 1px #666; background-color: #666; }
-section.responsabilidade-publicacoes .links a.inverse { color: #c8c8c8; border: solid 1px #c8c8c8; background-color: #fff; }
-section.responsabilidade-publicacoes .links a.inverse:hover { color: #666; border: solid 1px #666; background-color: #fff; }
+section.responsabilidade-sociais .lista li.last {
+  margin-right: 0; }
 
-section.responsabilidade-publicacoes .lista { margin: 0px; display: block; }
-section.responsabilidade-publicacoes .lista li { margin: 0px 28px 30px 0; text-align: center; width: 140px; height: 275px; float: left; }
-section.responsabilidade-publicacoes .lista li.last { margin-right: 0px; }
-section.responsabilidade-publicacoes .lista li span { display: block; font-size: 16px; text-align: left; height: 40px; }
-section.responsabilidade-publicacoes .lista li img { display: block; }
-section.responsabilidade-publicacoes .lista li a { margin-top: 5px; font-size: 16px; padding: 2px 7px; margin-right: 7px; color: #fff; border: solid 2px #c8c8c8; background-color: #c8c8c8; display: inline-block; -webkit-border-radius: 5px; border-radius: 5px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.responsabilidade-publicacoes .lista li a:hover { border: solid 2px #666; background-color: #666; }
+section.responsabilidade-sociais .lista h2 {
+  vertical-align: bottom;
+  height: 44px;
+  margin: 5px 0;
+  line-height: 22px;
+  display: block;
+  color: #39b14a;
+  font-size: 20px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: 700;
+  text-align: left; }
 
-section.responsabilidade-publicacoes .item { display: block; position: relative; margin: 10px 0px; }
-section.responsabilidade-publicacoes .item .texto { top: 0px; left: 120px; color: #A4A5A7; font-size: 14px; text-align: justify; position: absolute; }
-section.responsabilidade-publicacoes .item .thumb { display: block; }
-section.responsabilidade-publicacoes .item .links { bottom: 5px; left: 120px; right: 0px; position: absolute; }
-section.responsabilidade-publicacoes .item .links a { font-size: 16px; padding: 2px 7px; margin-right: 7px; color: #fff; border: solid 1px #c8c8c8; background-color: #c8c8c8; display: inline-block; -webkit-border-radius: 5px; border-radius: 5px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.responsabilidade-publicacoes .item .links a:hover { border: solid 1px #666; background-color: #666; }
-section.responsabilidade-publicacoes .item .links a.inverse { color: #c8c8c8; border: solid 1px #c8c8c8; background-color: #fff; }
-section.responsabilidade-publicacoes .item .links a.inverse:hover { color: #666; border: solid 1px #666; background-color: #fff; }
+section.responsabilidade-sociais .lista img {
+  display: block;
+  margin-bottom: 5px; }
 
-section.responsabilidade-publicacoes .plano-de-manejo {}
-section.responsabilidade-publicacoes .plano-de-manejo .texto { left: 195px; }
-section.responsabilidade-publicacoes .plano-de-manejo .links { left: 195px; }
+section.responsabilidade-sociais p {
+  font-size: 16px;
+  color: #a4a5a7;
+  text-align: justify; }
 
-section.responsabilidade-publicacoes a.link-folha { color: #A4A5A7; font-size: 14px; }
-section.responsabilidade-publicacoes a.link-folha { color: #666; }
+section.responsabilidade-publicacoes {
+  text-align: justify;
+  color: #A4A5A7;
+  font-size: 14px; }
 
-section.responsabilidade-florestal { text-align: justify; color: #A4A5A7; font-size: 14px; }
-section.responsabilidade-florestal .texto-header { display: block; margin: 30px 0 15px 0 }
-section.responsabilidade-florestal .item { display: block; position: relative; margin: 10px 0px; }
-section.responsabilidade-florestal .item .texto { top: 0px; left: 120px; color: #A4A5A7; font-size: 14px; text-align: justify; position: absolute; }
-section.responsabilidade-florestal .item .thumb { display: block; }
-section.responsabilidade-florestal .item .links { bottom: 5px; left: 120px; right: 0px; position: absolute; }
-section.responsabilidade-florestal .item .links a { font-size: 16px; padding: 2px 7px; margin-right: 7px; color: #fff; border: solid 1px #c8c8c8; background-color: #c8c8c8; display: inline-block; -webkit-border-radius: 5px; border-radius: 5px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.responsabilidade-florestal .item .links a:hover { border: solid 1px #666; background-color: #666; }
-section.responsabilidade-florestal .item .links a.inverse { color: #c8c8c8; border: solid 1px #c8c8c8; background-color: #fff; }
-section.responsabilidade-florestal .item .links a.inverse:hover { color: #666; border: solid 1px #666; background-color: #fff; }
+section.responsabilidade-publicacoes .descricao {
+  display: block;
+  position: relative;
+  margin: 35px 0px; }
 
-section.responsabilidade-industrial { }
-section.responsabilidade-industrial .texto { text-align: justify; color: #A4A5A7; font-size: 14px; margin-bottom: 20px; }
-section.responsabilidade-industrial h2 { margin-top: 20px; }
-section.responsabilidade-industrial ul { margin: 30px 0; display: block; }
-section.responsabilidade-industrial ul li { margin-bottom: 7px; width: 978px; border: 1px solid #1C674B; -webkit-border-radius: 5px; border-radius: 5px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; font-size: 16px; height: 30px; overflow: hidden; }
-section.responsabilidade-industrial ul li span { color: #fff; background-color: #1C674B; line-height: 30px; display: block; float: left; width: 50px; text-align: center; }
-section.responsabilidade-industrial ul li a { color: #1C674B; float: left; display: block; line-height: 30px; width: 77px; text-align: center; }
-section.responsabilidade-industrial ul li a.last { width: 81px; }
-section.responsabilidade-industrial ul li a:hover { color: #fff; background-color: #1C674B; }
+section.responsabilidade-publicacoes .texto {
+  top: 0px;
+  left: 120px;
+  color: #A4A5A7;
+  font-size: 14px;
+  text-align: justify;
+  position: absolute; }
 
-section.responsabilidade-industrial ul li a.none { color: #ccc; }
-section.responsabilidade-industrial ul li a.none:hover { color: #ccc; cursor: inherit; background-color: inherit; }
+section.responsabilidade-publicacoes .thumb {
+  display: block; }
 
-section.responsabilidade-empregos {}
-section.responsabilidade-empregos .texto { text-align: justify; color: #A4A5A7; font-size: 14px; margin: 30px 0; }
-section.responsabilidade-empregos table { padding: 0; margin: 0px auto 35px auto; width: 750px; border: 1px solid #1C674B; -webkit-border-radius: 5px; border-radius: 5px; }
-section.responsabilidade-empregos thead td { line-height: 20px; text-align: center; background-color: #1C674B; color: #fff; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; font-size: 16px; }
-section.responsabilidade-empregos thead th { line-height: 20px; font-size: 16px; color: #39B14A; border-bottom: solid 1px #39B14A; }
-section.responsabilidade-empregos tbody td { line-height: 20px; text-align: center; font-size: 14px; color: #A4A5A7; border-right: solid 1px #39B14A; border-bottom: dashed 1px #d9d9d9; }
-section.responsabilidade-empregos tbody td.last { border-right: none; }
-section.responsabilidade-empregos tbody td.title { width: 210px; text-align: left; padding-left: 10px; color: #6c6c6c; }
-section.responsabilidade-empregos tfoot td { padding: 0px 10px; line-height: 30px; background-color: #1C674B; color: #fff; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; font-size: 16px; }
-section.responsabilidade-empregos tfoot th { padding: 0px 10px; line-height: 30px; font-size: 16px; color: #39B14A; border-top: solid 1px #39B14A; }
+section.responsabilidade-publicacoes .links {
+  bottom: 5px;
+  left: 120px;
+  right: 0px;
+  position: absolute; }
 
-section.responsabilidade-fiscal {}
-section.responsabilidade-fiscal { text-align: justify; color: #A4A5A7; font-size: 14px; }
-section.responsabilidade-fiscal .descricao { display: block; margin: 30px 0 15px 0 }
-section.responsabilidade-fiscal .item { display: block; position: relative; margin: 10px 0px; }
-section.responsabilidade-fiscal .item .texto { top: 0px; left: 210px; color: #A4A5A7; font-size: 14px; text-align: justify; position: absolute; }
-section.responsabilidade-fiscal .item .thumb { display: block; }
-section.responsabilidade-fiscal .item .links { bottom: 5px; left: 210px; right: 0px; position: absolute; }
-section.responsabilidade-fiscal .item .links a { font-size: 16px; padding: 2px 7px; margin-right: 7px; color: #fff; border: solid 1px #c8c8c8; background-color: #c8c8c8; display: inline-block; -webkit-border-radius: 5px; border-radius: 5px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.responsabilidade-fiscal .item .links a:hover { border: solid 1px #666; background-color: #666; }
-section.responsabilidade-fiscal .item .links a.inverse { color: #c8c8c8; border: solid 1px #c8c8c8; background-color: #fff; }
-section.responsabilidade-florestal .item .links a.inverse:hover { color: #666; border: solid 1px #666; background-color: #fff; }
+section.responsabilidade-publicacoes .links a {
+  font-size: 16px;
+  padding: 2px 7px;
+  margin-right: 7px;
+  color: #fff;
+  border: solid 1px #c8c8c8;
+  background-color: #c8c8c8;
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal; }
 
-section.responsabilidade-barbaNegra {}
-section.responsabilidade-barbaNegra .descricao { display: block; position: relative; margin: 35px 0px; }
-section.responsabilidade-barbaNegra .texto { top: 0px; left: 120px; color: #A4A5A7; font-size: 14px; text-align: justify; position: absolute; }
-section.responsabilidade-barbaNegra .thumb { display: block; }
-section.responsabilidade-barbaNegra .links { bottom: 5px; left: 120px; right: 0px; position: absolute; }
-section.responsabilidade-barbaNegra .links a { font-size: 16px; padding: 2px 7px; margin-right: 7px; color: #fff; border: solid 1px #c8c8c8; background-color: #c8c8c8; display: inline-block; -webkit-border-radius: 5px; border-radius: 5px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.responsabilidade-barbaNegra .links a:hover { border: solid 1px #666; background-color: #666; }
-section.responsabilidade-barbaNegra .links a.inverse { color: #c8c8c8; border: solid 1px #c8c8c8; background-color: #fff; }
-section.responsabilidade-barbaNegra .links a.inverse:hover { color: #666; border: solid 1px #666; background-color: #fff; }
+section.responsabilidade-publicacoes .links a:hover {
+  border: solid 1px #666;
+  background-color: #666; }
+
+section.responsabilidade-publicacoes .links a.inverse {
+  color: #c8c8c8;
+  border: solid 1px #c8c8c8;
+  background-color: #fff; }
+
+section.responsabilidade-publicacoes .links a.inverse:hover {
+  color: #666;
+  border: solid 1px #666;
+  background-color: #fff; }
+
+section.responsabilidade-publicacoes .lista {
+  margin: 0px;
+  display: block; }
+
+section.responsabilidade-publicacoes .lista li {
+  margin: 0px 28px 30px 0;
+  text-align: center;
+  width: 140px;
+  height: 275px;
+  float: left; }
+
+section.responsabilidade-publicacoes .lista li.last {
+  margin-right: 0px; }
+
+section.responsabilidade-publicacoes .lista li span {
+  display: block;
+  font-size: 16px;
+  text-align: left;
+  height: 40px; }
+
+section.responsabilidade-publicacoes .lista li img {
+  display: block; }
+
+section.responsabilidade-publicacoes .lista li a {
+  margin-top: 5px;
+  font-size: 16px;
+  padding: 2px 7px;
+  margin-right: 7px;
+  color: #fff;
+  border: solid 2px #c8c8c8;
+  background-color: #c8c8c8;
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal; }
+
+section.responsabilidade-publicacoes .lista li a:hover {
+  border: solid 2px #666;
+  background-color: #666; }
+
+section.responsabilidade-publicacoes .item {
+  display: block;
+  position: relative;
+  margin: 10px 0px; }
+
+section.responsabilidade-publicacoes .item .texto {
+  top: 0px;
+  left: 120px;
+  color: #A4A5A7;
+  font-size: 14px;
+  text-align: justify;
+  position: absolute; }
+
+section.responsabilidade-publicacoes .item .thumb {
+  display: block; }
+
+section.responsabilidade-publicacoes .item .links {
+  bottom: 5px;
+  left: 120px;
+  right: 0px;
+  position: absolute; }
+
+section.responsabilidade-publicacoes .item .links a {
+  font-size: 16px;
+  padding: 2px 7px;
+  margin-right: 7px;
+  color: #fff;
+  border: solid 1px #c8c8c8;
+  background-color: #c8c8c8;
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal; }
+
+section.responsabilidade-publicacoes .item .links a:hover {
+  border: solid 1px #666;
+  background-color: #666; }
+
+section.responsabilidade-publicacoes .item .links a.inverse {
+  color: #c8c8c8;
+  border: solid 1px #c8c8c8;
+  background-color: #fff; }
+
+section.responsabilidade-publicacoes .item .links a.inverse:hover {
+  color: #666;
+  border: solid 1px #666;
+  background-color: #fff; }
+
+section.responsabilidade-publicacoes .plano-de-manejo .texto {
+  left: 195px; }
+
+section.responsabilidade-publicacoes .plano-de-manejo .links {
+  left: 195px; }
+
+section.responsabilidade-publicacoes a.link-folha {
+  color: #A4A5A7;
+  font-size: 14px; }
+
+section.responsabilidade-publicacoes a.link-folha {
+  color: #666; }
+
+section.responsabilidade-florestal {
+  text-align: justify;
+  color: #A4A5A7;
+  font-size: 14px; }
+
+section.responsabilidade-florestal .texto-header {
+  display: block;
+  margin: 30px 0 15px 0; }
+
+section.responsabilidade-florestal .item {
+  display: block;
+  position: relative;
+  margin: 10px 0px; }
+
+section.responsabilidade-florestal .item .texto {
+  top: 0px;
+  left: 120px;
+  color: #A4A5A7;
+  font-size: 14px;
+  text-align: justify;
+  position: absolute; }
+
+section.responsabilidade-florestal .item .thumb {
+  display: block; }
+
+section.responsabilidade-florestal .item .links {
+  bottom: 5px;
+  left: 120px;
+  right: 0px;
+  position: absolute; }
+
+section.responsabilidade-florestal .item .links a {
+  font-size: 16px;
+  padding: 2px 7px;
+  margin-right: 7px;
+  color: #fff;
+  border: solid 1px #c8c8c8;
+  background-color: #c8c8c8;
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal; }
+
+section.responsabilidade-florestal .item .links a:hover {
+  border: solid 1px #666;
+  background-color: #666; }
+
+section.responsabilidade-florestal .item .links a.inverse {
+  color: #c8c8c8;
+  border: solid 1px #c8c8c8;
+  background-color: #fff; }
+
+section.responsabilidade-florestal .item .links a.inverse:hover {
+  color: #666;
+  border: solid 1px #666;
+  background-color: #fff; }
+
+section.responsabilidade-industrial .texto {
+  text-align: justify;
+  color: #A4A5A7;
+  font-size: 14px;
+  margin-bottom: 20px; }
+
+section.responsabilidade-industrial h2 {
+  margin-top: 20px; }
+
+section.responsabilidade-industrial ul {
+  margin: 30px 0;
+  display: block; }
+
+section.responsabilidade-industrial ul li {
+  margin-bottom: 7px;
+  width: 978px;
+  border: 1px solid #1C674B;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  height: 30px;
+  overflow: hidden; }
+
+section.responsabilidade-industrial ul li span {
+  color: #fff;
+  background-color: #1C674B;
+  line-height: 30px;
+  display: block;
+  float: left;
+  width: 50px;
+  text-align: center; }
+
+section.responsabilidade-industrial ul li a {
+  color: #1C674B;
+  float: left;
+  display: block;
+  line-height: 30px;
+  width: 77px;
+  text-align: center; }
+
+section.responsabilidade-industrial ul li a.last {
+  width: 81px; }
+
+section.responsabilidade-industrial ul li a:hover {
+  color: #fff;
+  background-color: #1C674B; }
+
+section.responsabilidade-industrial ul li a.none {
+  color: #ccc; }
+
+section.responsabilidade-industrial ul li a.none:hover {
+  color: #ccc;
+  cursor: inherit;
+  background-color: inherit; }
+
+section.responsabilidade-empregos .texto {
+  text-align: justify;
+  color: #A4A5A7;
+  font-size: 14px;
+  margin: 30px 0; }
+
+section.responsabilidade-empregos table {
+  padding: 0;
+  margin: 0px auto 35px auto;
+  width: 750px;
+  border: 1px solid #1C674B;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+section.responsabilidade-empregos thead td {
+  line-height: 20px;
+  text-align: center;
+  background-color: #1C674B;
+  color: #fff;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px; }
+
+section.responsabilidade-empregos thead th {
+  line-height: 20px;
+  font-size: 16px;
+  color: #39B14A;
+  border-bottom: solid 1px #39B14A; }
+
+section.responsabilidade-empregos tbody td {
+  line-height: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #A4A5A7;
+  border-right: solid 1px #39B14A;
+  border-bottom: dashed 1px #d9d9d9; }
+
+section.responsabilidade-empregos tbody td.last {
+  border-right: none; }
+
+section.responsabilidade-empregos tbody td.title {
+  width: 210px;
+  text-align: left;
+  padding-left: 10px;
+  color: #6c6c6c; }
+
+section.responsabilidade-empregos tfoot td {
+  padding: 0px 10px;
+  line-height: 30px;
+  background-color: #1C674B;
+  color: #fff;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px; }
+
+section.responsabilidade-empregos tfoot th {
+  padding: 0px 10px;
+  line-height: 30px;
+  font-size: 16px;
+  color: #39B14A;
+  border-top: solid 1px #39B14A; }
+
+section.responsabilidade-fiscal {
+  text-align: justify;
+  color: #A4A5A7;
+  font-size: 14px; }
+
+section.responsabilidade-fiscal .descricao {
+  display: block;
+  margin: 30px 0 15px 0; }
+
+section.responsabilidade-fiscal .item {
+  display: block;
+  position: relative;
+  margin: 10px 0px; }
+
+section.responsabilidade-fiscal .item .texto {
+  top: 0px;
+  left: 210px;
+  color: #A4A5A7;
+  font-size: 14px;
+  text-align: justify;
+  position: absolute; }
+
+section.responsabilidade-fiscal .item .thumb {
+  display: block; }
+
+section.responsabilidade-fiscal .item .links {
+  bottom: 5px;
+  left: 210px;
+  right: 0px;
+  position: absolute; }
+
+section.responsabilidade-fiscal .item .links a {
+  font-size: 16px;
+  padding: 2px 7px;
+  margin-right: 7px;
+  color: #fff;
+  border: solid 1px #c8c8c8;
+  background-color: #c8c8c8;
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal; }
+
+section.responsabilidade-fiscal .item .links a:hover {
+  border: solid 1px #666;
+  background-color: #666; }
+
+section.responsabilidade-fiscal .item .links a.inverse {
+  color: #c8c8c8;
+  border: solid 1px #c8c8c8;
+  background-color: #fff; }
+
+section.responsabilidade-florestal .item .links a.inverse:hover {
+  color: #666;
+  border: solid 1px #666;
+  background-color: #fff; }
+
+section.responsabilidade-barbaNegra .descricao {
+  display: block;
+  position: relative;
+  margin: 35px 0px; }
+
+section.responsabilidade-barbaNegra .texto {
+  top: 0px;
+  left: 120px;
+  color: #A4A5A7;
+  font-size: 14px;
+  text-align: justify;
+  position: absolute; }
+
+section.responsabilidade-barbaNegra .thumb {
+  display: block; }
+
+section.responsabilidade-barbaNegra .links {
+  bottom: 5px;
+  left: 120px;
+  right: 0px;
+  position: absolute; }
+
+section.responsabilidade-barbaNegra .links a {
+  font-size: 16px;
+  padding: 2px 7px;
+  margin-right: 7px;
+  color: #fff;
+  border: solid 1px #c8c8c8;
+  background-color: #c8c8c8;
+  display: inline-block;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal; }
+
+section.responsabilidade-barbaNegra .links a:hover {
+  border: solid 1px #666;
+  background-color: #666; }
+
+section.responsabilidade-barbaNegra .links a.inverse {
+  color: #c8c8c8;
+  border: solid 1px #c8c8c8;
+  background-color: #fff; }
+
+section.responsabilidade-barbaNegra .links a.inverse:hover {
+  color: #666;
+  border: solid 1px #666;
+  background-color: #fff; }
 
 /* Produtos Area */
+section.produtos .header {
+  margin: 30px 0 15px 0; }
 
-section.produtos {}
-section.produtos .header { margin: 30px 0 15px 0; }
-section.produtos .descricao { text-align: justify; color: #A4A5A7; font-size: 14px; display: block; }
-section.produtos .fluxograma { text-align: justify; color: #A4A5A7; font-size: 14px; display: block; margin: 15px 0; }
-section.produtos .fluxograma ul { margin: 10px 0; }
-section.produtos .fluxograma li { width: 300px; height: 320px; display: block; float: left; margin: 0px 40px 10px 0px; height: }
-section.produtos .fluxograma li.last { margin-right: 0; }
-section.produtos .fluxograma li img { display: block; margin-bottom: 5px; }
+section.produtos .descricao {
+  text-align: justify;
+  color: #A4A5A7;
+  font-size: 14px;
+  display: block; }
 
-section.produtos.papel {}
+section.produtos .fluxograma {
+  text-align: justify;
+  color: #A4A5A7;
+  font-size: 14px;
+  display: block;
+  margin: 15px 0; }
 
+section.produtos .fluxograma ul {
+  margin: 10px 0; }
+
+section.produtos .fluxograma li {
+  width: 300px;
+  height: 320px;
+  display: block;
+  float: left;
+  margin: 0px 40px 10px 0px; }
+
+section.produtos .fluxograma li.last {
+  margin-right: 0; }
+
+section.produtos .fluxograma li img {
+  display: block;
+  margin-bottom: 5px; }
 
 /* Noticias Area */
+section.noticias {
+  margin: 50px auto;
+  min-height: 1000px; }
 
-section.noticias { margin: 50px auto; min-height: 1000px; }
+section.noticias .block {
+  display: block;
+  position: relative;
+  margin: 20px 0px 50px 0px;
+  width: 660px;
+  height: auto; }
 
-section.noticias .block { display: block; position: relative; margin: 20px 0px 50px 0px; width: 660px; height: auto; }
-section.noticias .block .data { height: 20px; width: 200px; color: #a4a5a7; font-size: 18px; position: absolute; top: 0px; left: 0px; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
-section.noticias .block .titulo { height: 25px; width: 660px; color: #1c674b; font-size: 22px; position: absolute; top: 25px; left: 0px; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
-section.noticias .block .body { color: #A4A5A7; font-size: 14px; padding-top: 60px; display: block; text-align: justify; }
-section.noticias .block .body a { color: #1c674b; }
-section.noticias .block .body a:hover { text-decoration: underline; cursor: pointer; }
-section.noticias .block .body img { margin: 10px; }
+section.noticias .block .data {
+  height: 20px;
+  width: 200px;
+  color: #a4a5a7;
+  font-size: 18px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: 700; }
 
-section.noticias .sidebar { background-color: #eee; position: absolute; padding: 10px 0px 10px 10px; width: 290px; right: 0px; top: 302px; min-height: 300px; }
-section.noticias .sidebar ul { margin: 0; }
-section.noticias .sidebar ul li { display: block; margin-bottom: 10px; border-bottom: solid 1px #1c674b; padding-bottom: 10px; }
-section.noticias .sidebar ul li .data { color: #a4a5a7; font-size: 18px; height: 22px; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
-section.noticias .sidebar ul li .titulo { padding-right: 10px; color: #1c674b; display: block; font-size: 16px; }
-section.noticias .sidebar ul li a { font-size: 16px; color: #A4A5A7; display: block; text-align: right; margin-top: 5px; line-height: 17px; height: 17px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.noticias .sidebar ul li a:hover { color: #000; }
-section.noticias .sidebar ul li a img { width: 20px; height: 17px; float: right; display: block; margin-left: 5px; }
-section.noticias .sidebar .control { display: block; }
-section.noticias .sidebar .control a { padding: 0px 6px; background-color: #A4A5A7; font-size: 20px; color: #fff; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.noticias .sidebar .control a:hover { cursor: pointer; background-color: #000; }
-section.noticias .sidebar .control a.hide { display: none; }
-section.noticias .sidebar .next { float: right; }
-section.noticias .sidebar .prev { float: left; }
+section.noticias .block .titulo {
+  height: 25px;
+  width: 660px;
+  color: #1c674b;
+  font-size: 22px;
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  display: block;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: 700; }
+
+section.noticias .block .body {
+  color: #A4A5A7;
+  font-size: 14px;
+  padding-top: 60px;
+  display: block;
+  text-align: justify; }
+
+section.noticias .block .body a {
+  color: #1c674b; }
+
+section.noticias .block .body a:hover {
+  text-decoration: underline;
+  cursor: pointer; }
+
+section.noticias .block .body img {
+  margin: 10px; }
+
+section.noticias .sidebar {
+  background-color: #eee;
+  position: absolute;
+  padding: 10px 0px 10px 10px;
+  width: 290px;
+  right: 0px;
+  top: 302px;
+  min-height: 300px; }
+
+section.noticias .sidebar ul {
+  margin: 0; }
+
+section.noticias .sidebar ul li {
+  display: block;
+  margin-bottom: 10px;
+  border-bottom: solid 1px #1c674b;
+  padding-bottom: 10px; }
+
+section.noticias .sidebar ul li .data {
+  color: #a4a5a7;
+  font-size: 18px;
+  height: 22px;
+  display: block;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: 700; }
+
+section.noticias .sidebar ul li .titulo {
+  padding-right: 10px;
+  color: #1c674b;
+  display: block;
+  font-size: 16px; }
+
+section.noticias .sidebar ul li a {
+  font-size: 16px;
+  color: #A4A5A7;
+  display: block;
+  text-align: right;
+  margin-top: 5px;
+  line-height: 17px;
+  height: 17px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal; }
+
+section.noticias .sidebar ul li a:hover {
+  color: #000; }
+
+section.noticias .sidebar ul li a img {
+  width: 20px;
+  height: 17px;
+  float: right;
+  display: block;
+  margin-left: 5px; }
+
+section.noticias .sidebar .control {
+  display: block; }
+
+section.noticias .sidebar .control a {
+  padding: 0px 6px;
+  background-color: #A4A5A7;
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal; }
+
+section.noticias .sidebar .control a:hover {
+  cursor: pointer;
+  background-color: #000; }
+
+section.noticias .sidebar .control a.hide {
+  display: none; }
+
+section.noticias .sidebar .next {
+  float: right; }
+
+section.noticias .sidebar .prev {
+  float: left; }
 
 /* Home Area */
+section.column {
+  display: table; }
 
-section.column { display: table; }
-section.column .left { width: 310px; float: left; display: table; }
-section.column .center { width: 310px; float: left; margin-left: 25px; display: table; }
-section.column .right { background-color: #eee; padding: 10px 0px 0px 0px; width: 310px; float: right; display: table; }
+section.column .left {
+  width: 310px;
+  float: left;
+  display: table; }
 
-section.column .right ul { margin: 0; }
-section.column .right ul li { display: block; margin-bottom: 10px; margin-left: 10px; border-bottom: solid 1px #1c674b; padding-bottom: 10px; }
-section.column .right ul li.last { border-bottom: none; }
-section.column .right ul li .data { color: #a4a5a7; font-size: 18px; height: 22px; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
-section.column .right ul li .titulo { padding-right: 10px; color: #1c674b; display: block; font-size: 16px; }
-section.column .right ul li .titulo.bold { font-size: 22px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
-section.column .right ul li .texto { padding-right: 10px; padding-top: 5px; text-align: justify; color: #A4A5A7; font-size: 14px; display: block; }
-section.column .right ul li .img { display: block; text-align: center; margin: 5px 0; }
-section.column .right ul li .img img { width: 300px; display: block; }
-section.column .right ul li a { display: table; }
+section.column .center {
+  width: 310px;
+  float: left;
+  margin-left: 25px;
+  display: table; }
 
-section.column .parse { }
+section.column .right {
+  background-color: #eee;
+  padding: 10px 0px 0px 0px;
+  width: 310px;
+  float: right;
+  display: table; }
 
-section.column .parse ul { margin: 10px 0px; }
-section.column .parse ul li { color: #A4A5A7; font-size: 14px; display: block; margin-bottom: 10px; padding-bottom: 10px; border-bottom: solid 1px #1c674b; text-align: justify; }
-section.column .parse ul li a { color: #A4A5A7; display: table; }
-section.column .parse ul li .titulo { text-align: left; letter-spacing: 0px; line-height: 20px; font-size: 24px; padding: 0px; color: #1e674c; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
-section.column .parse ul li .data { text-align: left; letter-spacing: 0px; line-height: 30px; font-size: 24px; padding: 0px; color: #a4a5a7; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
-section.column .parse ul li.last { border-bottom: none; }
-section.column .parse ul li img { display: block; width: 310px; margin: 8px 0px 10px 0px; }
+section.column .right ul {
+  margin: 0; }
 
-section.column .parse ul li.green { color: #1e674c !important; }
+section.column .right ul li {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-bottom: solid 1px #1c674b;
+  padding-bottom: 10px; }
 
-section.column .right .banner-bndes { display: block; background-color: #fff; padding: 10px 0px; height: 38px; }
+section.column .right ul li.last {
+  border-bottom: none; }
 
+section.column .right ul li .data {
+  color: #a4a5a7;
+  font-size: 18px;
+  height: 22px;
+  display: block;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: 700; }
 
+section.column .right ul li .titulo {
+  padding-right: 10px;
+  color: #1c674b;
+  display: block;
+  font-size: 16px; }
 
-#box { display: none; z-index: 500; left: 50%; top: 50%; position: fixed; margin: -203px 0px 0px -361px; width: 720px; height: 405px; background-color: #fff; border: 1px solid #1e674c; -webkit-box-shadow: 0px 0px 20px 0px #1e674c; box-shadow: 0px 0px 20px 0px #1e674c; -webkit-border-radius: 5px 0px 5px 5px; border-radius: 5px 0px 5px 5px; }
-#box .close { padding: 0px 5px; background-color: #1e674c; position: absolute; top: -26px; right: -1px; display: block; font-size: 16px; color: #fff; text-align: right; line-height: 25px; height: 25px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; -webkit-border-radius: 5px 5px 0px 0px; border-radius: 5px 5px 0px 0px; }
-#box .close:hover { color: #999; }
+section.column .right ul li .titulo.bold {
+  font-size: 22px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: 700; }
+
+section.column .right ul li .texto {
+  padding-right: 10px;
+  padding-top: 5px;
+  text-align: justify;
+  color: #A4A5A7;
+  font-size: 14px;
+  display: block; }
+
+section.column .right ul li .img {
+  display: block;
+  text-align: center;
+  margin: 5px 0; }
+
+section.column .right ul li .img img {
+  width: 300px;
+  display: block; }
+
+section.column .right ul li a {
+  display: table; }
+
+section.column .parse ul {
+  margin: 10px 0px; }
+
+section.column .parse ul li {
+  color: #A4A5A7;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #1c674b;
+  text-align: justify; }
+
+section.column .parse ul li a {
+  color: #A4A5A7;
+  display: table; }
+
+section.column .parse ul li .titulo {
+  text-align: left;
+  letter-spacing: 0px;
+  line-height: 20px;
+  font-size: 24px;
+  padding: 0px;
+  color: #1e674c;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: 700; }
+
+section.column .parse ul li .data {
+  text-align: left;
+  letter-spacing: 0px;
+  line-height: 30px;
+  font-size: 24px;
+  padding: 0px;
+  color: #a4a5a7;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: 700; }
+
+section.column .parse ul li.last {
+  border-bottom: none; }
+
+section.column .parse ul li img {
+  display: block;
+  width: 310px;
+  margin: 8px 0px 10px 0px; }
+
+section.column .parse ul li.green {
+  color: #1e674c !important; }
+
+section.column .right .banner-bndes {
+  display: block;
+  background-color: #fff;
+  padding: 10px 0px;
+  height: 38px; }
+
+#box {
+  display: none;
+  z-index: 500;
+  left: 50%;
+  top: 50%;
+  position: fixed;
+  margin: -203px 0px 0px -361px;
+  width: 720px;
+  height: 405px;
+  background-color: #fff;
+  border: 1px solid #1e674c;
+  -webkit-box-shadow: 0px 0px 20px 0px #1e674c;
+  box-shadow: 0px 0px 20px 0px #1e674c;
+  -webkit-border-radius: 5px 0px 5px 5px;
+  border-radius: 5px 0px 5px 5px; }
+
+#box .close {
+  padding: 0px 5px;
+  background-color: #1e674c;
+  position: absolute;
+  top: -26px;
+  right: -1px;
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  text-align: right;
+  line-height: 25px;
+  height: 25px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px; }
+
+#box .close:hover {
+  color: #999; }
 
 /*  Folha Area */
+.folha-menu {
+  width: 980px;
+  height: 260px;
+  display: block;
+  position: relative;
+  background: url("../img/folha-menu.jpg") no-repeat top left; }
 
-.folha-menu { width: 980px; height: 260px; display: block; position: relative; background: url('../img/folha-menu.jpg') no-repeat top left; }
-.folha-menu a { float: left; padding: 70px 15px 0px 15px; margin: 0px; color: transparent !important; display: inline-block; width: 297px; height: 190px; cursor: pointer; }
-.folha-menu a:hover, .folha-menu a.active { background: url('../img/folha-menu-active.png') repeat; color: #fff !important; }
+.folha-menu a {
+  float: left;
+  padding: 70px 15px 0px 15px;
+  margin: 0px;
+  color: transparent !important;
+  display: inline-block;
+  width: 297px;
+  height: 190px;
+  cursor: pointer; }
 
-.folha-menu a { vertical-align: center; font-size: 25px; line-height: 30px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: bold; }
-.folha-menu a span { font-size: 60px; line-height: 60px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: bold; }
+.folha-menu a:hover, .folha-menu a.active {
+  background: url("../img/folha-menu-active.png") repeat;
+  color: #fff !important; }
 
-.folha-menu a[rel=campanha] {}
-.folha-menu a[rel=centro] {}
-.folha-menu a[rel=metropolitana] { width: 296px; }
+.folha-menu a {
+  vertical-align: center;
+  font-size: 25px;
+  line-height: 30px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: bold; }
 
-.folha-container { width: 980px; display: table; }
+.folha-menu a span {
+  font-size: 60px;
+  line-height: 60px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: bold; }
 
-.folha-body { float: left; display: table; width: 660px; height: auto; margin-top: 20px; }
-.folha-body .row { display: table; margin-bottom: 30px; }
-.folha-body .row .area { color: #a4a5a7; font-size: 19px; height: 22px; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: bold; }
-.folha-body .row .titulo { color: #1C674B; font-size: 25px; height: 35px; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: bold; }
-.folha-body .row .corpo { color: #A4A5A7; font-size: 14px; display: block; text-align: justify; }
-.folha-body .row .corpo img { max-width: 660px !important; }
+.folha-menu a[rel=metropolitana] {
+  width: 296px; }
 
-.folha-bar { float: right; background-color: #eee; display: table; position: relative; top: 0; padding: 10px 0px 10px 10px; width: 290px; min-height: 300px; }
-.folha-bar ul { margin: 0; }
-.folha-bar ul li { display: block; margin-bottom: 10px; border-bottom: solid 1px #1c674b; padding-bottom: 10px; }
-.folha-bar ul li .data { color: #a4a5a7; font-size: 19px; height: 22px; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-.folha-bar ul li .titulo { padding-right: 10px; color: #1c674b; display: block; font-size: 16px; }
+.folha-container {
+  width: 980px;
+  display: table; }
 
-.folha-selecione { margin-top: 5%; }
-.folha-selecione b { color: #1C674B; font-size: 20px; height: 35px; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; display: block; text-align: center; }
+.folha-body {
+  float: left;
+  display: table;
+  width: 660px;
+  height: auto;
+  margin-top: 20px; }
+
+.folha-body .row {
+  display: table;
+  margin-bottom: 30px; }
+
+.folha-body .row .area {
+  color: #a4a5a7;
+  font-size: 19px;
+  height: 22px;
+  display: block;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: bold; }
+
+.folha-body .row .titulo {
+  color: #1C674B;
+  font-size: 25px;
+  height: 35px;
+  display: block;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: bold; }
+
+.folha-body .row .corpo {
+  color: #A4A5A7;
+  font-size: 14px;
+  display: block;
+  text-align: justify; }
+
+.folha-body .row .corpo img {
+  max-width: 660px !important; }
+
+.folha-bar {
+  float: right;
+  background-color: #eee;
+  display: table;
+  position: relative;
+  top: 0;
+  padding: 10px 0px 10px 10px;
+  width: 290px;
+  min-height: 300px; }
+
+.folha-bar ul {
+  margin: 0; }
+
+.folha-bar ul li {
+  display: block;
+  margin-bottom: 10px;
+  border-bottom: solid 1px #1c674b;
+  padding-bottom: 10px; }
+
+.folha-bar ul li .data {
+  color: #a4a5a7;
+  font-size: 19px;
+  height: 22px;
+  display: block;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal; }
+
+.folha-bar ul li .titulo {
+  padding-right: 10px;
+  color: #1c674b;
+  display: block;
+  font-size: 16px; }
+
+.folha-selecione {
+  margin-top: 5%; }
+
+.folha-selecione b {
+  color: #1C674B;
+  font-size: 20px;
+  height: 35px;
+  display: block;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal;
+  display: block;
+  text-align: center; }
 
 /* Expansao Area */
+section.expansao {
+  height: 780px; }
 
-section.expansao { height: 780px; }
-section.expansao .expansao-body { display: table; margin-bottom: 30px; color: #A4A5A7; font-size: 16px; display: block; text-align: justify; float: left; display: table; width: 660px; height: auto; }
-section.expansao .titulo { color: #1C674B; font-size: 25px; height: 35px; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: bold; }
-section.expansao .expansao-bar { float: right; display: table; width: 290px;  }
+section.expansao .expansao-body {
+  display: table;
+  margin-bottom: 30px;
+  color: #A4A5A7;
+  font-size: 16px;
+  display: block;
+  text-align: justify;
+  float: left;
+  display: table;
+  width: 660px;
+  height: auto; }
 
-section.expansao-andamento {}
-section.expansao-andamento .texto { color: #A4A5A7; font-size: 14px; text-align: justify; }
+section.expansao .titulo {
+  color: #1C674B;
+  font-size: 25px;
+  height: 35px;
+  display: block;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: bold; }
 
-.vi-fo .bloco { width: 980px; height: 560px; display: block; position: relative; margin-top: 20px; }
-.vi-fo .videos { width: 601px; height: 550px; float: left; }
-.vi-fo .videos .titulo { border-bottom: solid 1px #39b14a; display: block; position: relative; color: #808080; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: bold; font-size: 18px; line-height: 25px; height: 25px; }
-.vi-fo .videos .thumbs { height: 525px; width: 630px; display: block; left: -29px; position: relative; overflow-y: scroll; }
-.vi-fo .videos .thumbs a { width: 276px; height: 200px; margin-left: 29px; margin-bottom: 15px; display: block; float: left; position: relative; }
-.vi-fo .videos .thumbs img { width: 276px; height: 135px; position: absolute; bottom: -3px; left: -3px; border: solid 3px #fff; }
-.vi-fo .videos .thumbs a:hover img { border-color: #39b14a; }
-.vi-fo .videos .thumbs .play { background: url('../img/play-80.png') no-repeat; position: absolute; width: 80px; height: 80px; display: block; left: 50%; top: 93px; margin-left: -40px; }
-.vi-fo .videos .thumbs a { color: #A4A5A7; font-size: 16px; }
-.vi-fo .videos .thumbs h4 { color: #1C674B; font-size: 22px; line-height: 22px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: bold; }
-.vi-fo .videos .thumbs span { color: #39B14A; font-size: 16px; } 
+section.expansao .expansao-bar {
+  float: right;
+  display: table;
+  width: 290px; }
 
-.vi-fo .fotos { width: 330px; height: 550px; float: right; position: relative; }
-.vi-fo .fotos .titulo { border-bottom: solid 1px #39b14a; display: block; position: relative; color: #808080; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: bold; font-size: 18px; line-height: 25px; height: 25px; }
-.vi-fo .fotos .texto { display: block; line-height: 30px; }
-.vi-fo .fotos .thumbs { left: -7px; width: 342px; height: 495px; position: relative; display: block; overflow-y: scroll; }
-.vi-fo .fotos .thumbs a { width: 100px; height: 75px; margin: -2px 0px 5px 5px; display: block; float: left; border: solid 2px #fff; }
-.vi-fo .fotos .thumbs img { width: 100px; height: 75px; display: block; background-color: #999; }
-.vi-fo .fotos .thumbs a:hover { border-color: #39b14a; }
+section.expansao-andamento .texto {
+  color: #A4A5A7;
+  font-size: 14px;
+  text-align: justify; }
+
+.vi-fo .bloco {
+  width: 980px;
+  height: 560px;
+  display: block;
+  position: relative;
+  margin-top: 20px; }
+
+.vi-fo .videos {
+  width: 601px;
+  height: 550px;
+  float: left; }
+
+.vi-fo .videos .titulo {
+  border-bottom: solid 1px #39b14a;
+  display: block;
+  position: relative;
+  color: #808080;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  height: 25px; }
+
+.vi-fo .videos .thumbs {
+  height: 525px;
+  width: 630px;
+  display: block;
+  left: -29px;
+  position: relative;
+  overflow-y: scroll; }
+
+.vi-fo .videos .thumbs a {
+  width: 276px;
+  height: 200px;
+  margin-left: 29px;
+  margin-bottom: 15px;
+  display: block;
+  float: left;
+  position: relative; }
+
+.vi-fo .videos .thumbs img {
+  width: 276px;
+  height: 135px;
+  position: absolute;
+  bottom: -3px;
+  left: -3px;
+  border: solid 3px #fff; }
+
+.vi-fo .videos .thumbs a:hover img {
+  border-color: #39b14a; }
+
+.vi-fo .videos .thumbs .play {
+  background: url("../img/play-80.png") no-repeat;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  display: block;
+  left: 50%;
+  top: 93px;
+  margin-left: -40px; }
+
+.vi-fo .videos .thumbs a {
+  color: #A4A5A7;
+  font-size: 16px; }
+
+.vi-fo .videos .thumbs h4 {
+  color: #1C674B;
+  font-size: 22px;
+  line-height: 22px;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: bold; }
+
+.vi-fo .videos .thumbs span {
+  color: #39B14A;
+  font-size: 16px; }
+
+.vi-fo .fotos {
+  width: 330px;
+  height: 550px;
+  float: right;
+  position: relative; }
+
+.vi-fo .fotos .titulo {
+  border-bottom: solid 1px #39b14a;
+  display: block;
+  position: relative;
+  color: #808080;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  height: 25px; }
+
+.vi-fo .fotos .texto {
+  display: block;
+  line-height: 30px; }
+
+.vi-fo .fotos .thumbs {
+  left: -7px;
+  width: 342px;
+  height: 495px;
+  position: relative;
+  display: block;
+  overflow-y: scroll; }
+
+.vi-fo .fotos .thumbs a {
+  width: 100px;
+  height: 75px;
+  margin: -2px 0px 5px 5px;
+  display: block;
+  float: left;
+  border: solid 2px #fff; }
+
+.vi-fo .fotos .thumbs img {
+  width: 100px;
+  height: 75px;
+  display: block;
+  background-color: #999; }
+
+.vi-fo .fotos .thumbs a:hover {
+  border-color: #39b14a; }
 
 /* Erro */
+section.erro {
+  margin: 50px auto;
+  text-align: justify;
+  color: #A4A5A7;
+  font-size: 16px;
+  width: 980px; }
 
-section.erro { margin: 50px auto; text-align: justify; color: #A4A5A7; font-size: 16px; width: 980px; }
-section.erro h1 { margin: 0 0 6px 0; letter-spacing: 0px; font-size: 24px; padding: 0px; color: #1e674c; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
+section.erro h1 {
+  margin: 0 0 6px 0;
+  letter-spacing: 0px;
+  font-size: 24px;
+  padding: 0px;
+  color: #1e674c;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: 700; }
 
 /* Box Form */
+#box-form {
+  position: fixed;
+  z-index: 9999;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%; }
 
-#box-form { position: fixed; z-index: 9999; top: 0px; left: 0px; right: 0px; bottom: 0px; width: 100%; height: 100%; }
-#box-form .container { width: 200px; margin-top: 300px; display: block; color: #666666; border: solid 1px #666666; display: block; background-color: #eeeeee; font-size: 16px; line-height: 32px; text-align: center; padding: 10px 12px; }
-#box-form .container a { width: 80px; color: #666666; border: solid 1px #666666; display: inline-block; background-color: #eeeeee; font-size: 14px; height: 32px; line-height: 32px; padding: 0px 10px; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease; }
-#box-form .container a:hover { border-color: #000; color: #000; cursor: pointer; transform: scale(1.1, 1.1); -webkit-transform: scale(1.1, 1.1); -moz-transform: scale(1.1, 1.1); -o-transform: scale(1.1, 1.1); -ms-transform: scale(1.1, 1.1); }
+#box-form .container {
+  width: 200px;
+  margin-top: 300px;
+  display: block;
+  color: #666666;
+  border: solid 1px #666666;
+  display: block;
+  background-color: #eeeeee;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  padding: 10px 12px; }
 
+#box-form .container a {
+  width: 80px;
+  color: #666666;
+  border: solid 1px #666666;
+  display: inline-block;
+  background-color: #eeeeee;
+  font-size: 14px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0px 10px;
+  transition: All 0.2s ease;
+  -webkit-transition: All 0.2s ease;
+  -moz-transition: All 0.2s ease;
+  -o-transition: All 0.2s ease; }
+
+#box-form .container a:hover {
+  border-color: #000;
+  color: #000;
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1); }
 
 /* Projetos */
-
 /* Educacao */
-.projeto-educacao { font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif; font-stretch: normal;  }
-.projeto-educacao h1 { top: 65px; left: 35px; position: absolute; width: 480px; font-size: 42px; line-height: 40px; font-weight: 300; text-align: right; color: #fff; }
-.projeto-educacao h2 { top: 145px; left: 35px; position: absolute; width: 480px; font-size: 25px; line-height: 40px; font-weight: 700; text-align: right; color: #fff; }
-.projeto-educacao .livros { top: 20px; right: 85px; position: absolute; }
-.projeto-educacao .titulo { height: 215px; position: relative; }
-.projeto-educacao .texto { color: #4D4D4D; font-weight: 400; font-size: 18px; line-height: 22px; text-align: justify; width: 765px; padding: 70px 0; }
-.projeto-educacao .barra { -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.5); box-shadow: 0 0 20px 0 rgba(0,0,0,0.5); top: -18px; position: absolute; font-weight: 500; left: 50%; margin-left: -200px; background-color: #fff; line-height: 36px; color: #549A3C; font-size: 18px; width: 400px; text-align: center; }
-.projeto-educacao .tabelas { width: 810px; text-align: center; }
-.projeto-educacao table { border: 0; border-collapse: collapse;  border-spacing: 0; display: inline-table; }
-.projeto-educacao table.lista { min-width: 380px; margin: 0 10px; }
-.projeto-educacao table td, .projeto-educacao table th { padding: 0; margin: 0; }
-.projeto-educacao table th { color: #fff; text-align: center; font-size: 12px; font-weight: 300; line-height: 20px; text-transform: uppercase; }
-.projeto-educacao table td { background-color: #fff; padding: 5px; font-size: 20px; text-align: center; font-weight: 500; line-height: 100%; border: solid 1px #000; border-collapse: collapse; }
-.projeto-educacao table td.municipio { text-align: left; font-weight: 400; }
+.projeto-educacao {
+  font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
+  font-stretch: normal; }
 
+.projeto-educacao h1 {
+  top: 65px;
+  left: 35px;
+  position: absolute;
+  width: 480px;
+  font-size: 42px;
+  line-height: 40px;
+  font-weight: 300;
+  text-align: right;
+  color: #fff; }
 
+.projeto-educacao h2 {
+  top: 145px;
+  left: 35px;
+  position: absolute;
+  width: 480px;
+  font-size: 25px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: right;
+  color: #fff; }
+
+.projeto-educacao .livros {
+  top: 20px;
+  right: 85px;
+  position: absolute; }
+
+.projeto-educacao .titulo {
+  height: 215px;
+  position: relative; }
+
+.projeto-educacao .texto {
+  color: #4D4D4D;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: justify;
+  width: 765px;
+  padding: 70px 0; }
+
+.projeto-educacao .barra {
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  top: -18px;
+  position: absolute;
+  font-weight: 500;
+  left: 50%;
+  margin-left: -200px;
+  background-color: #fff;
+  line-height: 36px;
+  color: #549A3C;
+  font-size: 18px;
+  width: 400px;
+  text-align: center; }
+
+.projeto-educacao .tabelas {
+  width: 810px;
+  text-align: center; }
+
+.projeto-educacao table {
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: inline-table; }
+
+.projeto-educacao table.lista {
+  min-width: 380px;
+  margin: 0 10px; }
+
+.projeto-educacao table td, .projeto-educacao table th {
+  padding: 0;
+  margin: 0; }
+
+.projeto-educacao table th {
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20px;
+  text-transform: uppercase; }
+
+.projeto-educacao table td {
+  background-color: #fff;
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 100%;
+  border: solid 1px #000;
+  border-collapse: collapse; }
+
+.projeto-educacao table td.municipio {
+  text-align: left;
+  font-weight: 400; }
+
+/*# sourceMappingURL=main.css.map */

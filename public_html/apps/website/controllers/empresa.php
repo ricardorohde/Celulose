@@ -22,6 +22,7 @@ class Empresa extends CI_Controller {
 		$this->load->view(getLang().'/empresa/historia');
 
 
+		$this->load->view('tpl/agende');
 		$this->load->view('tpl/footer');
 
 	}

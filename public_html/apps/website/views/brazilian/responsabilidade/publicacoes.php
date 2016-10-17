@@ -1,12 +1,11 @@
-<?php
-	$this->load->view(getLang().'/responsabilidade/aba');
-?>
-<section class="container responsabilidade-publicacoes">
-	<h1 class="title"><?=lang('defualt_menu_publicacoes'); ?></h1>
-
+<div class="banner">
 	<img class="banner" alt="" src="<?=base_url('assets/img/banners/banner-responsabilidade-publicacoes.jpg'); ?>">
+</div>
+
+
+<section class="responsabilidade-publicacoes">	
 	
-	<h2 id="plano-de-manejo">Plano de Manejo</h2>
+	<h3 id="plano-de-manejo">Plano de Manejo</h3>
 	<div class="item plano-de-manejo">
 		<div class="thumb">
 			<img src="<?=base_url('assets/img/thumbs/plano-de-manejo-capa.jpg'); ?>">
@@ -18,8 +17,22 @@
 			<a href="<?=site_url('docs/dl/plano_de_manejo_web.pdf'); ?>"><?=lang('defualt_download_pdf'); ?></a>
 		</div>
 	</div>
+
+	<h3 id="relatorios-de-sustentabilidade">Relatórios de Sustentabilidade</h3>
+	<div class="item">
+		<div class="thumb">
+			<img src="<?=base_url('assets/img/thumbs/relatorio-sustentabilidade-2014.jpg'); ?>">
+		</div>
+		<div class="texto">
+			Relatório de Sustentabilidade, um material que mostra o compromisso que temos com o meio ambiente do Rio Grande do Sul. Clique e Baixe este material que apresenta informações relevantes sobre a atuação da Celulose Riograndense.
+		</div>
+		<div class="links">
+			<a href="<?=site_url('docs/dl/Relatorio_de_sustentabilidade_2014-2015.pdf'); ?>"><?=lang('defualt_download_pdf'); ?></a>
+		</div>
+	</div>
+
 	
-	<h2 id="informativos">Informativos</h2>
+	<h3 id="informativos">Informativos</h3>
 	<ul class="lista">
 		<li>
 			<span>Sistema de Gestão</span>
@@ -53,18 +66,7 @@
 		</li>
 	</ul>
 
-	<h2 id="relatorios-de-sustentabilidade">Relatórios de Sustentabilidade</h2>
-	<div class="item">
-		<div class="thumb">
-			<img src="<?=base_url('assets/img/thumbs/relatorio-sustentabilidade-2014.jpg'); ?>">
-		</div>
-		<div class="texto">
-			Relatório de Sustentabilidade, um material que mostra o compromisso que temos com o meio ambiente do Rio Grande do Sul. Clique e Baixe este material que apresenta informações relevantes sobre a atuação da Celulose Riograndense.
-		</div>
-		<div class="links">
-			<a href="<?=site_url('docs/dl/Relatorio_de_sustentabilidade_2014-2015.pdf'); ?>"><?=lang('defualt_download_pdf'); ?></a>
-		</div>
-	</div>
+	
 
 
 	<?php /*

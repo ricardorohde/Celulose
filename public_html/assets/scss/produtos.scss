@@ -1,0 +1,28 @@
+/* Produtos Area */
+*{outline: 1px solid #da12f2;}
+#produtos{
+	.header { margin: 30px 0 15px 0; }
+
+	.descricao { 
+		text-align: justify; 
+		color: #A4A5A7; 
+		font-size: 14px; 
+		display: block; 
+	}
+
+	.fluxograma {
+
+		ul { 
+
+			li { 
+				padding: 0;
+				
+
+				img { 
+					display: block; 
+					margin-bottom: 5px; 
+				}
+			}
+		}
+	}
+}

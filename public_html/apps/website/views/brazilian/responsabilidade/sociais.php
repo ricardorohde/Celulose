@@ -1,5 +1,5 @@
 <?php
-	$this->load->view(getLang().'/responsabilidade/aba');
+
 	$count = 0;
 ?>
 <section class="container responsabilidade-sociais">

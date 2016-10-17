@@ -1,6 +1,4 @@
-<?php
-	$this->load->view(getLang().'/responsabilidade/aba');
-?>
+
 <section class="container responsabilidade-empregos">
 	<h1 class="title"><?=lang('defualt_menu_empregos'); ?></h1>
 
