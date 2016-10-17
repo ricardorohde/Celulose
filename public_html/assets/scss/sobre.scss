@@ -1,0 +1,179 @@
+#sobre{
+	.diferencial{
+		margin: 40px auto 40px;
+
+		.item{
+			padding: 3px;
+			@include border-radius(0);
+			position: relative;
+			width: 100%;		/* desired width */
+
+
+			&:before{
+				content: "";
+				display: block;
+				padding-top: 100%; 	/* ratio of 1:1*/
+			}
+
+			.content{
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				padding: 2px;
+
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+	.esquema{
+		text-align: center;
+		img{
+			margin: 40px auto 40px auto;
+			width: 100%;
+			height: 100%;
+
+		}
+	}
+}
+
+#certificacoes{
+	
+	img{
+		margin-top: 40px;
+	}
+
+	
+
+	.pdf{
+		position:absolute;
+		top:190px;
+		left:10px;
+		margin:0px;
+		padding:0px;
+		
+
+
+		&:hover{
+			outline: 1px solid $verde;
+		}
+
+		a, a:visited{
+			padding:0px;
+			text-decoration: none;
+			text-align:center;
+			color:#000;
+			width:80px;  
+			height:20px;	
+			display:block;
+
+			font-size: 10px;	
+			font-weight: 700;
+			text-transform: uppercase;
+			line-height: 20px;
+			border: 1px solid $verde;
+			margin-bottom: 20px;
+		}
+
+	}
+
+	h5{
+		margin-top: 60px;
+		margin-bottom: 10px;
+
+	}
+
+	p{
+		font-size: 12px;
+	}
+}
+
+
+@media (min-width: 768px) {
+	#sobre{
+		
+		.esquema{
+			img{
+				width: 60%;
+				height: 60%;
+				
+			}
+		}
+	}
+
+	#certificacoes{
+		
+		img{
+			margin-top: 0;
+		}
+
+		
+
+		.pdf{
+			position:absolute;
+			top:150px;
+			left:10px;
+			margin:0px;
+			padding:0px;
+			margin-bottom: 20px;
+			
+			a{
+				padding:0px;
+				text-decoration: none;
+				text-align:center;
+				color:#000;
+				width:80px; 
+				height:20px;
+				display:block;
+
+				font-size: 10px;
+				font-weight: 700;
+				text-transform: uppercase;
+				line-height: 20px;
+				border: 1px solid $verde;
+				margin-bottom: 0;	
+
+				&:hover{
+					outline: 1px solid $verde;
+				}
+			}
+
+		}
+
+		h5{
+			margin: 0 0 10px 10px;
+
+		}
+
+		p{	
+			margin: 10px;
+			font-size: 12px;
+		}
+	}
+
+
+}
+
+@media (min-width: 992px) {
+	#sobre{
+		
+		.esquema{
+			img{
+				width: 40%;
+				height: 40%;
+				
+			}
+		}
+	}
+
+}
+
+@media (min-width: 1200px) {
+
+}
