@@ -12,6 +12,7 @@ class Responsabilidade extends CI_Controller {
 		 	'keywords' => '' 
 			]);
 		$this->load->view(getLang().'/responsabilidade/publicacoes');
+		$this->load->view(getLang().'/responsabilidade/folha');
 
 		$this->load->view('tpl/agende');
 		$this->load->view('tpl/footer');

@@ -11,30 +11,34 @@ class Noticias extends CI_Controller {
 
 		$noticia = $this->model->getNoticia($param);
 		if($noticia){
-			$content = array(
-				'header' => array(
-					'title' => $noticia->titulo,
-					'description' => character_limiter(strip_tags($noticia->html),120,"..."),
-					'keywords' => character_limiter(strip_tags($noticia->titulo . ', ' . $noticia->html),120,"") 
-				)
-			);
 
+			$img = $this->parseHTML($noticia->html);			
+			
+			$headerContent = [
+			'title' 		=> $noticia->titulo,
+			'description' 	=> character_limiter(strip_tags($noticia->html),120,"..."),
+			'keywords' 		=> character_limiter(strip_tags($noticia->titulo . ', ' . $noticia->html),120,"") 
+			];
+			
 
-			$img = $this->parseHTML($noticia->html);
-			if($img){
-				$content['header']['facebook'] = array(
-					'title' => $noticia->titulo,
-					'type' => 'photo',
-					'image' => $img
-				);
-			}
-			$content['noticia'] = $noticia;
-			$content['lista'] = $this->model->getNoticiasLista(0);
-			$content['listaNum'] = $this->model->getNoticiasListaNum();
+			$this->load->view('tpl/header',$headerContent);
+			//
 
+			$texto = str_replace( $img, '', strip_tags($noticia->html));
 
+			//
+			
+			$this->load->view('noticias',[
+				'noticia' 		=> $noticia,
+				'noticiatexto' 	=> $texto,
+				'lista' 		=> $this->model->getNoticiasLista(0),
+				'listaNum' 		=> $this->model->getNoticiasListaNum(),
+				'image'			=> $img
+				]);
 
-			views($this,'noticias',$content);
+			$this->load->view('tpl/agende');
+			$this->load->view('tpl/footer');
+
 		} else { show_404(); }
 	}
 
@@ -49,7 +53,7 @@ class Noticias extends CI_Controller {
 					'data' => sql_site($rows->data),
 					'titulo' => $rows->titulo,
 					'link' => site_url('noticias/'.$rows->url)
-				));
+					));
 			}
 
 			$json['total'] = $this->model->getNoticiasListaNum();
@@ -61,13 +65,16 @@ class Noticias extends CI_Controller {
 	}
 
 	private function parseHTML($html){
+
 		$dom = new domDocument;
 		$dom->loadHTML($html);
 		$dom->preserveWhiteSpace = false;
 		$images = $dom->getElementsByTagName('img');
+
 		foreach ($images as $image) {
-			return $image->getAttribute('src');
+			$arr = $dom->saveHTML($image);
 		}
-		return false;
+
+		return $arr;
 	}
 }

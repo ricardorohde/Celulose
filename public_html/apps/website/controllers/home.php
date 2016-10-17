@@ -54,11 +54,11 @@ class Home extends CI_Controller {
 		
 		$this->load->view(getLang().'/home',[
 			'slider' => $imgs,
-			'noticias' 	=> $noticias,
-			'agende'	=> '1'
+			'noticias' 	=> $noticias
 			]);
 
 
+		$this->load->view('tpl/agende');
 		$this->load->view('tpl/footer');
 
 
