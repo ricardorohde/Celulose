@@ -1,0 +1,28 @@
+#agende{
+	.container{
+		text-align: center;
+		margin: 80px auto 200px auto;
+		p{
+			margin: 50px 0;
+			text-align: justify;
+		}
+		input{
+			height: 50px;
+			width: 100%;
+			@include box-shadow(0, 0, 30px, 0, rgba(0,0,0,0.5),false);
+		}
+	}
+	
+}
+
+@media (min-width: 768px) {
+	#agende{
+	.container{
+		p{
+			margin: 50px 40px;
+		}
+	}
+	
+}
+
+}
