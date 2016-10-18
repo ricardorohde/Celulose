@@ -1,4 +1,4 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+﻿<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Noticias extends CI_Controller {
 
@@ -12,7 +12,7 @@ class Noticias extends CI_Controller {
 		$noticia = $this->model->getNoticia($param);
 		if($noticia){
 
-			$img = $this->parseHTML($noticia->html);			
+						
 			
 			$headerContent = [
 			'title' 		=> $noticia->titulo,
@@ -24,16 +24,35 @@ class Noticias extends CI_Controller {
 			$this->load->view('tpl/header',$headerContent);
 			//
 
-			$texto = str_replace( $img, '', strip_tags($noticia->html));
+			$imgNoticia = $this->parseHTML($noticia->html);
+			$texto = str_replace( $imgNoticia, '', strip_tags($noticia->html));
+
+			//
+
+			$lista = $this->model->getNoticiasLista();
+			$listaNoticias = [];
+
+			$i = 0;
+			foreach($lista as $rows){
+				$img = $this->parseHTML($noticia->html);
+				$listaNoticias[$i] = array(
+					'data' => sql_site($rows->data),
+					'titulo' => $rows->titulo,
+					'link' => site_url('noticias/'.$rows->url),
+					'texto' => character_limiter(strip_tags($rows->html),120,"..."),
+					'img' => $img
+					);
+				$i++;
+			}
 
 			//
 			
 			$this->load->view('noticias',[
 				'noticia' 		=> $noticia,
 				'noticiatexto' 	=> $texto,
-				'lista' 		=> $this->model->getNoticiasLista(0),
+				'imgNoticia'	=> $imgNoticia,
+				'listaNoticias' => $listaNoticias,
 				'listaNum' 		=> $this->model->getNoticiasListaNum(),
-				'image'			=> $img
 				]);
 
 			$this->load->view('tpl/agende');
@@ -66,6 +85,7 @@ class Noticias extends CI_Controller {
 
 	private function parseHTML($html){
 
+		$arr = [];
 		$dom = new domDocument;
 		$dom->loadHTML($html);
 		$dom->preserveWhiteSpace = false;

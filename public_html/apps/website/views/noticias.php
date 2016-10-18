@@ -14,7 +14,11 @@
 			<div class="col-xs-12">
 				<div class="col-xs-12 col-sm-6">
 
-					 <?php echo $image; ?>
+					 <?php 
+
+					 echo $imgNoticia;
+
+					 ?>
 					<div class="clear"></div>
 
 				</div>
@@ -22,11 +26,7 @@
 					<div class="data"><?=sql_site($noticia->data); ?></div>
 					<div class="titulo"><?=$noticia->titulo; ?></div>
 					
-					<?php
-					
-					echo $noticiatexto;
-					
-					 ?>					
+					<p><?php echo $noticiatexto; ?></p>				
 
 					<div class="clear"></div>
 				</div>
@@ -38,7 +38,9 @@
 
 					<?php
 					$i = 1;
-					foreach ($noticia as $rows) {
+
+
+					foreach ($listaNoticias as $rows) {
 						if($i>4){
 							$auxClass = "mobile-hide";
 						}else{
@@ -52,7 +54,7 @@
 								<div class="item">
 									<div class="content">
 										<a href="<?= $rows['link']; ?>">
-											<img src="<?= $rows['img']; ?>" alt="<?= $rows['titulo']; ?>">
+											<?php echo $rows["img"]; ?>
 										</a>
 									</div>
 								</div>
@@ -64,18 +66,18 @@
 					</div>
 
 
-			<div class="sidebar" data-total="<?=$listaNum; ?>">
+			<!-- <div class="sidebar" data-total="<?=$listaNum; ?>">
 				<ul>
 					<?php
-					foreach($lista as $rows){
-						echo '
-						<li>
-							<div class="data">',sql_site($rows->data),'</div>
-							<div class="titulo">',$rows->titulo,'</div>
-							<a class="link" href="',site_url('noticias/'.$rows->url),'">Leia</a>
-						</li>
-						';
-					}
+					// foreach($lista as $rows){
+					// 	echo '
+					// 	<li>
+					// 		<div class="data">',sql_site($rows->data),'</div>
+					// 		<div class="titulo">',$rows->titulo,'</div>
+					// 		<a class="link" href="',site_url('noticias/'.$rows->url),'">Leia</a>
+					// 	</li>
+					// 	';
+					//}
 
 					?>
 				</ul>
@@ -87,7 +89,7 @@
 				<script type="text/javascript">
 					$(function(){ Celulose.noticias.init(); });
 				</script>
-			</div>
+			</div> -->
 
 
 

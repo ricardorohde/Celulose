@@ -8,7 +8,7 @@ class Home extends CI_Controller {
 
 
 		$imgs = array();
-		$noticias = array();
+		
 
 
 		$slider = $this->model->getSliders();
@@ -23,7 +23,7 @@ class Home extends CI_Controller {
 			}
 		}
 
-		
+		$noticias = array();
 		$rawNoticias = $this->model->getNoticiasLista();
 		
 		$displayImg = true;

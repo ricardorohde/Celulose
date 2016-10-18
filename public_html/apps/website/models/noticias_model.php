@@ -1,4 +1,4 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+﻿<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Noticias_model extends CI_Model {	
 	
@@ -24,9 +24,9 @@ class Noticias_model extends CI_Model {
 
 	}
 
-	function getNoticiasLista($page = 0){
+	function getNoticiasLista(){
 
-		return $this->db->select('noticias.id, noticias.url, noticias.titulo, noticias.data')
+		return $this->db->select('noticias.id, noticias.url, noticias.titulo, noticias.data, noticias.html')
 		->from('celulose_noticias as noticias')
 		->join('celulose_lang as lang','noticias.lang = lang.id','inner join')
 		->where(array(
@@ -34,7 +34,7 @@ class Noticias_model extends CI_Model {
 				'noticias.visible = ' => '1'
 		))
 		->order_by('noticias.data','desc')
-		->limit(5,$page)
+		->limit(7,0)
 		->get()->result();
 
 	}

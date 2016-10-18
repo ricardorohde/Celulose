@@ -422,6 +422,22 @@ footer {
 
   .menu-button {
     display: none; } }
+#agende .container {
+  text-align: center;
+  margin: 80px auto 200px auto; }
+  #agende .container p {
+    margin: 50px 0;
+    text-align: justify; }
+  #agende .container input {
+    height: 50px;
+    width: 100%;
+    -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5); }
+
+@media (min-width: 768px) {
+  #agende .container p {
+    margin: 50px 40px; } }
 #home {
   margin: 40px 0 60px; }
   #home .container .noticias {
