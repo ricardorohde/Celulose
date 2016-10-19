@@ -24,7 +24,7 @@ class Contato extends CI_Controller {
 				'area' => $this->input->post('form_area'),
 				'mensagem' => nl2br(trim(strip_tags($this->input->post('form_mensagem')))),
 				'ctime' => time(),
-			);
+				);
 
 			if(preg_match(EMAIL_FORMAT,$data['email'])){
 				$emails = $this->model->getEmailsByArea($data['area']);
@@ -36,7 +36,7 @@ class Contato extends CI_Controller {
 
 				$this->load->library('email',array(
 					'mailtype' => 'html'
-				));
+					));
 
 				if(sizeof($emails) > 0){
 
@@ -53,7 +53,7 @@ class Contato extends CI_Controller {
 
 					$data = array_merge($data,array(
 						'assunto' => $area
-					));
+						));
 
 					$this->email->message($this->load->view('tpl/email-contato',$data,true));	
 					
@@ -69,33 +69,21 @@ class Contato extends CI_Controller {
 			}
 		}
 
-		views($this,getLang().'/contato/formulario',array(
-			'header' => array(
-				'title' => lang('defualt_menu_com_quem_falar'),
-				'description' => '',
-				'keywords' => '' 
-			),
+		$this->load->view('tpl/header',[
+			'title' => lang('defualt_menu_com_quem_falar'),
+			'description' => '',
+			'keywords' => '' 
+			]);
+		$this->load->view(getLang().'/contato/formulario',[
 			'areas' => $areas
-		));
-	}
+			]);
+		$this->load->view(getLang().'/contato/telefones');
+			$this->load->view(getLang().'/contato/localizacao');
 
-	public function telefones(){
-		views($this,getLang().'/contato/telefones',array(
-			'header' => array(
-				'title' => lang('defualt_menu_telefones'),
-				'description' => '',
-				'keywords' => '' 
-			)
-		));
-	}
-	public function localizacao(){
-		views($this,getLang().'/contato/localizacao',array(
-			'header' => array(
-				'title' => lang('defualt_menu_localizacao'),
-				'description' => '',
-				'keywords' => '' 
-			)
-		));
+
+		$this->load->view('tpl/agende');
+		$this->load->view('tpl/footer');
+
 	}
 
 	public function trabalhe(){
@@ -124,14 +112,14 @@ class Contato extends CI_Controller {
 				'celulose_fisica' => $this->input->post('form_fisica'),
 				'celulose_arquivo' => '',
 				'celulose_ctime' => time()
-			);
-				
+				);
+
 			$this->load->library('upload',array(
 				'upload_path' => './assets/arquivos/trabalhe/',
 				'allowed_types' => 'pdf|doc|docx',
 				'encrypt_name' => true,
 				'max_size' => 2048
-			));
+				));
 
 			if(!$this->upload->do_upload()){
 				alert('Upload erro: '.$this->upload->display_errors('',''));
@@ -142,7 +130,7 @@ class Contato extends CI_Controller {
 
 				$this->load->library('email',array(
 					'mailtype' => 'html'
-				));
+					));
 
 				if(sizeof($this->trabalheEmails) > 0){
 					$this->email->from('no-reply@celuloseriograndense.com.br', 'Website - Celulose Riograndense');
@@ -152,7 +140,7 @@ class Contato extends CI_Controller {
 					$this->email->send();
 					$this->email->clear();
 				}
-					
+
 				$this->email->from('no-reply@celuloseriograndense.com.br', 'Website - Celulose Riograndense');
 				$this->email->to($data['celulose_email']); 
 				$this->email->subject("Trabalhe Conosco - Celulose Riograndense");
@@ -169,11 +157,11 @@ class Contato extends CI_Controller {
 				'title' => lang('defualt_menu_trabalhe'),
 				'description' => '',
 				'keywords' => '' 
-			),
+				),
 			'areas' => $this->model->getTrabalheArea(),
 			'cursos' => $this->model->getTrabalheCursos(),
 			'formacoes' => $this->model->getTrabalheFormacoes()
-		));
+			));
 	}
 
 	private function parseNome($string){
@@ -191,6 +179,6 @@ class Contato extends CI_Controller {
 		return array(
 			$nome,
 			trim(implode(' ',$sobrenome))
-		);
+			);
 	}
 }

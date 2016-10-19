@@ -422,6 +422,22 @@ footer {
 
   .menu-button {
     display: none; } }
+#agende .container {
+  text-align: center;
+  margin: 80px auto 200px auto; }
+  #agende .container p {
+    margin: 50px 0;
+    text-align: justify; }
+  #agende .container input {
+    height: 50px;
+    width: 100%;
+    -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5); }
+
+@media (min-width: 768px) {
+  #agende .container p {
+    margin: 50px 40px; } }
 #home {
   margin: 40px 0 60px; }
   #home .container .noticias {
@@ -566,6 +582,139 @@ footer {
   #sobre .esquema img {
     width: 40%;
     height: 40%; } }
+/* Produtos Area */
+#produtos .header {
+  margin: 30px 0 15px 0; }
+#produtos .descricao {
+  text-align: justify;
+  color: #A4A5A7;
+  font-size: 14px;
+  display: block; }
+#produtos .fluxograma ul li {
+  padding: 0; }
+  #produtos .fluxograma ul li img {
+    display: block;
+    margin-bottom: 5px; }
+
+#noticias .news .col-xs-12 {
+  padding: 0; }
+  #noticias .news .col-xs-12 .item {
+    padding: 3px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    position: relative;
+    width: 100%;
+    /* desired width */ }
+    #noticias .news .col-xs-12 .item:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+      /* ratio of 1:1*/ }
+    #noticias .news .col-xs-12 .item .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      padding: 2px; }
+      #noticias .news .col-xs-12 .item .content img {
+        width: 100% !important;
+        height: 100% !important; }
+#noticias .veja-mais {
+  text-align: center;
+  margin: 50px 0 60px 0; }
+  #noticias .veja-mais .item {
+    padding: 3px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    position: relative;
+    width: 100%;
+    /* desired width */ }
+    #noticias .veja-mais .item:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+      /* ratio of 1:1*/ }
+    #noticias .veja-mais .item:hover {
+      opacity: .6; }
+    #noticias .veja-mais .item .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      padding: 2px; }
+      #noticias .veja-mais .item .content img {
+        width: 100% !important;
+        height: 100% !important; }
+
+@media (min-width: 768px) {
+  #noticias .news .col-xs-12 {
+    padding: 0 15; } }
+#contato .texto {
+  text-align: justify;
+  color: #A4A5A7;
+  font-size: 14px;
+  display: block; }
+#contato .formulario input {
+  width: 100%; }
+
+.formulario .legenda {
+  color: #666666; }
+
+.formulario .legenda a {
+  color: #666666;
+  text-decoration: underline; }
+
+.formulario .success {
+  font-size: 16px;
+  line-height: 25px;
+  color: #39b34a;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal; }
+
+section.trabalhe-conosco .descricao {
+  color: #a4a5a7;
+  font-size: 14px;
+  text-align: justify;
+  display: block;
+  margin-top: 20px; }
+
+section.contato-localizacao .google-maps {
+  width: 978px;
+  height: 313px;
+  border: solid 1px #1d7d0d;
+  display: block;
+  margin: 10px auto 15px auto; }
+
+section.contato-localizacao .box-google-maps {
+  font-size: 12px; }
+
+section.contato-localizacao .box-google-maps h1 {
+  letter-spacing: 0px;
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px 0px 3px 0px;
+  color: #39b34a;
+  text-transform: uppercase;
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
+  font-weight: normal; }
+
+section.contato-localizacao .descricao {
+  color: #a4a5a7;
+  font-size: 14px;
+  text-align: left;
+  display: block;
+  margin-bottom: 20px; }
+
 #main-frame {
   position: relative;
   margin: 0px;
@@ -644,175 +793,6 @@ section.docs iframe {
   background-color: #fff; }
 
 /* Contatos Area */
-.formulario label {
-  font-size: 12px;
-  color: #666666;
-  line-height: 20px;
-  position: relative; }
-
-.formulario table {
-  width: 100%; }
-
-.formulario table td {
-  vertical-align: top; }
-
-.formulario input[type=submit] {
-  float: right;
-  color: #666666;
-  border: solid 1px #666666;
-  display: block;
-  background-color: #eeeeee;
-  font-size: 14px;
-  height: 32px;
-  line-height: 32px;
-  padding: 0px 10px;
-  transition: All 0.2s ease;
-  -webkit-transition: All 0.2s ease;
-  -moz-transition: All 0.2s ease;
-  -o-transition: All 0.2s ease; }
-
-.formulario input[type=submit]:hover {
-  border-color: #000;
-  color: #000;
-  cursor: pointer;
-  transform: scale(1.1, 1.1);
-  -webkit-transform: scale(1.1, 1.1);
-  -moz-transform: scale(1.1, 1.1);
-  -o-transform: scale(1.1, 1.1);
-  -ms-transform: scale(1.1, 1.1); }
-
-.formulario input[type=text], .formulario select, .formulario textarea {
-  height: 26px;
-  border: solid 1px #666666;
-  font-size: 12px;
-  color: #666666;
-  line-height: 26px;
-  vertical-align: middle;
-  padding: 0 0 0 5px;
-  resize: none; }
-
-.formulario textarea {
-  height: 110px; }
-
-.formulario .row {
-  display: block;
-  height: 40px;
-  width: 858px; }
-
-.formulario .error {
-  color: #931818;
-  font-size: 12px;
-  display: block; }
-
-.formulario .span1 {
-  width: 865px; }
-
-.formulario select.span1 {
-  width: 872px; }
-
-.formulario .span2 {
-  width: 410px; }
-
-.formulario select.span2 {
-  width: 417px; }
-
-.formulario .span3 {
-  width: 264px; }
-
-.formulario .radio {
-  margin: 0px 5px 3px 3px; }
-
-.formulario .legenda {
-  color: #666666; }
-
-.formulario .legenda a {
-  color: #666666;
-  text-decoration: underline; }
-
-.formulario .success {
-  font-size: 16px;
-  line-height: 25px;
-  color: #39b34a;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: normal; }
-
-section.contato .texto {
-  text-align: justify;
-  color: #A4A5A7;
-  font-size: 14px;
-  display: block; }
-
-section.contato .formulario {
-  margin: 30px 50px;
-  display: block; }
-
-section.contato .formulario .row {
-  width: 875px;
-  margin-top: 12px; }
-
-section.trabalhe-conosco {
-  margin-top: 50px; }
-
-section.trabalhe-conosco .descricao {
-  color: #a4a5a7;
-  font-size: 14px;
-  text-align: justify;
-  display: block;
-  margin-top: 20px; }
-
-section.trabalhe-conosco .formulario {
-  margin: 30px 50px;
-  display: block; }
-
-section.trabalhe-conosco .formulario strong {
-  font-weight: bold; }
-
-section.contato-telefones .lista-left, .lista-right {
-  float: left;
-  margin-left: 146px;
-  width: 270px; }
-
-section.contato-telefones .lista-left, .lista-right {
-  margin-top: 20px;
-  display: block; }
-
-section.contato-telefones .lista-left li, .lista-right li {
-  font-size: 16px;
-  line-height: 25px;
-  color: #a4a5a7;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: normal; }
-
-section.contato-telefones .lista-left li span, .lista-right li span {
-  font-size: 20px; }
-
-section.contato-localizacao .google-maps {
-  width: 978px;
-  height: 313px;
-  border: solid 1px #1d7d0d;
-  display: block;
-  margin: 10px auto 15px auto; }
-
-section.contato-localizacao .box-google-maps {
-  font-size: 12px; }
-
-section.contato-localizacao .box-google-maps h1 {
-  letter-spacing: 0px;
-  font-size: 15px;
-  padding: 0px;
-  margin: 0px 0px 3px 0px;
-  color: #39b34a;
-  text-transform: uppercase;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: normal; }
-
-section.contato-localizacao .descricao {
-  color: #a4a5a7;
-  font-size: 14px;
-  text-align: left;
-  display: block;
-  margin-bottom: 20px; }
-
 /* Responsabilidade Area */
 section.responsabilidade-sociais .lista {
   display: block;
@@ -1293,40 +1273,6 @@ section.responsabilidade-barbaNegra .links a.inverse:hover {
   border: solid 1px #666;
   background-color: #fff; }
 
-/* Produtos Area */
-section.produtos .header {
-  margin: 30px 0 15px 0; }
-
-section.produtos .descricao {
-  text-align: justify;
-  color: #A4A5A7;
-  font-size: 14px;
-  display: block; }
-
-section.produtos .fluxograma {
-  text-align: justify;
-  color: #A4A5A7;
-  font-size: 14px;
-  display: block;
-  margin: 15px 0; }
-
-section.produtos .fluxograma ul {
-  margin: 10px 0; }
-
-section.produtos .fluxograma li {
-  width: 300px;
-  height: 320px;
-  display: block;
-  float: left;
-  margin: 0px 40px 10px 0px; }
-
-section.produtos .fluxograma li.last {
-  margin-right: 0; }
-
-section.produtos .fluxograma li img {
-  display: block;
-  margin-bottom: 5px; }
-
 /* Noticias Area */
 section.noticias {
   margin: 50px auto;
@@ -1379,84 +1325,6 @@ section.noticias .block .body a:hover {
 
 section.noticias .block .body img {
   margin: 10px; }
-
-section.noticias .sidebar {
-  background-color: #eee;
-  position: absolute;
-  padding: 10px 0px 10px 10px;
-  width: 290px;
-  right: 0px;
-  top: 302px;
-  min-height: 300px; }
-
-section.noticias .sidebar ul {
-  margin: 0; }
-
-section.noticias .sidebar ul li {
-  display: block;
-  margin-bottom: 10px;
-  border-bottom: solid 1px #1c674b;
-  padding-bottom: 10px; }
-
-section.noticias .sidebar ul li .data {
-  color: #a4a5a7;
-  font-size: 18px;
-  height: 22px;
-  display: block;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: 700; }
-
-section.noticias .sidebar ul li .titulo {
-  padding-right: 10px;
-  color: #1c674b;
-  display: block;
-  font-size: 16px; }
-
-section.noticias .sidebar ul li a {
-  font-size: 16px;
-  color: #A4A5A7;
-  display: block;
-  text-align: right;
-  margin-top: 5px;
-  line-height: 17px;
-  height: 17px;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: normal; }
-
-section.noticias .sidebar ul li a:hover {
-  color: #000; }
-
-section.noticias .sidebar ul li a img {
-  width: 20px;
-  height: 17px;
-  float: right;
-  display: block;
-  margin-left: 5px; }
-
-section.noticias .sidebar .control {
-  display: block; }
-
-section.noticias .sidebar .control a {
-  padding: 0px 6px;
-  background-color: #A4A5A7;
-  font-size: 20px;
-  color: #fff;
-  display: block;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: normal; }
-
-section.noticias .sidebar .control a:hover {
-  cursor: pointer;
-  background-color: #000; }
-
-section.noticias .sidebar .control a.hide {
-  display: none; }
-
-section.noticias .sidebar .next {
-  float: right; }
-
-section.noticias .sidebar .prev {
-  float: left; }
 
 /* Home Area */
 section.column {

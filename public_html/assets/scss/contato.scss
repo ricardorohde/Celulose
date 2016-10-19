@@ -1,0 +1,49 @@
+
+//*{outline: 1px solid #da13cf;}
+
+#contato{
+	.texto { 
+		text-align: justify;
+		color: #A4A5A7;
+		font-size: 14px;
+		display: block; }
+	
+	.formulario { 
+		
+		input{
+			width: 100%;
+		}
+		select{
+			width: 100%;	
+		}
+	}
+
+	} 
+
+
+
+
+.formulario .legenda { color: #666666; }
+.formulario .legenda a { color: #666666; text-decoration: underline; }
+.formulario .success { font-size: 16px; line-height: 25px; color: #39b34a; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
+	
+	section.trabalhe-conosco .descricao { color: #a4a5a7; font-size: 14px; text-align: justify; display: block; margin-top: 20px; }
+	
+
+	section.contato-localizacao {}
+	section.contato-localizacao .google-maps { width: 978px; height: 313px; border: solid 1px #1d7d0d; display: block; margin: 10px auto 15px auto; }
+	section.contato-localizacao .box-google-maps { font-size: 12px; }
+	section.contato-localizacao .box-google-maps h1 { letter-spacing: 0px; font-size: 15px; padding: 0px; margin: 0px 0px 3px 0px; color: #39b34a; text-transform: uppercase; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
+	section.contato-localizacao .descricao { color: #a4a5a7; font-size: 14px; text-align: left; display: block; margin-bottom: 20px; }
+
+	@media (min-width: 768px) {
+
+	}
+
+	@media (min-width: 992px) {
+
+	}
+
+	@media (min-width: 1200px) {
+
+	}

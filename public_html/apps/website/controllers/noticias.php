@@ -34,7 +34,7 @@ class Noticias extends CI_Controller {
 
 			$i = 0;
 			foreach($lista as $rows){
-				$img = $this->parseHTML($noticia->html);
+				$img = $this->parseHTML($rows->html);
 				$listaNoticias[$i] = array(
 					'data' => sql_site($rows->data),
 					'titulo' => $rows->titulo,

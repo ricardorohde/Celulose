@@ -26,46 +26,7 @@ section.docs iframe { height: 700px; width: 980px; display: block; border: solid
 
 /* Contatos Area */
 
-.formulario label { font-size: 12px; color: #666666; line-height: 20px; position: relative; }
-.formulario table { width: 100%; }
-.formulario table td { vertical-align: top; }
-.formulario input[type=submit] { float: right; color: #666666; border: solid 1px #666666; display: block; background-color: #eeeeee; font-size: 14px; height: 32px; line-height: 32px; padding: 0px 10px; transition:All 0.2s ease; -webkit-transition:All 0.2s ease; -moz-transition:All 0.2s ease; -o-transition:All 0.2s ease; }
-.formulario input[type=submit]:hover { border-color: #000; color: #000; cursor: pointer; transform: scale(1.1, 1.1); -webkit-transform: scale(1.1, 1.1); -moz-transform: scale(1.1, 1.1); -o-transform: scale(1.1, 1.1); -ms-transform: scale(1.1, 1.1); }
-.formulario input[type=text], .formulario select, .formulario textarea { height: 26px; border: solid 1px #666666; font-size: 12px; color: #666666;	line-height: 26px; vertical-align: middle; padding:0 0 0 5px; resize: none; }
-.formulario textarea { height: 110px; }
-.formulario .row { display: block; height: 40px; width: 858px; }
-.formulario .error { color: #931818; font-size: 12px; display: block; }
-.formulario .span1 { width: 865px; }
-.formulario select.span1 { width: 872px; }
-.formulario .span2 { width: 410px; }
-.formulario select.span2 { width: 417px; }
-.formulario .span3 { width: 264px; }
-.formulario .radio { margin: 0px 5px 3px 3px; }
 
-.formulario .legenda { color: #666666; }
-.formulario .legenda a { color: #666666; text-decoration: underline; }
-.formulario .success { font-size: 16px; line-height: 25px; color: #39b34a; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-
-section.contato .texto { text-align: justify; color: #A4A5A7; font-size: 14px; display: block; }
-section.contato .formulario { margin: 30px 50px; display: block; }
-section.contato	.formulario .row { width: 875px; margin-top: 12px; }
-section.trabalhe-conosco { margin-top: 50px; }
-section.trabalhe-conosco .descricao { color: #a4a5a7; font-size: 14px; text-align: justify; display: block; margin-top: 20px; }
-section.trabalhe-conosco .formulario { margin: 30px 50px; display: block; }
-section.trabalhe-conosco .formulario strong { font-weight: bold; }
-
-
-section.contato-telefones {}
-section.contato-telefones .lista-left, .lista-right  { float: left; margin-left: 146px; width: 270px; }
-section.contato-telefones .lista-left, .lista-right { margin-top: 20px; display: block; }
-section.contato-telefones .lista-left li, .lista-right li { font-size: 16px; line-height: 25px; color: #a4a5a7; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.contato-telefones .lista-left li span, .lista-right li span { font-size: 20px; }
-
-section.contato-localizacao {}
-section.contato-localizacao .google-maps { width: 978px; height: 313px; border: solid 1px #1d7d0d; display: block; margin: 10px auto 15px auto; }
-section.contato-localizacao .box-google-maps { font-size: 12px; }
-section.contato-localizacao .box-google-maps h1 { letter-spacing: 0px; font-size: 15px; padding: 0px; margin: 0px 0px 3px 0px; color: #39b34a; text-transform: uppercase; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.contato-localizacao .descricao { color: #a4a5a7; font-size: 14px; text-align: left; display: block; margin-bottom: 20px; }
 
 /* Responsabilidade Area */
 
@@ -182,21 +143,6 @@ section.noticias .block .body { color: #A4A5A7; font-size: 14px; padding-top: 60
 section.noticias .block .body a { color: #1c674b; }
 section.noticias .block .body a:hover { text-decoration: underline; cursor: pointer; }
 section.noticias .block .body img { margin: 10px; }
-
-section.noticias .sidebar { background-color: #eee; position: absolute; padding: 10px 0px 10px 10px; width: 290px; right: 0px; top: 302px; min-height: 300px; }
-section.noticias .sidebar ul { margin: 0; }
-section.noticias .sidebar ul li { display: block; margin-bottom: 10px; border-bottom: solid 1px #1c674b; padding-bottom: 10px; }
-section.noticias .sidebar ul li .data { color: #a4a5a7; font-size: 18px; height: 22px; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
-section.noticias .sidebar ul li .titulo { padding-right: 10px; color: #1c674b; display: block; font-size: 16px; }
-section.noticias .sidebar ul li a { font-size: 16px; color: #A4A5A7; display: block; text-align: right; margin-top: 5px; line-height: 17px; height: 17px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.noticias .sidebar ul li a:hover { color: #000; }
-section.noticias .sidebar ul li a img { width: 20px; height: 17px; float: right; display: block; margin-left: 5px; }
-section.noticias .sidebar .control { display: block; }
-section.noticias .sidebar .control a { padding: 0px 6px; background-color: #A4A5A7; font-size: 20px; color: #fff; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; }
-section.noticias .sidebar .control a:hover { cursor: pointer; background-color: #000; }
-section.noticias .sidebar .control a.hide { display: none; }
-section.noticias .sidebar .next { float: right; }
-section.noticias .sidebar .prev { float: left; }
 
 /* Home Area */
 
