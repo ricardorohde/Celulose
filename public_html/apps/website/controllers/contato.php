@@ -78,7 +78,7 @@ class Contato extends CI_Controller {
 			'areas' => $areas
 			]);
 		$this->load->view(getLang().'/contato/telefones');
-			$this->load->view(getLang().'/contato/localizacao');
+		$this->load->view(getLang().'/contato/localizacao');
 
 
 		$this->load->view('tpl/agende');
@@ -152,16 +152,21 @@ class Contato extends CI_Controller {
 			}
 		}
 
-		views($this,'trabalhe',array(
-			'header' => array(
-				'title' => lang('defualt_menu_trabalhe'),
-				'description' => '',
-				'keywords' => '' 
-				),
+
+		$this->load->view('tpl/header',[
+			'title' => lang('defualt_menu_trabalhe'),
+			'description' => '',
+			'keywords' => '' 
+			]);
+
+		$this->load->view('trabalhe',[
 			'areas' => $this->model->getTrabalheArea(),
 			'cursos' => $this->model->getTrabalheCursos(),
 			'formacoes' => $this->model->getTrabalheFormacoes()
-			));
+			]);
+
+		$this->load->view('tpl/agende');
+		$this->load->view('tpl/footer');
 	}
 
 	private function parseNome($string){
