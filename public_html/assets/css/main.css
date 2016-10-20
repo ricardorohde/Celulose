@@ -664,8 +664,15 @@ footer {
   color: #A4A5A7;
   font-size: 14px;
   display: block; }
+#contato .formulario label {
+  font-size: 14px; }
 #contato .formulario input {
   width: 100%; }
+#contato .formulario select {
+  width: 200px; }
+#contato .formulario textarea {
+  width: 100%;
+  height: 200px; }
 
 .formulario .legenda {
   color: #666666; }

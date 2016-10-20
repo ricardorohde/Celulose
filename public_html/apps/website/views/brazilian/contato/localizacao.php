@@ -5,14 +5,15 @@
 
 			<h2 class="title"><?=lang('defualt_menu_localizacao'); ?></h2>
 
-			<div class="google-maps" id="google-maps"></div>
-
 			<div class="descricao">
 				CMPC Celulose Riograndense<br>
 				Rua São Geraldo, 1680 Bairro Ermo<br>
 				92500-000 Guaíba – RS<br>
 				+55 51 2139.7211
 			</div>
+
+			<div class="google-maps" id="google-maps"></div>
+
 		</div>
 	</div>
 	<script type="text/javascript">
