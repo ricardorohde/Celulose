@@ -88,9 +88,6 @@ if(!isset($js)){ $js = array(); }
 						<a target="_self" href="<?=base_url('empresa'); ?>"><?=lang('defualt_menu_empresa'); ?></a>
 					</li>
 					<li>
-						<a target="_self" href="<?=base_url('guaiba-2'); ?>"><?=lang('defualt_menu_guaiba2'); ?></a>
-					</li>
-					<li>
 						<a target="_self" href="<?=base_url('produtos'); ?>"><?=lang('defualt_menu_produtos'); ?></a>
 					</li>
 					<li>
@@ -104,7 +101,12 @@ if(!isset($js)){ $js = array(); }
 					<li>
 						<a target="_self" href="<?=base_url('contato'); ?>"><?=lang('defualt_menu_contato'); ?></a>
 					</li>
-					<li class="last"><a target="_self" href="<?=base_url('trabalhe-conosco'); ?>"><?=lang('defualt_menu_trabalhe'); ?></a></li>
+					<li>
+						<a target="_self" href="<?=base_url('#'); ?>"><?=lang('defualt_menu_visite'); ?></a>
+					</li>
+					<li>
+						<a target="_self" href="<?=base_url('trabalhe-conosco'); ?>"><?=lang('defualt_menu_trabalhe'); ?></a>
+					</li>
 				</ul>
 
 

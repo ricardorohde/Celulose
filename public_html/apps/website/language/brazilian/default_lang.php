@@ -40,6 +40,7 @@ $lang['defualt_menu_fiscal'] = "Contribuição Fiscal";
 $lang['defualt_menu_barba'] = "Reserva Barba Negra";
 $lang['defualt_menu_noticias'] = "Notícias";
 $lang['defualt_menu_contato'] = "Contato";
+$lang['defualt_menu_visite'] = "Visite-nos";
 $lang['defualt_menu_com_quem_falar'] = "Com quem quer falar?";
 $lang['defualt_menu_telefones'] = "Telefones de Contato";
 $lang['defualt_menu_localizacao'] = "Localização";

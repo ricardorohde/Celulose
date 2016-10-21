@@ -1,0 +1,308 @@
+* {
+  outline: 1px solid #daa; }
+
+h2 {
+  color: #64AF53;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 5px;
+  width: 100%;
+  margin: 100px auto 60px;
+  overflow: hidden;
+  text-align: center;
+  font-weight: 300; }
+  h2:before, h2:after {
+    content: "";
+    display: inline-block;
+    width: 50%;
+    margin: 0 .5em 0 -55%;
+    border-bottom: 1px solid; }
+  h2:after {
+    margin: 0 -55% 0 .5em; }
+
+h3 {
+  color: #64AF53;
+  text-transform: uppercase;
+  font-size: 17px;
+  margin-bottom: 15px; }
+
+h4 {
+  color: #4D4D4D;
+  font-size: 16px;
+  padding-top: 20px;
+  margin-bottom: 10px; }
+
+h5 {
+  color: #64AF53;
+  font-size: 16px; }
+
+p {
+  color: #4D4D4D;
+  font-size: 15px;
+  text-align: justify;
+  font-weight: 700; }
+
+.mobile-hide {
+  display: none; }
+
+.banner {
+  width: 100vw;
+  height: 300px; }
+  .banner img {
+    width: 100%;
+    height: 100%; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #4D4D4D; }
+
+header {
+  background-color: #fff;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 200;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  top: 0;
+  overflow: hidden;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  transition: all ease 0.3s; }
+  header .logo {
+    height: 12vh;
+    width: 100vw;
+    margin-top: 20px;
+    display: block;
+    position: relative;
+    top: 0;
+    z-index: 500;
+    cursor: pointer;
+    background: url("../img/logo-sm-color.png") no-repeat 50% 50%;
+    background-size: contain;
+    text-align: center; }
+  header .container {
+    padding: 0; }
+    header .container nav {
+      position: relative;
+      z-index: 480; }
+      header .container nav ul {
+        margin: 20px 0 0 0; }
+        header .container nav ul li {
+          height: 9vh;
+          width: 100vw;
+          text-align: center;
+          border-top: 1px solid #64AF53;
+          line-height: 9vh;
+          cursor: pointer;
+          -webkit-transition: all ease 0.3s;
+          -moz-transition: all ease 0.3s;
+          -o-transition: all ease 0.3s;
+          -ms-transition: all ease 0.3s;
+          transition: all ease 0.3s; }
+          header .container nav ul li:hover {
+            background-color: #64AF53; }
+            header .container nav ul li:hover > a {
+              color: #fff; }
+          header .container nav ul li:last-child {
+            border-bottom: 1px solid #64AF53; }
+          header .container nav ul li a {
+            color: #39b34a;
+            text-transform: uppercase;
+            font-weight: 900;
+            width: 100%;
+            color: #808080;
+            height: 100%;
+            width: 100%;
+            -webkit-transition: all ease 0.3s;
+            -moz-transition: all ease 0.3s;
+            -o-transition: all ease 0.3s;
+            -ms-transition: all ease 0.3s;
+            transition: all ease 0.3s; }
+            header .container nav ul li a:hover {
+              color: #fff; }
+
+.menu-button {
+  position: fixed;
+  height: 4em;
+  width: 4em;
+  background-color: #64AF53;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 4em;
+  right: 0;
+  bottom: 0;
+  margin: 0 20px 20px 0;
+  z-index: 1000;
+  cursor: pointer;
+  -webkit-box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25); }
+  .menu-button img {
+    height: 50%;
+    width: auto; }
+
+#menu.move {
+  width: 100vw; }
+
+footer {
+  display: block;
+  position: relative; }
+  footer .copy {
+    background-color: #64AF53;
+    padding: 10px 0 0 0; }
+    footer .copy .container {
+      text-align: center;
+      color: #fff;
+      line-height: 30px;
+      font-size: 16px; }
+      footer .copy .container .select:hover img {
+        background-color: #83bf76;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%; }
+      footer .copy .container .active img {
+        background-color: #83bf76;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%; }
+      footer .copy .container img {
+        display: inline-block;
+        margin-right: 5px;
+        height: 46px;
+        width: auto;
+        padding: 3px; }
+      footer .copy .container a:not(.mobile-hide) {
+        display: inline-block;
+        color: #fff; }
+      footer .copy .container .redes a:hover:not(:last-child) img {
+        background-color: #83bf76;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%; }
+      footer .copy .container .info {
+        line-height: 20px;
+        margin: 20px 0; }
+        footer .copy .container .info a {
+          margin-top: 20px; }
+    footer .copy .border {
+      background: url("../img/footer-border.png") repeat-x;
+      height: 22px;
+      width: 100%; }
+  footer .incendioflorestal {
+    left: 50%;
+    position: absolute;
+    margin: auto;
+    bottom: 220px;
+    right: 0;
+    margin-left: -169px; }
+
+@media (min-width: 768px) {
+  .mobile-hide {
+    display: block; }
+
+  header .container {
+    margin: 0; }
+
+  footer {
+    margin-top: 50px;
+    display: block;
+    position: relative; }
+    footer .copy {
+      padding: 10px 0 0 0; }
+      footer .copy .container {
+        line-height: 30px;
+        font-size: 16px; }
+        footer .copy .container .redes {
+          display: inline-block;
+          margin-top: 30px; }
+          footer .copy .container .redes img {
+            height: 43px;
+            width: auto;
+            padding: 3px; }
+        footer .copy .container .info {
+          line-height: 20px;
+          margin: 20px 0;
+          font-size: 14px; }
+          footer .copy .container .info a {
+            margin-top: 20px; }
+          footer .copy .container .info img {
+            position: absolute;
+            height: 80px;
+            width: auto;
+            right: -50px;
+            top: 10px; }
+    footer .incendioflorestal {
+      bottom: 145px; } }
+@media (min-width: 992px) {
+  header {
+    width: 100vw;
+    height: 120px;
+    background-color: transparent; }
+    header .logo {
+      width: auto;
+      height: 100px;
+      float: left;
+      margin: 10px;
+      background: url("../img/logo-sm.png") no-repeat 50% 50%;
+      background-size: contain; }
+    header .container {
+      margin-right: auto;
+      margin-left: auto; }
+      header .container nav {
+        float: right; }
+        header .container nav ul {
+          margin: 0; }
+          header .container nav ul li {
+            display: inline-block;
+            border: none;
+            height: 120px;
+            width: auto;
+            line-height: 120px; }
+            header .container nav ul li:last-child {
+              border: none; }
+            header .container nav ul li:hover {
+              background-color: transparent; }
+              header .container nav ul li:hover > a {
+                color: #808080;
+                height: 120px !important; }
+            header .container nav ul li a {
+              box-sizing: border-box;
+              padding: 0px 10px 10px 10px;
+              font-size: 14px;
+              color: #fff;
+              height: 120px !important; }
+
+  .act {
+    background-color: #fff;
+    -webkit-box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25); }
+    .act .logo {
+      background: url("../img/logo-sm-color.png") no-repeat 50% 50%;
+      background-size: contain; }
+    .act .container nav ul li:hover {
+      background-color: #F2F2F2; }
+      .act .container nav ul li:hover > a {
+        color: #4D4D4D; }
+    .act .container nav ul li a {
+      color: #808080; }
+
+  .menu-button {
+    display: none; } }
+
+/*# sourceMappingURL=tpl.css.map */

@@ -1,10 +1,11 @@
+@import "mixin.scss";
 
 $verde: #64AF53;
 $fonte: 'Raleway', sans-serif;
 $cinza-escuro: #4D4D4D;
 $cinza-claro: #808080;
 
-//*{outline: 1px solid #daa;}
+*{outline: 1px solid #daa;}
 
 //----------------------------------------------//
 //                     Sets                     //
@@ -167,9 +168,12 @@ header {
 						color: #39b34a; 
 						text-transform: uppercase;  
 						font-weight: 900; 
-						height: 53px;
+						
 						width: 100%;
 						color: $cinza-claro;
+
+						height: 100%;
+						width: 100%;//a = full
 						@include transition(all ease .3s);
 
 						&:hover, {
@@ -411,14 +415,17 @@ header{
 
 						>a{
 							color: $cinza-claro;
+							height: $menu-height!important;
 						}
 
 					}
 
 					a{
+						box-sizing: border-box;
 						padding: 0px 10px 10px 10px; 
 						font-size: 14px;
 						color: #fff;
+						height: $menu-height!important;
 					}
 				}
 			}
