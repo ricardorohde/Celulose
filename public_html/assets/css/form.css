@@ -6,8 +6,7 @@ input {
   font-size: 12px;
   padding-left: 15px;
   border: 1px solid #64AF53;
-  font-weight: 500;
-  width: 100%; }
+  font-weight: 500; }
   input:focus {
     outline: 2px solid #64AF53; }
 
@@ -83,8 +82,7 @@ textarea {
   font-size: 12px;
   padding: 5px;
   border: 1px solid #64AF53;
-  font-weight: 500;
-  width: 100%; }
+  font-weight: 500; }
   textarea:focus {
     outline: 1px solid #64AF53; }
 
@@ -105,8 +103,7 @@ select {
   max-width: 200px;
   text-indent: 0.01px;
   text-overflow: "";
-  cursor: pointer;
-  min-width: 100%; }
+  cursor: pointer; }
   select:focus {
     outline: 2px solid #64AF53; }
 

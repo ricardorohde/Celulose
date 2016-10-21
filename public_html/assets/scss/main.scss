@@ -132,6 +132,52 @@ section.responsabilidade-barbaNegra .links a.inverse:hover { color: #666; border
 
 
 
+/* Noticias Area */
+
+section.noticias { margin: 50px auto; min-height: 1000px; }
+
+section.noticias .block { display: block; position: relative; margin: 20px 0px 50px 0px; width: 660px; height: auto; }
+section.noticias .block .data { height: 20px; width: 200px; color: #a4a5a7; font-size: 18px; position: absolute; top: 0px; left: 0px; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
+section.noticias .block .titulo { height: 25px; width: 660px; color: #1c674b; font-size: 22px; position: absolute; top: 25px; left: 0px; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
+section.noticias .block .body { color: #A4A5A7; font-size: 14px; padding-top: 60px; display: block; text-align: justify; }
+section.noticias .block .body a { color: #1c674b; }
+section.noticias .block .body a:hover { text-decoration: underline; cursor: pointer; }
+section.noticias .block .body img { margin: 10px; }
+
+/* Home Area */
+
+section.column { display: table; }
+section.column .left { width: 310px; float: left; display: table; }
+section.column .center { width: 310px; float: left; margin-left: 25px; display: table; }
+section.column .right { background-color: #eee; padding: 10px 0px 0px 0px; width: 310px; float: right; display: table; }
+
+section.column .right ul { margin: 0; }
+section.column .right ul li { display: block; margin-bottom: 10px; margin-left: 10px; border-bottom: solid 1px #1c674b; padding-bottom: 10px; }
+section.column .right ul li.last { border-bottom: none; }
+section.column .right ul li .data { color: #a4a5a7; font-size: 18px; height: 22px; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
+section.column .right ul li .titulo { padding-right: 10px; color: #1c674b; display: block; font-size: 16px; }
+section.column .right ul li .titulo.bold { font-size: 22px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
+section.column .right ul li .texto { padding-right: 10px; padding-top: 5px; text-align: justify; color: #A4A5A7; font-size: 14px; display: block; }
+section.column .right ul li .img { display: block; text-align: center; margin: 5px 0; }
+section.column .right ul li .img img { width: 300px; display: block; }
+section.column .right ul li a { display: table; }
+
+section.column .parse { }
+
+section.column .parse ul { margin: 10px 0px; }
+section.column .parse ul li { color: #A4A5A7; font-size: 14px; display: block; margin-bottom: 10px; padding-bottom: 10px; border-bottom: solid 1px #1c674b; text-align: justify; }
+section.column .parse ul li a { color: #A4A5A7; display: table; }
+section.column .parse ul li .titulo { text-align: left; letter-spacing: 0px; line-height: 20px; font-size: 24px; padding: 0px; color: #1e674c; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
+section.column .parse ul li .data { text-align: left; letter-spacing: 0px; line-height: 30px; font-size: 24px; padding: 0px; color: #a4a5a7; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: 700; }
+section.column .parse ul li.last { border-bottom: none; }
+section.column .parse ul li img { display: block; width: 310px; margin: 8px 0px 10px 0px; }
+
+section.column .parse ul li.green { color: #1e674c !important; }
+
+section.column .right .banner-bndes { display: block; background-color: #fff; padding: 10px 0px; height: 38px; }
+
+
+
 #box { display: none; z-index: 500; left: 50%; top: 50%; position: fixed; margin: -203px 0px 0px -361px; width: 720px; height: 405px; background-color: #fff; border: 1px solid #1e674c; -webkit-box-shadow: 0px 0px 20px 0px #1e674c; box-shadow: 0px 0px 20px 0px #1e674c; -webkit-border-radius: 5px 0px 5px 5px; border-radius: 5px 0px 5px 5px; }
 #box .close { padding: 0px 5px; background-color: #1e674c; position: absolute; top: -26px; right: -1px; display: block; font-size: 16px; color: #fff; text-align: right; line-height: 25px; height: 25px; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: normal; -webkit-border-radius: 5px 5px 0px 0px; border-radius: 5px 5px 0px 0px; }
 #box .close:hover { color: #999; }
@@ -169,6 +215,13 @@ section.responsabilidade-barbaNegra .links a.inverse:hover { color: #666; border
 
 /* Expansao Area */
 
+section.expansao { height: 780px; }
+section.expansao .expansao-body { display: table; margin-bottom: 30px; color: #A4A5A7; font-size: 16px; display: block; text-align: justify; float: left; display: table; width: 660px; height: auto; }
+section.expansao .titulo { color: #1C674B; font-size: 25px; height: 35px; display: block; font-family: "Yanone Kaffeesatz", Arial, sans-serif; font-weight: bold; }
+section.expansao .expansao-bar { float: right; display: table; width: 290px;  }
+
+section.expansao-andamento {}
+section.expansao-andamento .texto { color: #A4A5A7; font-size: 14px; text-align: justify; }
 
 .vi-fo .bloco { width: 980px; height: 560px; display: block; position: relative; margin-top: 20px; }
 .vi-fo .videos { width: 601px; height: 550px; float: left; }

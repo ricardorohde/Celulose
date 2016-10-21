@@ -1,5 +1,5 @@
 
-<section id="contato-localizacao">
+<section class="contato-localizacao">
 	<div class="container">
 		<div class="col-md-offset-1 col-md-10">
 
