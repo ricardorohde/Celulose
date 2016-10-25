@@ -6,15 +6,18 @@ input {
   font-size: 12px;
   padding-left: 15px;
   border: 1px solid #64AF53;
-  font-weight: 500; }
+  font-weight: 500;
+  width: 100%; }
   input:focus {
     outline: 2px solid #64AF53; }
 
 label {
   color: #4D4D4D;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Raleway", sans-serif;
-  font-weight: 500; }
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 0; }
 
 p {
   color: #4D4D4D;
@@ -31,7 +34,8 @@ p {
   font-size: 13px;
   font-weight: 500; }
 .radio input[type=radio] {
-  display: none; }
+  display: none;
+  width: 100%; }
 .radio label:before {
   content: "";
   display: inline-block;
@@ -103,7 +107,8 @@ select {
   max-width: 200px;
   text-indent: 0.01px;
   text-overflow: "";
-  cursor: pointer; }
+  cursor: pointer;
+  min-width: 100%; }
   select:focus {
     outline: 2px solid #64AF53; }
 

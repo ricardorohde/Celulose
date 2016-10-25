@@ -25,6 +25,7 @@ input{
   padding-left: 15px;
   border: 1px solid $verde;
   font-weight: 500;
+  width: 100%;
 
   &:focus{
     outline: 2px solid $verde;     
@@ -34,9 +35,11 @@ input{
 
 label{
 	color: $cinza-escuro;
-	font-size: 16px;
+	font-size: 14px;
 	font-family: $fonte;
   font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 0;
 
 }
 
@@ -61,6 +64,7 @@ p{
 
   input[type=radio] {
     display: none;
+    width: 100%;
   }
 
   label:before {
@@ -156,6 +160,7 @@ select{
   text-indent: 0.01px;
   text-overflow: "";
   cursor: pointer;
+  min-width: 100%;
 
   &:focus{
     outline: 2px solid $verde;   

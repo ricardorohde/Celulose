@@ -39,7 +39,7 @@ class Noticias extends CI_Controller {
 					'data' => sql_site($rows->data),
 					'titulo' => $rows->titulo,
 					'link' => site_url('noticias/'.$rows->url),
-					'texto' => character_limiter(strip_tags($rows->html),120,"..."),
+					'texto' => character_limiter(strip_tags($rows->html,'<p>'),120,"..."),
 					'img' => $img
 					);
 				$i++;

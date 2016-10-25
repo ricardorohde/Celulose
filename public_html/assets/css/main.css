@@ -165,7 +165,7 @@ p {
   font-weight: 700; }
 
 .mobile-hide {
-  display: none; }
+  display: none !important; }
 
 .banner {
   width: 100vw;
@@ -240,9 +240,10 @@ header {
             color: #39b34a;
             text-transform: uppercase;
             font-weight: 900;
-            height: 53px;
             width: 100%;
             color: #808080;
+            height: 100%;
+            width: 100%;
             -webkit-transition: all ease 0.3s;
             -moz-transition: all ease 0.3s;
             -o-transition: all ease 0.3s;
@@ -334,7 +335,7 @@ footer {
 
 @media (min-width: 768px) {
   .mobile-hide {
-    display: block; }
+    display: block !important; }
 
   header .container {
     margin: 0; }
@@ -399,11 +400,14 @@ footer {
             header .container nav ul li:hover {
               background-color: transparent; }
               header .container nav ul li:hover > a {
-                color: #808080; }
+                color: #808080;
+                height: 120px !important; }
             header .container nav ul li a {
+              box-sizing: border-box;
               padding: 0px 10px 10px 10px;
               font-size: 14px;
-              color: #fff; }
+              color: #fff;
+              height: 120px !important; }
 
   .act {
     background-color: #fff;
@@ -669,10 +673,16 @@ footer {
 #contato .formulario input {
   width: 100%; }
 #contato .formulario select {
-  width: 200px; }
+  width: 400px; }
 #contato .formulario textarea {
   width: 100%;
   height: 200px; }
+#contato .contato-localizacao .descricao {
+  color: #4D4D4D;
+  font-size: 14px;
+  text-align: left;
+  display: block;
+  margin-bottom: 20px; }
 
 .formulario .legenda {
   color: #666666; }

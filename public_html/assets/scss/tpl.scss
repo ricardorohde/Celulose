@@ -71,6 +71,7 @@ p{
 .banner{
 	width: 100vw;
 	height: 300px;
+	display: none;
 
 	img{
 		width: 100%;
@@ -307,6 +308,10 @@ footer {
 //----------------------------------------------//
 .mobile-hide{
 	display: block!important;
+}
+
+.banner{
+	display: block;
 }
 
 //----------------------------------------------//
