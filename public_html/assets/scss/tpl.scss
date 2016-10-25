@@ -5,7 +5,7 @@ $fonte: 'Raleway', sans-serif;
 $cinza-escuro: #4D4D4D;
 $cinza-claro: #808080;
 
-*{outline: 1px solid #daa;}
+//*{outline: 1px solid #daa;}
 
 //----------------------------------------------//
 //                     Sets                     //
@@ -65,7 +65,7 @@ p{
 }
 
 .mobile-hide{
-	display: none;
+	display: none!important;
 }
 
 .banner{
@@ -306,7 +306,7 @@ footer {
 //                      Set                     //
 //----------------------------------------------//
 .mobile-hide{
-	display: block;
+	display: block!important;
 }
 
 //----------------------------------------------//
