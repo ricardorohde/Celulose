@@ -1,4 +1,4 @@
-﻿<a id="linkSliderFix ">
+﻿<a id="linkSliderFix">
 	<div class="container">
 		<ul class="nivo-controlNav"></ul>
 	</div>
@@ -6,7 +6,7 @@
 <div id="box">
 
 </div>
-<section class="slider mobile-hide">
+<section class="slider">
 	<div id="slider" class="nivoSlider">
 		<?php
 		$i = 0;
@@ -17,7 +17,9 @@
 	</div>
 	<script type="text/javascript">
 		
-		$('#slider').nivoSlider();
+			$('#slider').nivoSlider({
+				controlNav: true
+			});
 
 	</script>
 </section>

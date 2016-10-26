@@ -66,12 +66,12 @@ if(!isset($js)){ $js = array(); }
 
 </head>
 <body class="<?=browser_body(); ?>">
-
-	<header id="menu-home" class="left">
+	<section id="home">
+	<header id="menu" class="left">
 		
 		<div class="container">
 			<div class="left logo">
-				<a target="_self" href="<?=base_url(); ?>">
+				<a target="_self" href="<?=base_url('home'); ?>">
 					
 				</a>
 			</div>
@@ -108,7 +108,8 @@ if(!isset($js)){ $js = array(); }
 
 		</div>
 	</header>
+	</section>
 
-	<div id="menu-button-home" class="menu-button">
+	<div id="menu-button" class="menu-button">
 		<img src="assets/img/menu-icon.svg" alt="">
 	</div>

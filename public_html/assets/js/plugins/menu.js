@@ -4,19 +4,14 @@ $(document).ready(function() {
     $("#menu").toggleClass("move");
 });
 
-   
-   $("#menu-button-home").click(function() {
-    $("#menu").toggleClass("move");
-});
-
 
    $(window).scroll(function() {
 
-    if ($("header").offset().top > 0) {
-     $('#menu-home').addClass("act"); 
+    if ($("#home header").offset().top > 0) {
+     $('#menu').addClass("act"); 
     }else{
      
-     $('#menu-home').removeClass("act");
+     $('#menu').removeClass("act");
    }
   });
 });

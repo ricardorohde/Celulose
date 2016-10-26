@@ -71,7 +71,7 @@ if(!isset($js)){ $js = array(); }
 		
 		<div class="container">
 			<div class="left logo">
-				<a target="_self" href="<?=base_url(); ?>">
+				<a target="_self" href="<?=base_url('home'); ?>">
 					
 				</a>
 			</div>
