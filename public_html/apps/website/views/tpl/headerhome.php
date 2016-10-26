@@ -67,7 +67,7 @@ if(!isset($js)){ $js = array(); }
 </head>
 <body class="<?=browser_body(); ?>">
 
-	<header id="menu" class="left act">
+	<header id="menu-home" class="left">
 		
 		<div class="container">
 			<div class="left logo">
@@ -109,6 +109,6 @@ if(!isset($js)){ $js = array(); }
 		</div>
 	</header>
 
-	<div class="menu-button">
+	<div id="menu-button-home" class="menu-button">
 		<img src="assets/img/menu-icon.svg" alt="">
 	</div>

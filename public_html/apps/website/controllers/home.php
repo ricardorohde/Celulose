@@ -46,7 +46,7 @@ class Home extends CI_Controller {
 			$i++;
 		}
 
-		$this->load->view('tpl/header',[
+		$this->load->view('tpl/headerhome',[
 			'title' => lang('defualt_menu_home'),
 		 	'description' => '',
 		 	'keywords' => '' 

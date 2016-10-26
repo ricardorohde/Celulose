@@ -173,6 +173,8 @@ p {
   display: none !important; }
 
 .banner {
+  position: absolute;
+  top: 0;
   width: 100vw;
   height: 300px;
   display: none; }
@@ -181,7 +183,6 @@ p {
     height: 100%; }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0; }
 
@@ -243,13 +244,13 @@ header {
           header .container nav ul li:last-child {
             border-bottom: 1px solid #64AF53; }
           header .container nav ul li a {
+            display: block;
             color: #39b34a;
             text-transform: uppercase;
             font-weight: 900;
-            width: 100%;
-            color: #808080;
             height: 100%;
             width: 100%;
+            color: #808080;
             -webkit-transition: all ease 0.3s;
             -moz-transition: all ease 0.3s;
             -o-transition: all ease 0.3s;
@@ -385,7 +386,7 @@ footer {
     height: 120px;
     background-color: transparent; }
     header .logo {
-      width: auto;
+      width: 100px;
       height: 100px;
       float: left;
       margin: 10px;
@@ -412,11 +413,10 @@ footer {
                 color: #808080;
                 height: 120px !important; }
             header .container nav ul li a {
-              box-sizing: border-box;
               padding: 0px 10px 10px 10px;
               font-size: 14px;
               color: #fff;
-              height: 120px !important; }
+              height: 10px; }
 
   .act {
     background-color: #fff;

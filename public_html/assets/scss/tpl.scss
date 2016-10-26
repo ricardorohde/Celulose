@@ -69,6 +69,8 @@ p{
 }
 
 .banner{
+	position: absolute;
+	top: 0;
 	width: 100vw;
 	height: 300px;
 	display: none;
@@ -90,7 +92,7 @@ p{
 //                     Reset                    //
 //----------------------------------------------//
 *{
-	box-sizing: border-box;
+	
 	margin: 0;
 	padding: 0;
 }
@@ -166,15 +168,16 @@ header {
 					}
 
 					a { 
+						display: block;
 						color: #39b34a; 
 						text-transform: uppercase;  
 						font-weight: 900; 
-						
+
+						height: 100%;
 						width: 100%;
 						color: $cinza-claro;
 
-						height: 100%;
-						width: 100%;//a = full
+						
 						@include transition(all ease .3s);
 
 						&:hover, {
@@ -386,11 +389,11 @@ header{
 	background-color: transparent;
 
 	.logo{
-		width: auto;
+		width: 100px;
 		height: 100px;
 		float: left;
 		margin: 10px;
-
+		
 		background: url("../img/logo-sm.png") no-repeat 50% 50%;
 		background-size:contain;
 	}
@@ -426,11 +429,10 @@ header{
 					}
 
 					a{
-						box-sizing: border-box;
 						padding: 0px 10px 10px 10px; 
 						font-size: 14px;
 						color: #fff;
-						height: $menu-height!important;
+						height: 10px;
 					}
 				}
 			}

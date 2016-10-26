@@ -1,4 +1,5 @@
-﻿<div class="banner">
+﻿
+<div class="banner">
 	<img class="banner" alt="" src="<?=base_url('assets/img/banners/banner-noticias.jpg'); ?>">
 </div>
 
@@ -17,11 +18,7 @@
 						<div class="item">
 							<div class="content">
 
-								<?php 
-
-								echo $imgNoticia;
-
-								?>
+								<?php echo $imgNoticia;?>
 							</div>
 						</div>
 						<div class="clear"></div>
