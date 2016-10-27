@@ -37,14 +37,25 @@ if(!isset($js)){ $js = array(); }
 
 	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/bootstrap.css'); ?>">
 	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/reset.css'); ?>">
-	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/slider.css'); ?>">
-
+	
 	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/main.css'); ?>">
 	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/custom.css'); ?>">
 
 	<link rel="stylesheet" type="text/css" href="<?=base_url('assets/css/lang/'.$_SESSION['celulose_lang'].'.css'); ?>">
 
+
+	<!-- Teste Nivo Slider -->
+
+	<link rel="stylesheet" href="<?=base_url('assets/css/nivo/nivo-slider.css'); ?>" type="text/css" /> 
+	<link rel="stylesheet" href="<?=base_url('assets/css/nivo/default.css'); ?>" type="text/css" /> 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script> 
+	<script src="<?=base_url('assets/css/nivo/jquery.nivo.slider.pack.js');?>" type="text/javascript"></script>
 	
+
+	<!-- Teste Nivo Slider -->	
+	
+
+
 	<?php foreach($js as $rows){
 		echo '<script type="text/javascript" src="',base_url('assets/js/'.$rows),'"></script>' . PHP_EOL;
 	} ?>
@@ -67,47 +78,47 @@ if(!isset($js)){ $js = array(); }
 </head>
 <body class="<?=browser_body(); ?>">
 	<section id="home">
-	<header id="menu" class="left">
-		
-		<div class="container">
-			<div class="left logo">
-				<a target="_self" href="<?=base_url('home'); ?>">
-					
-				</a>
+		<header id="menu" class="left">
+
+			<div class="container">
+				<div class="left logo">
+					<a target="_self" href="<?=base_url('home'); ?>">
+
+					</a>
+				</div>
+				<nav>
+
+					<ul>
+						<li>
+							<a target="_self" href="<?=base_url('empresa'); ?>"><?=lang('defualt_menu_empresa'); ?></a>
+						</li>
+						<li>
+							<a target="_self" href="<?=base_url('produtos'); ?>"><?=lang('defualt_menu_produtos'); ?></a>
+						</li>
+						<li>
+							<a target="_self" href="<?=base_url('responsabilidade'); ?>"><?=lang('defualt_menu_responsabilidade'); ?></a>
+						</li>
+						<?php if(getLang() == 'brazilian'){ ?>
+						<li>
+							<a target="_self" href="<?=base_url('noticias'); ?>"><?=lang('defualt_menu_noticias'); ?></a>
+						</li>
+						<?php } ?>
+						<li>
+							<a target="_self" href="<?=base_url('contato'); ?>"><?=lang('defualt_menu_contato'); ?></a>
+						</li>
+						<li>
+							<a target="_self" href="<?=base_url('#'); ?>"><?=lang('defualt_menu_visite'); ?></a>
+						</li>
+						<li>
+							<a target="_self" href="<?=base_url('trabalhe-conosco'); ?>"><?=lang('defualt_menu_trabalhe'); ?></a>
+						</li>
+					</ul>
+
+
+				</nav>
+
 			</div>
-			<nav>
-				
-				<ul>
-					<li>
-						<a target="_self" href="<?=base_url('empresa'); ?>"><?=lang('defualt_menu_empresa'); ?></a>
-					</li>
-					<li>
-						<a target="_self" href="<?=base_url('produtos'); ?>"><?=lang('defualt_menu_produtos'); ?></a>
-					</li>
-					<li>
-						<a target="_self" href="<?=base_url('responsabilidade'); ?>"><?=lang('defualt_menu_responsabilidade'); ?></a>
-					</li>
-					<?php if(getLang() == 'brazilian'){ ?>
-					<li>
-						<a target="_self" href="<?=base_url('noticias'); ?>"><?=lang('defualt_menu_noticias'); ?></a>
-					</li>
-					<?php } ?>
-					<li>
-						<a target="_self" href="<?=base_url('contato'); ?>"><?=lang('defualt_menu_contato'); ?></a>
-					</li>
-					<li>
-						<a target="_self" href="<?=base_url('#'); ?>"><?=lang('defualt_menu_visite'); ?></a>
-					</li>
-					<li>
-						<a target="_self" href="<?=base_url('trabalhe-conosco'); ?>"><?=lang('defualt_menu_trabalhe'); ?></a>
-					</li>
-				</ul>
-
-
-			</nav>
-
-		</div>
-	</header>
+		</header>
 	</section>
 
 	<div id="menu-button" class="menu-button">
