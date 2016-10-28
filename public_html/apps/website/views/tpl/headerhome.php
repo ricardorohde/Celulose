@@ -77,7 +77,7 @@ if(!isset($js)){ $js = array(); }
 
 </head>
 <body class="<?=browser_body(); ?>">
-	<section id="home">
+	<section id="hhome">
 		<header id="menu" class="left">
 
 			<div class="container">

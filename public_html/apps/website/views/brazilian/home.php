@@ -1,5 +1,5 @@
 ﻿
-<section class="slider">
+<section class="slider mobile-hide">
 <div class="slider-wrapper theme-default">
 	
 	<div id="slider" class="nivoSlider">     
@@ -43,7 +43,9 @@
 								<div class="row">
 									<div class="item">
 										<div class="content">
+										
 											<a href="<?= $rows['link']; ?>">
+												<div class="black"><span><?= $rows['titulo']; ?></span></div>
 												<img src="<?= $rows['img']; ?>" alt="<?= $rows['titulo']; ?>">
 											</a>
 										</div>
@@ -51,8 +53,8 @@
 								</div>
 							</div>
 							<?php $i++; } ?>
-
-							<span>Veja mais +</span>
+<br>
+							<span><a target="_self" href="<?=base_url('noticias'); ?>">Veja mais Notícias +</a></span>
 						</div>
 
 						<div class="projetos-sociais">

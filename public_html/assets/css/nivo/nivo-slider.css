@@ -6,11 +6,10 @@
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  */
- 
+
 /* The Nivo Slider styles */
 .slider{
-	position: absolute!important;
-	top: 0!important;
+	margin-top: -20px;
 }
 
 .nivoSlider {
@@ -24,6 +23,12 @@
 	top:0px;
 	left:0px;
 	max-width: none;
+
+	min-width: 100vw!important;
+	min-height: 100vh!important;
+
+	width: 100vw;
+	height: 100vh;
 }
 .nivo-main-image {
 	display: block !important;
@@ -107,8 +112,9 @@
 }
 /* Control nav styles (e.g. 1,2,3...) */
 .nivo-controlNav {
-	position: absolute;
-	left: 50%;
+	position:absolute;
+	left:50%;
+	margin-left:-52px;
 	margin-top: -70px;
 	text-align:center;
 	padding: 15px 0;

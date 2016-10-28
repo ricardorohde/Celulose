@@ -19,7 +19,7 @@ class Home extends CI_Controller {
 					'src' => base_url('assets/img/slider/backgrounds/' . $rows->arquivo),
 					'target' => substr($rows->link,0,4) == "http" ? '_blank' : '_self',
 					'link' => substr($rows->link,0,4) == "http" ? $rows->link : (!empty($rows->link) ? site_url($rows->link) : ''),
-				));
+					));
 			}
 		}
 
@@ -35,12 +35,15 @@ class Home extends CI_Controller {
 				'link' => site_url('noticias/'.$rows->url),
 				'texto' => character_limiter(strip_tags($rows->html),120,"..."),
 				'img' => true
-			);
+				);
 			
 			if($displayImg){
 				if($img = $this->parseHTML($rows->html)){
+
 					$noticias[$i]['img'] = ($img);
 					$displayImg = true;
+				}else{
+					$noticias[$i]['img'] = base_url('assets/img/noticia.jpg');
 				}
 			}
 			$i++;
@@ -48,8 +51,8 @@ class Home extends CI_Controller {
 
 		$this->load->view('tpl/headerhome',[
 			'title' => lang('defualt_menu_home'),
-		 	'description' => '',
-		 	'keywords' => '' 
+			'description' => '',
+			'keywords' => '' 
 			]);
 		
 		$this->load->view(getLang().'/home',[
@@ -104,7 +107,7 @@ class Home extends CI_Controller {
 			'nome' => $this->input->post('nome'),
 			'email' => strtolower($this->input->post('email')),
 			'ctime' => time()
-		);
+			);
 
 		if(!empty($data['nome'])){
 			if(!empty($data['email']) && preg_match(EMAIL_FORMAT,$data['email'])){
@@ -134,6 +137,7 @@ class Home extends CI_Controller {
 		$dom->loadHTML($html);
 		$dom->preserveWhiteSpace = false;
 		$images = $dom->getElementsByTagName('img');
+
 		foreach ($images as $image) {
 			return $image->getAttribute('src');
 		}

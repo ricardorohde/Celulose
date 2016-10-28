@@ -22,8 +22,8 @@
 					padding-top: 100%; 	/* ratio of 1:1*/
 				}
 
-				&:hover{
-					opacity: .6;
+				&:hover > .content .black{
+					opacity: .75;
 				}
 
 				.content{
@@ -35,6 +35,24 @@
 					width: 100%;
 					height: 100%;
 					padding: 2px;
+
+					.black{
+						position: absolute;
+						height: 98.8%;
+						width: 98.8%;
+						background-color: #000;
+						opacity: 0;
+
+						span{
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+
+							color: #fff;
+							font-weight: 700;
+						}
+					}
 
 					img{
 						width: 100%;
@@ -54,9 +72,7 @@
 			.noticias{
 				text-align: center;
 				.item{
-
-					
-					.text{
+					.content{
 
 					}
 				}
