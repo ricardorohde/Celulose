@@ -40,36 +40,42 @@
 
 			<h3 id="informativos">Informativos</h3>
 			<ul class="lista">
-				<li>
-					<span>Sistema de Gestão</span>
-					<img src="<?=base_url('assets/img/thumbs/informativo_1.jpg'); ?>">
-					<a href="<?=site_url('docs/dl/Informativo_Celulose_01.pdf'); ?>"><?=lang('defualt_download_pdf'); ?></a>
-				</li>
-				<li>
-					<span>Resíduos nos Hortos Forestais</span>
-					<img src="<?=base_url('assets/img/thumbs/informativo_2.jpg'); ?>">
-					<a href="<?=site_url('docs/dl/Informativo_Celulose_02.pdf'); ?>"><?=lang('defualt_download_pdf'); ?></a>
-				</li>
-				<li>
-					<span>Vegetação Nativa nos Hortos Florestais</span>
-					<img src="<?=base_url('assets/img/thumbs/informativo_3.jpg'); ?>">
-					<a href="<?=site_url('docs/dl/Informativo_Celulose_03.pdf'); ?>"><?=lang('defualt_download_pdf'); ?></a>
-				</li>
-				<li>
-					<span>Àgua: Ela precisa ser cuidada</span>
-					<img src="<?=base_url('assets/img/thumbs/informativo_4.jpg'); ?>">
-					<a href="<?=site_url('docs/dl/Informativo_Celulose_04.pdf'); ?>"><?=lang('defualt_download_pdf'); ?></a>
-				</li>
-				<li>
+				
+					<div class="col-xs-4">
+						<span>Sistema de Gestão</span>
+						<img src="<?=base_url('assets/img/thumbs/informativo_1.jpg'); ?>">
+						<a href="<?=site_url('docs/dl/Informativo_Celulose_01.pdf'); ?>"><?=lang('defualt_download_pdf'); ?></a>
+					</div>
+				
+					<div class="col-xs-4">
+						<span>Resíduos nos Hortos Forestais</span>
+						<img src="<?=base_url('assets/img/thumbs/informativo_2.jpg'); ?>">
+						<a href="<?=site_url('docs/dl/Informativo_Celulose_02.pdf'); ?>"><?=lang('defualt_download_pdf'); ?></a>
+					</div>
+				
+					<div class="col-xs-4">
+						<span>Vegetação Nativa nos Hortos Florestais</span>
+						<img src="<?=base_url('assets/img/thumbs/informativo_3.jpg'); ?>">
+						<a href="<?=site_url('docs/dl/Informativo_Celulose_03.pdf'); ?>"><?=lang('defualt_download_pdf'); ?></a>
+					</div>
+				
+					<div class="col-xs-4">
+						<span>Àgua: Ela precisa ser cuidada</span>
+						<img src="<?=base_url('assets/img/thumbs/informativo_4.jpg'); ?>">
+						<a href="<?=site_url('docs/dl/Informativo_Celulose_04.pdf'); ?>"><?=lang('defualt_download_pdf'); ?></a>
+					</div>
+				
+				<div class="col-xs-4">
 					<span>Atendimento a emergências</span>
 					<img src="<?=base_url('assets/img/thumbs/informativo_5.jpg'); ?>">
 					<a href="<?=site_url('docs/dl/Informativo_Celulose_05.pdf'); ?>"><?=lang('defualt_download_pdf'); ?></a>
-				</li>
-				<li class="last">
+				</div>
+
+				<div class="col-xs-4">
 					<span>Adequação Ambiental</span>
 					<img src="<?=base_url('assets/img/thumbs/informativo_6.jpg'); ?>">
 					<a href="<?=site_url('docs/dl/Informativo_Celulose_06.pdf'); ?>"><?=lang('defualt_download_pdf'); ?></a>
-				</li>
+				</div>
 			</ul>
 		</div>
 	</div>
