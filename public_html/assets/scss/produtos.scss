@@ -1,8 +1,47 @@
 /* Produtos Area */
 
 #produtos{
-	.header { margin: 30px 0 15px 0; }
+	.descricao { 
+		text-align: justify; 
+		color: #A4A5A7; 
+		font-size: 14px; 
+		display: block; 
+		
+		.col-xs-12{
+			text-align: center;
+			img{
 
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+
+	.fluxograma {
+
+		ul { 
+			margin-left: 0;
+
+			li { 
+				margin-bottom: 50px;
+				
+				img { 
+					display: block; 
+					width: 100%;
+					margin-bottom: 5px; 
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+	#produtos{
 	.descricao { 
 		text-align: justify; 
 		color: #A4A5A7; 
@@ -25,14 +64,20 @@
 
 			li { 
 				padding: 25px;
+				height: 500px;
 
 				img { 
 					display: block; 
-					height: 100%;
 					width: 100%;
 					margin-bottom: 5px; 
 				}
 			}
 		}
 	}
+}
+
+}
+
+@media (min-width: 1200px) {
+
 }

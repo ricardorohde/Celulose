@@ -9,18 +9,18 @@
 
 			<h2 class="title"><?=lang('defualt_menu_celulose'); ?></h2>
 
-			<h3 class="header" id="o-que-e">O que é celulose?</h3>
+			<h3>O que é celulose?</h3>
 
 			<div class="descricao">
 				<p>A celulose é um polissacarídeo (similar ao açúcar) que é o principal componente da parede celular das fibras das plantas. Junto com a lignina, as resinas e os minerais (compostos inorgânicos), a celulose é um dos compostos que constituem a madeira - cerca de 50%. Suas moléculas, agrupadas pela lignina, formam feixes de fibras que constituem as células vegetais que compõem as fibras presentes na madeira. (Esquema figura 02) </p>
 
 				<p>O objetivo do processo industrial é extrair a celulose da madeira, na forma de uma pasta separando-a da lignina, resinas e minerais, as quais são usadas na geração de energia elétrica pela própria fábrica.</p>
-			
-			
-			<div class="col-xs-12">
-				<img alt="" src="<?=base_url('assets/img/'.getLang().'/produtos-figura-1.jpg'); ?>">
+				
+				
+				<div class="col-xs-12">
+					<img alt="" src="<?=base_url('assets/img/'.getLang().'/produtos-figura-1.jpg'); ?>">
+				</div>
 			</div>
-</div>
 
 			<h3 class="header" id="fluxograma-de-producao">Fluxograma de Produção</h3>
 
@@ -35,12 +35,12 @@
 						<p>Ocorre dentro dos plantios onde são cultivados os eucaliptos. O processo acontece em três etapas: colheita, corte e descascamento. Casca, folhas e galhos ficam na terra para virar matéria orgânica.</p>
 					</li>
 					<li class="col-sm-6 col-md-4">
-					<h3>2. Produção de Cavacos</h3>
+						<h3>2. Produção de Cavacos</h3>
 						<img alt="" src="<?=base_url('assets/img/'.getLang().'/fluxograma-2.jpg'); ?>">
 						<p>Após esse processo, as toras são levadas para lavagem, picagem em tamanho pré-determinado e peneiramento. A partir daí, os cavacos são depositados em silos.</p>
 					</li>
 					<li class="col-sm-6 col-md-4">
-					<h3>3. Cozimento</h3>
+						<h3>3. Cozimento</h3>
 						<img alt="" src="<?=base_url('assets/img/'.getLang().'/fluxograma-3.jpg'); ?>">
 						<p>No cozimento, os cavacos formam uma pasta marrom, também chamada de celulose não branqueada. Esse processo, que se chama Kraft, ocorre a 150º C com adição de Sulfato de Sódio e Soda Cáustica, dissolvendo a lignina e liberando a celulose como polpa de papel de maior qualidade.</p>
 					</li>

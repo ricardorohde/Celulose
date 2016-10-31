@@ -1,15 +1,36 @@
 /* Produtos Area */
-#produtos .header {
-  margin: 30px 0 15px 0; }
 #produtos .descricao {
   text-align: justify;
   color: #A4A5A7;
   font-size: 14px;
   display: block; }
-#produtos .fluxograma ul li {
-  padding: 0; }
-  #produtos .fluxograma ul li img {
-    display: block;
-    margin-bottom: 5px; }
+  #produtos .descricao .col-xs-12 {
+    text-align: center; }
+    #produtos .descricao .col-xs-12 img {
+      height: 100%;
+      width: 100%; }
+#produtos .fluxograma ul li img {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px; }
+
+@media (min-width: 992px) {
+  #produtos .descricao {
+    text-align: justify;
+    color: #A4A5A7;
+    font-size: 14px;
+    display: block; }
+    #produtos .descricao .col-xs-12 {
+      text-align: center; }
+      #produtos .descricao .col-xs-12 img {
+        height: 100%;
+        width: 100%; }
+  #produtos .fluxograma ul li {
+    padding: 25px;
+    height: 500px; }
+    #produtos .fluxograma ul li img {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px; } }
 
 /*# sourceMappingURL=produtos.css.map */

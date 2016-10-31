@@ -11,6 +11,19 @@ class Responsabilidade extends CI_Controller {
 		 	'description' => '',
 		 	'keywords' => '' 
 			]);
+		$this->load->view(getLang().'/responsabilidade/home');
+		
+
+		$this->load->view('tpl/agende');
+		$this->load->view('tpl/footer');
+	}
+
+	public function publicacoes(){
+		$this->load->view('tpl/header',[
+			'title' => lang('defualt_menu_publicacoes'),
+		 	'description' => '',
+		 	'keywords' => '' 
+			]);
 		$this->load->view(getLang().'/responsabilidade/publicacoes');
 		$this->load->view(getLang().'/responsabilidade/folha');
 
@@ -19,13 +32,15 @@ class Responsabilidade extends CI_Controller {
 	}
 
 	public function florestal(){
-		views($this,getLang().'/responsabilidade/florestal',array(
-			'header' => array(
-				'title' => lang('defualt_menu_ambiente_florestal'),
-				'description' => '',
-				'keywords' => '' 
-			)
-		));
+		$this->load->view('tpl/header',[
+			'title' => lang('defualt_menu_ambiente_florestal'),
+		 	'description' => '',
+		 	'keywords' => '' 
+			]);
+		$this->load->view(getLang().'/responsabilidade/florestal');
+
+		$this->load->view('tpl/agende');
+		$this->load->view('tpl/footer');
 	}
 
 	public function industrial(){
@@ -47,62 +62,75 @@ class Responsabilidade extends CI_Controller {
 			}
 		}
 
-		views($this,getLang().'/responsabilidade/industrial',array(
-			'header' => array(
-				'title' => lang('defualt_menu_ambiente_industrial'),
-				'description' => '',
-				'keywords' => '' 
-			),
+		$this->load->view('tpl/header',[
+			'title' => lang('defualt_menu_ambiente_industrial'),
+		 	'description' => '',
+		 	'keywords' => '' 
+			]);
+		$this->load->view(getLang().'/responsabilidade/industrial',[
 			'lista' => $lista
-		));
+			]);
+
+		$this->load->view('tpl/agende');
+		$this->load->view('tpl/footer');
 	}
 
 	public function sociais(){
 
 		$this->load->model('responsabilidade_model','model');
 
-		views($this,getLang().'/responsabilidade/sociais',array(
-			'header' => array(
-				'title' => lang('defualt_menu_projetos'),
-				'description' => '',
-				'keywords' => '' 
-			),
-			'lista' => $this->model->getSocialLista()
-		));
+		$this->load->view('tpl/header',[
+			'title' => lang('defualt_menu_projetos'),
+		 	'description' => '',
+		 	'keywords' => '' 
+			]);
+		$this->load->view(getLang().'/responsabilidade/sociais',[
+				'lista' => $this->model->getSocialLista()
+			]);
+
+		$this->load->view('tpl/agende');
+		$this->load->view('tpl/footer');
 	}
 
 	public function empregos(){
 
 		$this->load->model('responsabilidade_model','model');
 		
-		views($this,getLang().'/responsabilidade/empregos',array(
-			'header' => array(
-				'title' => lang('defualt_menu_empregos'),
-				'description' => '',
-				'keywords' => '' 
-			),
-			'lista' => $this->model->getEmpregosLista()
-		));
+		$this->load->view('tpl/header',[
+			'title' => lang('defualt_menu_empregos'),
+		 	'description' => '',
+		 	'keywords' => '' 
+			]);
+		$this->load->view(getLang().'/responsabilidade/empregos',[
+				'lista' => $this->model->getEmpregosLista()
+			]);
+
+		$this->load->view('tpl/agende');
+		$this->load->view('tpl/footer');
 	}
 
 	public function fiscal(){
-		views($this,getLang().'/responsabilidade/fiscal',array(
-			'header' => array(
-				'title' => lang('defualt_menu_fiscal'),
-				'description' => '',
-				'keywords' => '' 
-			)
-		));
+		$this->load->view('tpl/header',[
+			'title' => lang('defualt_menu_fiscal'),
+		 	'description' => '',
+		 	'keywords' => '' 
+			]);
+		$this->load->view(getLang().'/responsabilidade/fiscal');
+
+		$this->load->view('tpl/agende');
+		$this->load->view('tpl/footer');
 	}
 
 	public function barbaNegra(){
-		views($this,getLang().'/responsabilidade/barbaNegra',array(
-			'header' => array(
-				'title' => lang('defualt_menu_barba'),
-				'description' => '',
-				'keywords' => '' 
-			)
-		));
+		$this->load->view('tpl/header',[
+			'title' => lang('defualt_menu_barba'),
+		 	'description' => '',
+		 	'keywords' => '' 
+			]);
+		$this->load->view(getLang().'/responsabilidade/barbaNegra');
+
+		$this->load->view('tpl/agende');
+		$this->load->view('tpl/footer');
 	}
 
 	public function folha(){
@@ -125,16 +153,21 @@ class Responsabilidade extends CI_Controller {
 		$conteudos = $this->getConteudos($url,$folha->id);
 
 		if($folha){
-			views($this,getLang().'/responsabilidade/folhaLista',array(
-				'header' => array(
-					'title' => lang('defualt_menu_folha'),
-					'description' => '',
-					'keywords' => '' 
-				),
+
+			$this->load->view('tpl/header',[
+			'title' => lang('defualt_menu_folha'),
+		 	'description' => '',
+		 	'keywords' => '' 
+			]);
+		$this->load->view(getLang().'/responsabilidade/folhaLista', [
 				'url' => $url,
 				'conteudos' => $conteudos,
 				'lista' => $this->model->getFolhaEdicaoLista($url)
-			));
+			]);
+
+		$this->load->view('tpl/agende');
+		$this->load->view('tpl/footer');
+
 		} else {
 			show_404();
 		}

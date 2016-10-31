@@ -1,0 +1,18 @@
+
+
+#responsabilidade{
+	.row{
+		display: inline-block;
+		.item{
+			.content{
+				background-color: #222;
+				width: 17.28%;
+				height: 160px;
+
+				&:hover{
+					opacity: .6;
+				}
+			}
+		}
+	}
+}
