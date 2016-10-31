@@ -1,0 +1,134 @@
+#sobre .diferencial {
+  margin: 40px auto 40px; }
+  #sobre .diferencial .item {
+    padding: 3px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    position: relative;
+    width: 100%;
+    /* desired width */ }
+    #sobre .diferencial .item:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+      /* ratio of 1:1*/ }
+    #sobre .diferencial .item .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      padding: 2px; }
+      #sobre .diferencial .item .content img {
+        width: 100%;
+        height: 100%; }
+#sobre .esquema {
+  text-align: center; }
+  #sobre .esquema img {
+    margin: 40px auto 40px auto;
+    width: 100%;
+    height: 100%; }
+
+#certificacoes img {
+  margin-top: 40px; }
+#certificacoes .pdf {
+  position: absolute;
+  top: 190px;
+  left: 10px;
+  margin: 0px;
+  padding: 0px; }
+  #certificacoes .pdf:hover {
+    outline: 1px solid #64AF53; }
+  #certificacoes .pdf a, #certificacoes .pdf a:visited {
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    width: 80px;
+    height: 20px;
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 20px;
+    border: 1px solid #64AF53;
+    margin-bottom: 20px; }
+#certificacoes h5 {
+  margin-top: 60px;
+  margin-bottom: 10px; }
+#certificacoes p {
+  font-size: 12px; }
+
+#guaiba2 .item {
+  padding: 3px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  position: relative;
+  width: 100%;
+  /* desired width */ }
+  #guaiba2 .item:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    /* ratio of 1:1*/ }
+  #guaiba2 .item .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2px; }
+    #guaiba2 .item .content img {
+      display: block;
+      width: 100%;
+      height: 100%; }
+
+@media (min-width: 768px) {
+  #sobre .esquema img {
+    width: 60%;
+    height: 60%; }
+
+  #certificacoes img {
+    margin-top: 0; }
+  #certificacoes .pdf {
+    position: absolute;
+    top: 150px;
+    left: 10px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px; }
+    #certificacoes .pdf a {
+      padding: 0px;
+      text-decoration: none;
+      text-align: center;
+      color: #000;
+      width: 80px;
+      height: 20px;
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 20px;
+      border: 1px solid #64AF53;
+      margin-bottom: 0; }
+      #certificacoes .pdf a:hover {
+        outline: 1px solid #64AF53; }
+  #certificacoes h5 {
+    margin: 0 0 10px 10px; }
+  #certificacoes p {
+    margin: 10px;
+    font-size: 12px; } }
+@media (min-width: 992px) {
+  #sobre .esquema img {
+    width: 40%;
+    height: 40%; } }
+
+/*# sourceMappingURL=sobre.css.map */

@@ -573,6 +573,33 @@ footer {
 #certificacoes p {
   font-size: 12px; }
 
+#guaiba2 .item {
+  padding: 3px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  position: relative;
+  width: 100%;
+  /* desired width */ }
+  #guaiba2 .item:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    /* ratio of 1:1*/ }
+  #guaiba2 .item .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2px; }
+    #guaiba2 .item .content img {
+      width: 100% !important;
+      height: 100% !important; }
+
 @media (min-width: 768px) {
   #sobre .esquema img {
     width: 60%;
@@ -620,10 +647,17 @@ footer {
   color: #A4A5A7;
   font-size: 14px;
   display: block; }
+  #produtos .descricao .col-xs-12 {
+    text-align: center; }
+    #produtos .descricao .col-xs-12 img {
+      height: 100%;
+      width: 100%; }
 #produtos .fluxograma ul li {
-  padding: 0; }
+  padding: 25px; }
   #produtos .fluxograma ul li img {
     display: block;
+    height: 100%;
+    width: 100%;
     margin-bottom: 5px; }
 
 #noticias .news .col-xs-12 {

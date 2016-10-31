@@ -8,6 +8,15 @@
 		color: #A4A5A7; 
 		font-size: 14px; 
 		display: block; 
+		
+		.col-xs-12{
+			text-align: center;
+			img{
+
+				height: 100%;
+				width: 100%;
+			}
+		}
 	}
 
 	.fluxograma {
@@ -15,11 +24,12 @@
 		ul { 
 
 			li { 
-				padding: 0;
-				
+				padding: 25px;
 
 				img { 
 					display: block; 
+					height: 100%;
+					width: 100%;
 					margin-bottom: 5px; 
 				}
 			}

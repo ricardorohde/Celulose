@@ -1,4 +1,4 @@
-﻿
+
 <section class="slider mobile-hide">
 <div class="slider-wrapper theme-default">
 	
@@ -53,8 +53,8 @@
 								</div>
 							</div>
 							<?php $i++; } ?>
-<br>
-							<span><a target="_self" href="<?=base_url('noticias'); ?>">Veja mais Notícias +</a></span>
+
+							<div class=""><a target="_self" href="<?=base_url('noticias'); ?>">Veja mais Notícias +</a></div>
 						</div>
 
 						<div class="projetos-sociais">
