@@ -15,7 +15,8 @@
 		$(window).on('load', function() {
 			$('#slider').nivoSlider({
 				effect: 'slideInLeft',
-				directionNav: false
+				directionNav: false,
+				pauseOnHover: true
 			}); 
 		}); 
 	</script>

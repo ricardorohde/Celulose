@@ -106,14 +106,13 @@ if(!isset($js)){ $js = array(); }
 						<li>
 							<a target="_self" href="<?=base_url('contato'); ?>"><?=lang('defualt_menu_contato'); ?></a>
 						</li>
-						<li>
+						<!-- <li>
 							<a target="_self" href="<?=base_url('#'); ?>"><?=lang('defualt_menu_visite'); ?></a>
-						</li>
+						</li> -->
 						<li>
 							<a target="_self" href="<?=base_url('trabalhe-conosco'); ?>"><?=lang('defualt_menu_trabalhe'); ?></a>
 						</li>
 					</ul>
-
 
 				</nav>
 
