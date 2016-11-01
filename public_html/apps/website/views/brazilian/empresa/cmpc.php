@@ -5,19 +5,19 @@
 
 
 			<p>
-				Fundada no ano de 1920, a CMPC é pioneira no Chile na fabricação de celulose e papel. Trata-se de uma das principais empresas na área florestal na América Latina e está presente em mais de 50 países nos 5 continentes.
+				Fundada no ano de 1920, a CMPC é pioneira no Chile na fabricação de celulose, sendo o segundo maior do setor na América Latina, com 25 fábricas em oito países: Brasil, Peru, Uruguai, Colômbia, México, Equador e Argentina, além do Chile.
 			</p>
 			<p>
-				Com mais de 25 fábricas, conta com aproximadamente 8 mil colaboradores operando em 5 áreas de negócios, através das seguintes empresas: CMPC Florestal, CMPC Celulose, CMPC Papéis, CMPC Tissue e CMPC Produtos de Papel.
+				O grupo conta com aproximadamente 17 mil colaboradores operando em 5 áreas de negócios por meio das seguintes empresas: CMPC Florestal, CMPC Celulose, CMPC Papéis, CMPC Tissue e CMPC Produtos de Papel. 
 			</p>
 			<p>
-				A Companhia possui fortes laços com seus clientes ao redor do mundo e tem uma rede de comercialização de exportação diversificada que atinge mais de 200 clientes em 30 países.
+				A companhia possui fortes laços com seus clientes ao redor do mundo e tem uma rede de comercialização de exportação diversificada que atinge mais de 200 clientes em 30 países. 
 			</p>
 			<p>
-				A CMPC tem como premissa desenvolver um trabalho de maneira comprometida e responsável, através da geração de empregos, proporcionando rentabilidade aos seus acionistas, fabricando produtos de qualidade, educando e capacitando seus colaboradores e parceiros, sem nunca descuidar do meio ambiente.
+				A CMPC tem como premissa desenvolver um trabalho de maneira comprometida e responsável, como geração de empregos, rentabilidade aos seus acionistas ao fabricar produtos de qualidade, além de educar e capacitar seus colaboradores e parceiros, sem abandonar o comprometimento com o meio ambiente. 
 			</p>
 			<p>
-				Todos estes aspectos fazem da CMPC uma empresa desejada e muito respeitada em todos os países onde atua.
+				Iniciou suas operações no Brasil em 2009, quando a Unidade Guaíba da Aracruz Celulose assinou o compromisso de venda para a CMPC, originando assim, a CMPC Celulose Riograndense. Todos estes aspectos fazem da CMPC uma empresa desejada e respeitada em todos os países onde atua.
 			</p>
 			
 

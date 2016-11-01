@@ -14,8 +14,7 @@ $count = 0;
 			<h2 class="title"><?=lang('defualt_menu_projetos'); ?></h2>
 
 
-			<p>Plantar, desenvolver e colher resultados positivos através de projetos sociais é um dos melhores produtos que a Celulose Riograndense oferece à sociedade. Seja na distribuição de cadernos através do Projeto Educação, na formação de novos músicos com o Fábrica de Gaiteiros ou no cuidado com o meio ambiente através do Projeto Guaíba Limpo, todos os dias a Celulose Riograndense também trabalha para que, assim como o desenvolvimento econômico da região onde atua, o desenvolvimento social esteja sempre no caminho do sucesso.
-				Abaixo, conheça um pouco mais sobre cada um dos projetos.</p>
+			<p>A responsabilidade social da empresa se reflete, entre outros aspectos, num significativo programa de ações que estimulem o potencial das comunidades onde a empresa está presente, maximizando o ganho social proporcionado pela sua atividade econômica. Os principais são:</p>
 
 				<ul class="lista">
 					<?php

@@ -12,7 +12,7 @@
 			<h3>O que é celulose?</h3>
 
 			<div class="descricao">
-				<p>A celulose é um polissacarídeo (similar ao açúcar) que é o principal componente da parede celular das fibras das plantas. Junto com a lignina, as resinas e os minerais (compostos inorgânicos), a celulose é um dos compostos que constituem a madeira - cerca de 50%. Suas moléculas, agrupadas pela lignina, formam feixes de fibras que constituem as células vegetais que compõem as fibras presentes na madeira. (Esquema figura 02) </p>
+				<p>A celulose é um polissacarídeo (similar ao açúcar), sendo o principal componente da parede celular das fibras das plantas. Junto com a lignina, as resinas e os minerais (compostos inorgânicos), a celulose é um dos compostos que constituem a madeira - cerca de 50%. Suas moléculas, agrupadas pela lignina, formam feixes de fibras que constituem as células vegetais que compõem as fibras presentes na madeira. (Esquema figura 02)</p>
 
 				<p>O objetivo do processo industrial é extrair a celulose da madeira, na forma de uma pasta separando-a da lignina, resinas e minerais, as quais são usadas na geração de energia elétrica pela própria fábrica.</p>
 				
@@ -25,14 +25,14 @@
 			<h3 class="header" id="fluxograma-de-producao">Fluxograma de Produção</h3>
 
 			<div class="fluxograma">
-				<p>Conheça o fluxograma de produção da celulose e descubra cada etapa do nosso extenso trabalho. Para realizá-lo, desde a pesquisa e o plantio da muda de eucalipto até a fibra sendo transformada no papel que estará nas casas de pessoas do mundo todo, decorrem aproximadamente 7 anos.</p>
+				<p>Conheça o fluxograma de produção da celulose e descubra cada etapa do nosso extenso trabalho. Para realizá-lo, o processo leva aproximadamente 7 anos e se inicia desde a pesquisa e o plantio da muda de eucalipto, até a fibra sendo transformada no papel que estará nas casas de pessoas do mundo todo. </p>
 				<ul>
 
 					
 					<li class="col-sm-6 col-md-4">
 						<h3>1. Colheita</h3>
 						<img alt="" src="<?=base_url('assets/img/'.getLang().'/fluxograma-1.jpg'); ?>">
-						<p>Ocorre dentro dos plantios onde são cultivados os eucaliptos. O processo acontece em três etapas: colheita, corte e descascamento. Casca, folhas e galhos ficam na terra para virar matéria orgânica.</p>
+						<p>Ocorre dentro dos plantios onde são cultivados os eucaliptos. O processo acontece em três etapas: colheita, corte e descascamento. Cascas, folhas e galhos ficam na terra para virar matéria orgânica.</p>
 					</li>
 					<li class="col-sm-6 col-md-4">
 						<h3>2. Produção de Cavacos</h3>
@@ -50,7 +50,7 @@
 					<li class="col-sm-6 col-md-4">
 						<h3>4. Depuração, Deslignificação e Branqueamento</h3>
 						<img alt="" src="<?=base_url('assets/img/'.getLang().'/fluxograma-4.jpg'); ?>">
-						<p>Depuração consiste na separação das impureza da madeira e dos pedaços de cavaco que não foram cozidos. Depois é removida a lignina, uma substância que une as células da celulose. No branqueamento, a celulose é peneirada para remover impurezas e suas propriedades (alvura, limpeza e pureza química) são melhoradas.</p>
+						<p>Depuração consiste na separação das impurezas da madeira e dos pedaços de cavaco que não foram cozidos. Depois, é removida a lignina, uma substância que une as células da celulose. No branqueamento, a celulose é peneirada para remover impurezas e suas propriedades (alvura, limpeza e pureza química) são melhoradas.</p>
 					</li>
 					<li class="col-sm-6 col-md-4">
 						<h3>5. Secagem</h3>
@@ -60,7 +60,7 @@
 					<li class="col-sm-6 col-md-4">
 						<h3>6. Embalagem</h3>
 						<img alt="" src="<?=base_url('assets/img/'.getLang().'/fluxograma-6.jpg'); ?>">
-						<p>Na próxima fase, onde a cortadeira reduz a folha contínua em outras menores. Estas folhas formam fardos de 250 kg de celulose.</p>
+						<p>Depois de secas, as folhas de celulose são cortadas e organizadas em fardos, facilitando o transporte. </p>
 					</li>
 					
 
@@ -68,12 +68,12 @@
 					<li class="col-sm-6 col-md-4">
 						<h3>7. Transportes</h3>
 						<img alt="" src="<?=base_url('assets/img/'.getLang().'/fluxograma-7.jpg'); ?>">
-						<p>Após armazenada, a celulose é enviada através do Lago Guaíba e Lagoa dos Patos ao porto de Rio Grande, onde é embarcada para o mercado consumidor. Um dos diferenciais da Celulose Riograndense é ter uma localização próxima à BR 290 e um porto próprio, que facilita o transporte para as mais variadas regiões.</p>
+						<p>Após armazenada, a celulose é enviada por meio do Lago Guaíba e Lagoa dos Patos ao porto de Rio Grande, porto privado e coberto da companhia. Um dos diferenciais da Celulose Riograndense é ter uma localização próxima a BR 290 que facilita o transporte para as mais variadas regiões.</p>
 					</li>
 					<li class="col-sm-6 col-md-4">
 						<h3>8. Mercado</h3>
 						<img alt="" src="<?=base_url('assets/img/'.getLang().'/fluxograma-8.jpg'); ?>">
-						<p>A celulose produzida na fábrica de Guaíba é utilizada para o mercado externo, especialmente o continente asiático.</p>
+						<p>A celulose produzida na fábrica de Guaíba é utilizada para todo o mercado externo. </p>
 					</li>
 					<li class="col-sm-6 col-md-4">
 						<h3>9. Produto Final</h3>

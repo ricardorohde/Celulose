@@ -14,9 +14,7 @@
 				<div class="thumb">
 					<img src="<?=base_url('assets/img/thumbs/capa_rppn.jpg'); ?>">
 				</div>
-				<p>
-					Verdadeiro santuário da Natureza, com uma área de preservação permanente de 2,4 mil hectares.
-				</p>
+				<p>Em 2009, uma área de aproximadamente 2,4 mil hectares foi oficialmente reconhecida como reserva Particular do Patrimônio Natural (RPPN), rica em diversidade de fauna e flora. Localizada no município de Barra do Ribeiro, a reserva está situada em uma península entre a Lagoa dos Patos e o Lago Guaíba.</p>
 				<div class="links">
 					<a href="<?=site_url('docs/dl/revista_rppn.pdf'); ?>"><?=lang('defualt_download_pdf'); ?></a>
 				</div>
