@@ -4,9 +4,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
-$db['default']['database'] = 'db_celulose';
+$db['default']['username'] = 'celulose_website';
+$db['default']['password'] = 'T6,-cS[-3Nl7';
+$db['default']['database'] = 'celulose_website';
 
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';

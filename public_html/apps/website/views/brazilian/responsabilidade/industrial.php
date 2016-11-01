@@ -1,30 +1,37 @@
+<div class="banner">
+	<img alt="" src="<?=base_url('assets/img/banners/banner-responsabilidade-Industrial.jpg'); ?>">
+</div>
 
-<section class="container responsabilidade-industrial">
-	<h1 class="title"><?=lang('defualt_menu_ambiente_industrial'); ?></h1>
+<section class="responsabilidade-industrial">
+	<h2 class="title"><?=lang('defualt_menu_ambiente_industrial'); ?></h2>
+	<div class="container">
+		<div class="col-md-offset-1 col-md-10">
 
-	<img class="banner" alt="" src="<?=base_url('assets/img/banners/banner-responsabilidade-Industrial.jpg'); ?>">
 
-	<h2>Dados Ambientais de monitoramento de acordo com a Licença de Operação emitida pela FEPAM.</h2>
 
-	<div class="texto">Para baixar os relatórios clique abaixo no mês desejado.</div>
+			<h3>Dados Ambientais de monitoramento de acordo com a Licença de Operação emitida pela FEPAM.</h3>
 
-	<ul>
-<?php
-		foreach($lista as $y => $ano){
-			echo '<li><span>',$y,'</span>';
-			foreach($ano as $m => $mes){
-				$class = $m == 12 ? 'last' : '';
-				if($mes){
-					echo '<a class="',$class,'" href="',$mes->arquivo,'">',$mes->texto,'</a>';
-				} else {
-					echo '<a class="none">',lang('defualt_mes_'.$m),'</a>';
+			<p>Para baixar os relatórios clique abaixo no mês desejado.</p>
+
+			<ul>
+				<?php
+				foreach($lista as $y => $ano){
+					echo '<li><span>',$y,'</span>';
+					foreach($ano as $m => $mes){
+						$class = $m == 12 ? 'last' : '';
+						if($mes){
+							echo '<a class="',$class,'" href="',$mes->arquivo,'">',$mes->texto,'</a>';
+						} else {
+							echo '<a class="none">',lang('defualt_mes_'.$m),'</a>';
+						}
+					}
+					echo '</li>' . PHP_EOL;
 				}
-			}
-			echo '</li>' . PHP_EOL;
-		}
-?>
-	</ul>
+				?>
+			</ul>
 
-	
-	<div class="clear"></div>
+
+			<div class="clear"></div>
+		</div>
+	</div>
 </section>
