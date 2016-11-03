@@ -1,24 +1,19 @@
 
 <section class="slider mobile-hide">
-	<div class="slider-wrapper theme-default">
 
-		<div id="slider" class="nivoSlider">     
+		<div id="slider" class="nivoSlider">
 			<?php
 			$i = 0;
 			foreach($slider as $rows){
 				echo '<img rel="',$i++,'" src="',$rows->src,'" data-title="',$rows->legenda,'" data-url="',$rows->link,'" data-target="',$rows->target,'">' . PHP_EOL;
 			}
 			?>
-		</div> 
+
 	</div>
-	<script type="text/javascript"> 
-		$(window).on('load', function() {
-			$('#slider').nivoSlider({
-				effect: 'slideInLeft',
-				directionNav: false,
-				pauseOnHover: true
-			}); 
-		}); 
+	<script type="text/javascript">
+		
+		$('#slider').nivoSlider();
+
 	</script>
 </section>
 <section id="home">

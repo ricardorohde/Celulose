@@ -46,10 +46,10 @@ if(!isset($js)){ $js = array(); }
 
 	<!-- Teste Nivo Slider -->
 
-	<link rel="stylesheet" href="<?=base_url('assets/css/nivo/nivo-slider.css'); ?>" type="text/css" /> 
-	<link rel="stylesheet" href="<?=base_url('assets/css/nivo/default.css'); ?>" type="text/css" /> 
+	
+	<link rel="stylesheet" href="<?=base_url('assets/css/nivo/slider.css'); ?>" type="text/css" /> 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script> 
-	<script src="<?=base_url('assets/css/nivo/jquery.nivo.slider.pack.js');?>" type="text/javascript"></script>
+	<script src="<?=base_url('assets/css/nivo/slider.js');?>" type="text/javascript"></script>
 	
 
 	<!-- Teste Nivo Slider -->	
