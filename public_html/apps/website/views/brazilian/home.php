@@ -1,6 +1,6 @@
 
 <section class="slider mobile-hide">
-
+	
 		<div id="slider" class="nivoSlider">
 			<?php
 			$i = 0;
@@ -23,6 +23,8 @@
 
 				<div class="noticias">
 					<h2>Notícias</h2>
+
+					
 
 					<?php
 					$i = 1;
@@ -49,8 +51,13 @@
 							</div>
 						</div>
 						<?php $i++; } ?>
-
-						<a target="_self" href="<?=base_url('noticias'); ?>">Veja mais Notícias +</a>
+						<div class="clear"></div>
+						<div class="span">
+						<br>
+						<br>
+						<br>
+							<a target="_self" href="<?=base_url('noticias'); ?>">Veja mais Notícias +</a>
+						</div>
 					</div>
 
 					<div class="projetos-sociais">
@@ -69,6 +76,13 @@
 									<img src="<?=base_url('assets/img/projetos/nectar-social.jpg'); ?>">
 								</a>
 							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="span">
+							<br>
+							<br>
+							<br>
+							<a target="_self" href="<?=base_url('responsabilidade/sociais'); ?>">Conheça mais projetos sociais +</a>
 						</div>
 					</div>
 

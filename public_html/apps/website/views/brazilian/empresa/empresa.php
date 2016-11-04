@@ -65,7 +65,7 @@
 
 												<?php } ?>
 											</div>
-
+										<div class="clear"></div>
 										</div>
 
 										<h3>Processos de Fabricação</h3>
@@ -73,8 +73,7 @@
 										<h4>Geração de Energia</h4>
 										<p>
 											A empresa gera energia para seu uso a partir de resíduos do processo de produção da celulose. Estes resíduos são queimados
-											em uma caldeira e o vapor produzido faz as turbinas funcionarem. Assim, temos vapor e energia elétrica para suprir as necessidades
-											da fábrica. A produção interna de energia poderia atender uma cidade de 200 mil habitantes.
+											em uma caldeira e o vapor produzido faz as turbinas funcionarem. Assim, temos vapor e energia elétrica para suprir as necessidades da fábrica. A produção interna de energia poderia atender uma cidade de 200 mil habitantes.
 										</p>
 
 										<h4>Plantas Químicas</h4>

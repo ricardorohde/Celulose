@@ -151,13 +151,13 @@ h3 {
   color: #64AF53;
   text-transform: uppercase;
   font-size: 17px;
-  margin-bottom: 15px; }
+  margin: 30px 0; }
 
 h4 {
   color: #4D4D4D;
   font-size: 16px;
   padding-top: 20px;
-  margin-bottom: 10px; }
+  margin: 0; }
 
 h5 {
   color: #64AF53;
@@ -165,7 +165,7 @@ h5 {
 
 p {
   color: #4D4D4D;
-  font-size: 15px;
+  font-size: 14px;
   text-align: justify;
   font-weight: 700; }
 
@@ -459,7 +459,8 @@ footer {
   margin: 40px 0 60px; }
   #home .container .noticias {
     text-align: center;
-    margin: 50px 0 60px 0; }
+    margin: 50px 0 60px 0;
+    position: relative; }
     #home .container .noticias .item {
       padding: 3px;
       -webkit-border-radius: 0;
@@ -468,7 +469,8 @@ footer {
       border-radius: 0;
       position: relative;
       width: 100%;
-      /* desired width */ }
+      /* desired width */
+      z-index: 100; }
       #home .container .noticias .item:before {
         content: "";
         display: block;
@@ -490,7 +492,12 @@ footer {
           height: 98.8%;
           width: 98.8%;
           background-color: #000;
-          opacity: 0; }
+          opacity: 0;
+          -webkit-transition: all ease 0.3s;
+          -moz-transition: all ease 0.3s;
+          -o-transition: all ease 0.3s;
+          -ms-transition: all ease 0.3s;
+          transition: all ease 0.3s; }
           #home .container .noticias .item .content .black span {
             position: absolute;
             top: 50%;
@@ -505,15 +512,42 @@ footer {
       color: #4D4D4D;
       text-transform: uppercase;
       font-weight: 700;
-      font-size: 14px; }
+      font-size: 14px;
+      -webkit-transition: all ease 0.3s;
+      -moz-transition: all ease 0.3s;
+      -o-transition: all ease 0.3s;
+      -ms-transition: all ease 0.3s;
+      transition: all ease 0.3s; }
       #home .container .noticias a:hover {
         text-decoration: underline; }
-  #home .container .projetos-sociais img {
-    height: auto;
-    width: 100%;
-    margin-bottom: 10px; }
-    #home .container .projetos-sociais img:hover {
-      opacity: .6; }
+    #home .container .noticias .span a {
+      color: #4D4D4D;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 14px; }
+  #home .container .projetos-sociais {
+    text-align: center; }
+    #home .container .projetos-sociais img {
+      height: auto;
+      width: 100%;
+      margin-bottom: 10px;
+      z-index: 100;
+      -webkit-transition: all ease 0.3s;
+      -moz-transition: all ease 0.3s;
+      -o-transition: all ease 0.3s;
+      -ms-transition: all ease 0.3s;
+      transition: all ease 0.3s; }
+      #home .container .projetos-sociais img:hover {
+        opacity: .6; }
+    #home .container .projetos-sociais .span {
+      z-index: 30; }
+      #home .container .projetos-sociais .span a {
+        color: #4D4D4D;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 14px; }
+        #home .container .projetos-sociais .span a:hover {
+          text-decoration: underline; }
 
 @media (min-width: 768px) {
   #home .container .noticias {
@@ -582,10 +616,15 @@ footer {
     margin-bottom: 20px; }
 #certificacoes h5 {
   margin-top: 60px;
-  margin-bottom: 10px; }
+  margin-bottom: 0 !important;
+  font-size: 14px;
+  font-weight: 500; }
 #certificacoes p {
-  font-size: 12px; }
+  font-size: 11px !important;
+  margin-top: 0 !important; }
 
+#guaiba2 h3 {
+  margin-top: 0; }
 #guaiba2 .item {
   padding: 3px;
   -webkit-border-radius: 0;
@@ -613,10 +652,25 @@ footer {
       width: 100% !important;
       height: 100% !important; }
 #guaiba2 ul {
-  list-style: circle; }
+  list-style: circle;
+  margin-left: 15px; }
+  #guaiba2 ul li {
+    color: #4D4D4D;
+    font-size: 14px;
+    text-align: justify;
+    font-weight: 700; }
 
 #valores ul {
-  list-style: circle; }
+  list-style: circle;
+  margin-left: 15px; }
+  #valores ul li {
+    color: #4D4D4D;
+    font-size: 14px;
+    text-align: justify;
+    font-weight: 700; }
+
+#historia h3 {
+  margin: 20px auto 0; }
 
 @media (min-width: 768px) {
   #sobre .esquema img {
@@ -668,6 +722,8 @@ footer {
     #produtos .descricao .col-xs-12 img {
       height: 100%;
       width: 100%; }
+#produtos .fluxograma h3 {
+  line-height: 19px; }
 #produtos .fluxograma ul {
   margin-left: 0; }
   #produtos .fluxograma ul li {
@@ -676,6 +732,8 @@ footer {
       display: block;
       width: 100%;
       margin-bottom: 5px; }
+    #produtos .fluxograma ul li p {
+      font-size: 13px; }
 
 @media (min-width: 992px) {
   #produtos .descricao {
@@ -697,6 +755,8 @@ footer {
       margin-bottom: 5px; } }
 #responsabilidade {
   display: inline; }
+  #responsabilidade p {
+    margin-top: 100px; }
   #responsabilidade .links {
     text-align: center; }
     #responsabilidade .links ul {

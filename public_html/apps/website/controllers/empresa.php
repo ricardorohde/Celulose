@@ -17,7 +17,6 @@ class Empresa extends CI_Controller {
 			]);
 		$this->load->view(getLang().'/empresa/valores');
 		$this->load->view(getLang().'/empresa/certificacoes');
-		$this->load->view(getLang().'/empresa/cmpc');
 		$this->load->view(getLang().'/empresa/guaiba2');
 		$this->load->view(getLang().'/empresa/historia');
 

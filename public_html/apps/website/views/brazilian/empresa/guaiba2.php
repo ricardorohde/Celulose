@@ -3,10 +3,11 @@
 		<div class="col-md-offset-1 col-md-10">
 			<div class="row">
 
-				<h2><?=lang('defualt_menu_projeto_guaiba2'); ?></h2>
+				<h2><?=lang('defualt_menu_guaiba2'); ?></h2>
 
-				<div class="col-md-6">
+				<div class="col-md-6 ">
 					<h3>A melhor parte de um projeto é quando ele sai do papel e torna-se realidade.</h3>
+
 					<p>
 						As operações na segunda linha de produção, o Projeto Guaíba 2, foram iniciadas. Com investimento total de U$S 2,5 bilhões, a obra gerou 10 mil empregos diretos e 30 mil indiretos, além de gerar um programa de formação de mão-de-obra, beneficiando, aproximadamente, 9000 profissionais. </p>
 
@@ -23,7 +24,7 @@
 						</ul>
 					</div>
 
-					<div class="col-md-6">
+					<div class="col-md-6 ">
 
 
 						<div class="item">

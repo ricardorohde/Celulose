@@ -8,7 +8,6 @@ $lang['defualt_newsletter_cadastrar'] = "Cadastrar";
 
 /* Menus */
 $lang['defualt_menu_guaiba2'] = "Guaíba 2";
-$lang['defualt_menu_projeto_guaiba2'] = "Projeto Guaíba 2";
 $lang['defualt_menu_andamento_obra'] = "Andamento da Obra";
 $lang['defualt_menu_home'] = "Celulose Riograndense - Compromisso com o Rio Grande &eacute; a nossa marca.";
 $lang['defualt_menu_empresa'] = "A empresa";

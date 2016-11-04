@@ -14,7 +14,7 @@
 
 				<div class="links">
 					<ul>
-						<li><a href="<?=base_url('responsabilidade/publicacoes'); ?>"><img src="<?=base_url('assets/img/projetos/rep_publicacoes.jpg'); ?>" alt=""></a></li>
+						<li><a href="<?=base_url('responsabilidade/publicacoes');?>"><img src="<?=base_url('assets/img/projetos/rep_publicacoes.jpg'); ?>" alt=""></a></li>
 						<li><a href="<?=base_url('responsabilidade/florestal'); ?>"><img src="<?=base_url('assets/img/projetos/rep_florestal.jpg'); ?>" alt=""></a></li>
 						<li><a href="<?=base_url('responsabilidade/industrial'); ?>"><img src="<?=base_url('assets/img/projetos/rep_industrial.jpg'); ?>" alt=""></a></li>
 						<li><a href="<?=base_url('responsabilidade/sociais'); ?>"><img src="<?=base_url('assets/img/projetos/rep_sociais.jpg'); ?>" alt=""></a></li>
