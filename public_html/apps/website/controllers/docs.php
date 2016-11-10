@@ -22,7 +22,7 @@ class Docs extends CI_Controller {
 			if(file_exists($arquivo)){
 				$this->load->helper('download');
 				
-				$nome = sprintf(lang('defualt_download_relatorio'),lang('defualt_mes_'.$m),$y);
+				$nome = sprintf(lang('defualt_download_relatorio'),lang('mes_'.$m),$y);
 				force_download($nome,file_get_contents($arquivo));
 			} else { show_404(); }
 		} else { show_404(); }

@@ -22,7 +22,12 @@
 		}
 		textarea{
 			width: 100%;
-			height: 200px;
+			height: 171px;
+		}
+
+		.submit{
+			margin-top: 30px;
+			text-align: center;
 		}
 
 	}
@@ -40,8 +45,25 @@
 } 
 
 #trabalhe-conosco{
-	.botao{
-		text-align: center;
+	margin: 100px 0 60px;
+	.formulario{
+		margin-top: 100px;
+
+		.line{
+			margin-right: 5px;
+		}
+		
+		.radio {
+			
+			margin-top: 0!important;
+			label{margin-top: 0!important;}
+
+		}
+
+		.submit{
+			margin-top: 30px;
+			text-align: center;
+		}
 	}
 }
 

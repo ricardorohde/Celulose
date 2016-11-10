@@ -43,7 +43,7 @@ class Home extends CI_Controller {
 					$noticias[$i]['img'] = ($img);
 					$displayImg = true;
 				}else{
-					$noticias[$i]['img'] = base_url('assets/img/noticia.jpg');
+					$noticias[$i]['img'] = base_url('assets/img/noticias/noticia.jpg');
 				}
 			}
 			$i++;

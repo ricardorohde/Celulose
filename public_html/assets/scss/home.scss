@@ -25,7 +25,7 @@
 				}
 
 				&:hover > .content .black{
-					opacity: .75;
+					opacity: .91;
 				}
 
 				.content{
@@ -40,8 +40,12 @@
 
 					.black{
 						position: absolute;
-						height: 98.8%;
-						width: 98.8%;
+						height: 95%;
+						width: 95%;
+						
+						top: 2.5%;
+						left: 2.5%;
+
 						background-color: #000;
 						opacity: 0;
 						@include transition(all ease .3s);

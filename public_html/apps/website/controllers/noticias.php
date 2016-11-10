@@ -12,8 +12,6 @@ class Noticias extends CI_Controller {
 		$noticia = $this->model->getNoticia($param);
 		if($noticia){
 
-						
-			
 			$headerContent = [
 			'title' 		=> $noticia->titulo,
 			'description' 	=> character_limiter(strip_tags($noticia->html),120,"..."),
@@ -21,7 +19,6 @@ class Noticias extends CI_Controller {
 			];
 			
 
-			$this->load->view('tpl/header',$headerContent);
 			//
 
 			$imgNoticia = $this->parseHTML($noticia->html);
@@ -34,7 +31,15 @@ class Noticias extends CI_Controller {
 
 			$i = 0;
 			foreach($lista as $rows){
+
 				$img = $this->parseHTML($rows->html);
+
+				// if($img = $this->parseHTML($rows->html)){
+
+				// }else{
+				// 	$img = base_url('assets/img/noticia.jpg');
+				// }
+
 				$listaNoticias[$i] = array(
 					'data' => sql_site($rows->data),
 					'titulo' => $rows->titulo,
@@ -46,7 +51,7 @@ class Noticias extends CI_Controller {
 			}
 
 			//
-			
+			$this->load->view('tpl/header',$headerContent);
 			$this->load->view('noticias',[
 				'noticia' 		=> $noticia,
 				'noticiatexto' 	=> $texto,

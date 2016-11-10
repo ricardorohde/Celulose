@@ -13,22 +13,23 @@
 			<p>
 				A implementação de todas as atividades relativas ao Manejo Florestal se dá através de contratos permanentes com prestadores de serviços gerenciados pela equipe técnica da Celulose Riograndense. O estabelecimento de polos de mão-de-obra se dá com base em uma série de análises técnicas de viabilidade operacional, uma vez que não é viável ter uma equipe de trabalho locada em cada um dos 39 municípios onde há plantios manejados pela empresa.
 			</p>
-
-			<table cellpadding="0" cellspacing="0">
+			
+			
+			<table class="table table-responsive" cellpadding="0" cellspacing="0">
 				<thead>
 					<tr>
-						<td colspan="4">Prestadores de Serviços</td>
-						<td colspan="4">Próprios*</td>
+						<td class="col-md-8" colspan="4">Prestadores de Serviços</td>
+						<td class="col-md-4" colspan="4">Próprios*</td>
 					</tr>
 					<tr>
-						<th>Município de Lotação</th>
-						<th>Masculino</th>
-						<th>Feminino</th>
-						<th>Total</th>
-						<th>&nbsp;</th>
-						<th>Masculino</th>
-						<th>Feminino</th>
-						<th>Total</th>
+						<th class="col-xs-3">Município de Lotação</th>
+						<th class="col-xs-1">Masculino</th>
+						<th class="col-xs-1">Feminino</th>
+						<th class="col-xs-2">Total</th>
+						<th class="col-xs-1">&nbsp;</th>
+						<th class="col-xs-1">Masculino</th>
+						<th class="col-xs-1">Feminino</th>
+						<th class="col-xs-2">Total</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -57,14 +58,14 @@
 
 						echo '
 						<tr>
-							<td align="left" class="title">',$rows->municipio,'</td>
+							<td align="left">',$rows->municipio,'</td>
 							<td>',($rows->masculino == 0 ? ' -- ' : $rows->masculino),'</td>
-							<td>',($rows->feminino == 0 ? ' -- ' : $rows->feminino),'</td>
-							<td>',$auxTotalOne,'</td>
-							<td>&nbsp;</td>
-							<td>',($rows->pmasculino == 0 ? ' -- ' : $rows->pmasculino),'</td>
-							<td>',($rows->pfeminino == 0 ?' -- ' : $rows->pfeminino),'</td>
-							<td class="last">',$auxTotalTwo,'</td>
+							<td class="col-xs-1">',($rows->feminino == 0 ? ' -- ' : $rows->feminino),'</td>
+							<td class="col-xs-2">',$auxTotalOne,'</td>
+							<td class="col-xs-1">&nbsp;</td>
+							<td class="col-xs-1">',($rows->pmasculino == 0 ? ' -- ' : $rows->pmasculino),'</td>
+							<td class="col-xs-1">',($rows->pfeminino == 0 ?' -- ' : $rows->pfeminino),'</td>
+							<td class="col-xs-2">',$auxTotalTwo,'</td>
 						</tr>		
 						';
 					}
@@ -90,6 +91,7 @@
 					</tr>
 				</tfoot>
 			</table>
+			
 
 			<center>
 				<small>Última atualização: <?=date("m/Y", $ltime); ?></small>

@@ -46,6 +46,7 @@
 											<div class="black"><span><?= $rows['titulo']; ?></span></div>
 											<img src="<?= $rows['img']; ?>" alt="<?= $rows['titulo']; ?>">
 										</a>
+										
 									</div>
 								</div>
 							</div>

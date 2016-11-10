@@ -17,51 +17,58 @@ $to = ($to > 0) ? $to : 0;
 
 			<div class="formulario">
 				<div class="col-sm-12 col-md-offset-1 col-md-10">
-				<form action="<?=current_url(); ?>" method="post" id="main_form">
-					<div class="row">
-						<div class="col-sm-12 col-md-6">
-							<div class="row">
+					<form action="<?=current_url(); ?>" method="post" id="main_form">
+						<div class="row">
+							<div class="col-sm-12 col-md-6">
+								<div class="row">
 
-								<div class="col-xs-12 form-group">
-									<label> <?=lang('contato_form_nome'); ?> </label>
-									<input type="text" name="form_nome" value="<?=post('form_nome'); ?>" maxlength="120">
+									<div class="col-xs-12 form-group">
+										<label> <?=lang('contato_form_nome'); ?> </label>
+										<input type="text" name="form_nome" value="<?=post('form_nome'); ?>" maxlength="120">
 
-								</div>
+									</div>
 
-								<div class="col-xs-12 form-group">
-									<label> <?=lang('contato_form_email'); ?> </label>
-									<input type="text" name="form_email" value="<?=post('form_email'); ?>" maxlength="80">
-								</div>
+									<div class="col-xs-12 form-group">
+										<label> <?=lang('contato_form_email'); ?> </label>
+										<input type="text" name="form_email" value="<?=post('form_email'); ?>" maxlength="80">
+									</div>
 
-								<div class="col-xs-12 form-group">
-									<label> <?=lang('contato_form_area'); ?> </label>
-									<select name="form_area">
-										<option value=""><?=lang('contato_form_selecione'); ?></option>
-										<?php
-										if(sizeof($areas) > 0){
-											foreach($areas as $rows){
-												if(post('form_area',$to) == $rows->id){
-													echo '<option value="',$rows->id,'" selected="selected">',$rows->titulo,'</option>';
-												} else {
-													echo '<option value="',$rows->id,'">',$rows->titulo,'</option>';
+									<div class="col-xs-12 form-group">
+										<label> <?=lang('contato_form_area'); ?> </label>
+										<select name="form_area">
+											<option value=""><?=lang('contato_form_selecione'); ?></option>
+											<?php
+											if(sizeof($areas) > 0){
+												foreach($areas as $rows){
+													if(post('form_area',$to) == $rows->id){
+														echo '<option value="',$rows->id,'" selected="selected">',$rows->titulo,'</option>';
+													} else {
+														echo '<option value="',$rows->id,'">',$rows->titulo,'</option>';
+													}
 												}
 											}
-										}
-										?>
-									</select>
+											?>
+										</select>
 
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-6">
+								<div class="col-xs-12 form-group">
+									<div class="row">
+
+										<label> <?=lang('contato_form_mensagem'); ?> </label>
+										<textarea name="form_mensagem"><?=post('form_mensagem'); ?></textarea>	
+
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-12 col-md-6">
-							<div class="col-xs-12 form-group">
-								
-								<label> <?=lang('contato_form_mensagem'); ?> </label>
-								<textarea name="form_mensagem"><?=post('form_mensagem'); ?></textarea>	
-							</div>
-						</div>
-					</div>
 					</form>
+
+					<div class="submit">
+						<button type="submit" value="<?=lang('contato_form_enviar'); ?>">Enviar</button>
+					</div>
 				</div>					
 			</div>
 			<script type="text/javascript">

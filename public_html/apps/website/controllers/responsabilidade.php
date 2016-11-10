@@ -56,7 +56,8 @@ class Responsabilidade extends CI_Controller {
 				if($relatorio){
 					$lista[$y][$m] = (object) array(
 						'texto' => lang('defualt_mes_'.$m),
-						'arquivo' => base_url('docs/relatorio/'.$y.'/'.$m)
+						'arquivo' => base_url('docs/relatorio/'.$y.'/'.$m),
+						'titulo' => lang('mes_'.$m)
 					); 
 				}
 			}

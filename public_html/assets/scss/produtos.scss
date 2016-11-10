@@ -18,69 +18,98 @@
 	}
 
 	.fluxograma {
-	h3{
-		line-height: 19px;
-	}
+		h3{
+			line-height: 19px;
+			margin-bottom: 0;
+		}
 		ul { 
 			margin-left: 0;
 
 			li { 
-				margin-bottom: 50px;
+				margin-bottom: 20px;
+				text-align: center;
 				
 				img { 
 					display: block; 
-					width: 100%;
-					margin-bottom: 5px; 
+					width: 80%;
+					margin: 0 auto 5px;
 				}
 
 				p{
 					font-size: 13px;
 				}
+
+
 			}
 		}
 	}
 }
 
 @media (min-width: 768px) {
+	#produtos{
+		.fluxograma{
+			ul{
+				li{
+					img { 
+
+						width: 60%;
+						
+					}
+
+					&:not(:nth-child(4)){
+						h3{
+							margin-bottom: 20px!important;
+						}
+					}
+				}
+			}
+		}
+	}
 
 }
 
 @media (min-width: 992px) {
 
 	#produtos{
-	.descricao { 
-		text-align: justify; 
-		color: #A4A5A7; 
-		font-size: 14px; 
-		display: block; 
-		
-		.col-xs-12{
-			text-align: center;
-			img{
+		.descricao { 
+			text-align: justify; 
+			color: #A4A5A7; 
+			font-size: 14px; 
+			display: block; 
 
-				height: 100%;
-				width: 100%;
+			.col-xs-12{
+				text-align: center;
+				img{
+
+					height: 100%;
+					width: 100%;
+				}
 			}
 		}
-	}
 
-	.fluxograma {
+		.fluxograma {
 
-		ul { 
+			ul { 
 
-			li { 
-				padding: 25px;
-				height: 500px;
+				li { 
+					padding: 25px;
+					height: 500px;
 
-				img { 
-					display: block; 
-					width: 100%;
-					margin-bottom: 5px; 
+					img { 
+						display: block; 
+						width: 100%;
+						margin-bottom: 5px; 
+					}
+
+					&:not(:nth-child(4)){
+						h3{
+							margin-bottom: 35px!important;
+						}
+					}
 				}
 			}
 		}
 	}
-}
 
 }
 

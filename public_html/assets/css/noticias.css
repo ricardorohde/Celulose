@@ -1,62 +1,98 @@
-#noticias .news .col-xs-12 {
-  padding: 0; }
-  #noticias .news .col-xs-12 .item {
-    padding: 3px;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    border-radius: 0;
-    position: relative;
-    width: 100%;
-    /* desired width */ }
-    #noticias .news .col-xs-12 .item:before {
-      content: "";
-      display: block;
-      padding-top: 100%;
-      /* ratio of 1:1*/ }
-    #noticias .news .col-xs-12 .item .content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+#noticias {
+  margin-bottom: 60px; }
+  #noticias .news {
+    margin: 60px auto 50px; }
+    #noticias .news .col-xs-12 {
+      padding: 0; }
+      #noticias .news .col-xs-12 .item {
+        padding: 3px;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0;
+        position: relative;
+        width: 100%;
+        /* desired width */ }
+        #noticias .news .col-xs-12 .item:before {
+          content: "";
+          display: block;
+          padding-top: 100%;
+          /* ratio of 1:1*/ }
+        #noticias .news .col-xs-12 .item .content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          padding: 2px; }
+          #noticias .news .col-xs-12 .item .content img {
+            width: 100% !important;
+            height: 100% !important; }
+      #noticias .news .col-xs-12 span {
+        margin: 20px auto 0; }
+      #noticias .news .col-xs-12 h3 {
+        margin: 5px auto 15px; }
+  #noticias .veja-mais {
+    text-align: center;
+    margin: 50px 0 60px 0; }
+    #noticias .veja-mais .item {
+      padding: 3px;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      border-radius: 0;
+      position: relative;
       width: 100%;
-      height: 100%;
-      padding: 2px; }
-      #noticias .news .col-xs-12 .item .content img {
-        width: 100% !important;
-        height: 100% !important; }
-#noticias .veja-mais {
-  text-align: center;
-  margin: 50px 0 60px 0; }
-  #noticias .veja-mais .item {
-    padding: 3px;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    border-radius: 0;
-    position: relative;
-    width: 100%;
-    /* desired width */ }
-    #noticias .veja-mais .item:before {
-      content: "";
-      display: block;
-      padding-top: 100%;
-      /* ratio of 1:1*/ }
-    #noticias .veja-mais .item:hover {
-      opacity: .6; }
-    #noticias .veja-mais .item .content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      padding: 2px; }
-      #noticias .veja-mais .item .content img {
-        width: 100% !important;
-        height: 100% !important; }
+      /* desired width */
+      overflow: hidden;
+      z-index: 100; }
+      #noticias .veja-mais .item:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+        /* ratio of 1:1*/ }
+      #noticias .veja-mais .item:hover > .content .black {
+        opacity: .91; }
+      #noticias .veja-mais .item .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        padding: 2px;
+        overflow: hidden; }
+        #noticias .veja-mais .item .content .black {
+          position: absolute;
+          height: 95%;
+          width: 95%;
+          top: 2.5%;
+          left: 2.5%;
+          background-color: #000;
+          opacity: 0;
+          -webkit-transition: all ease 0.3s;
+          -moz-transition: all ease 0.3s;
+          -o-transition: all ease 0.3s;
+          -ms-transition: all ease 0.3s;
+          transition: all ease 0.3s; }
+          #noticias .veja-mais .item .content .black span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%) translate3d(0, 0, 0);
+            -moz-transform: translate(-50%, -50%) translate3d(0, 0, 0);
+            -webkit-transform: translate(-50%, -50%) translate3d(0, 0, 0);
+            -o-transform: translate(-50%, -50%) translate3d(0, 0, 0);
+            -ms-transform: translate(-50%, -50%) translate3d(0, 0, 0);
+            transform: translate(-50%, -50%) translate3d(0, 0, 0);
+            color: #fff;
+            font-weight: 700; }
+        #noticias .veja-mais .item .content img {
+          width: auto !important;
+          height: 100% !important; }
 
 @media (min-width: 768px) {
   #noticias .news .col-xs-12 {

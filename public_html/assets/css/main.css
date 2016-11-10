@@ -6,15 +6,18 @@ input {
   font-size: 12px;
   padding-left: 15px;
   border: 1px solid #64AF53;
-  font-weight: 500; }
+  font-weight: 500;
+  width: 100%; }
   input:focus {
     outline: 2px solid #64AF53; }
 
 label {
   color: #4D4D4D;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Raleway", sans-serif;
-  font-weight: 500; }
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 0; }
 
 p {
   color: #4D4D4D;
@@ -31,15 +34,18 @@ p {
   font-size: 13px;
   font-weight: 500; }
 .radio input[type=radio] {
-  display: none; }
+  display: none;
+  width: 100%; }
 .radio label:before {
   content: "";
   display: inline-block;
   width: 13px;
   height: 13px;
   margin-right: 10px;
+  margin-top: 0;
   position: absolute;
   left: 0;
+  top: 2px;
   bottom: 1px;
   background-color: transparent;
   border: 1px solid #64AF53; }
@@ -103,7 +109,8 @@ select {
   max-width: 200px;
   text-indent: 0.01px;
   text-overflow: "";
-  cursor: pointer; }
+  cursor: pointer;
+  min-width: 100%; }
   select:focus {
     outline: 2px solid #64AF53; }
 
@@ -146,13 +153,13 @@ h3 {
   color: #64AF53;
   text-transform: uppercase;
   font-size: 17px;
-  margin-bottom: 15px; }
+  margin: 30px 0; }
 
 h4 {
   color: #4D4D4D;
   font-size: 16px;
   padding-top: 20px;
-  margin-bottom: 10px; }
+  margin: 0; }
 
 h5 {
   color: #64AF53;
@@ -160,7 +167,7 @@ h5 {
 
 p {
   color: #4D4D4D;
-  font-size: 15px;
+  font-size: 14px;
   text-align: justify;
   font-weight: 700; }
 
@@ -168,14 +175,16 @@ p {
   display: none !important; }
 
 .banner {
+  margin-top: 120px;
+  top: 100px;
   width: 100vw;
-  height: 300px; }
+  height: 300px;
+  display: none; }
   .banner img {
     width: 100%;
     height: 100%; }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0; }
 
@@ -211,6 +220,10 @@ header {
     background: url("../img/logo-sm-color.png") no-repeat 50% 50%;
     background-size: contain;
     text-align: center; }
+    header .logo a {
+      display: block;
+      width: 100%;
+      height: 100%; }
   header .container {
     padding: 0; }
     header .container nav {
@@ -237,13 +250,13 @@ header {
           header .container nav ul li:last-child {
             border-bottom: 1px solid #64AF53; }
           header .container nav ul li a {
+            display: block;
             color: #39b34a;
             text-transform: uppercase;
             font-weight: 900;
-            width: 100%;
-            color: #808080;
             height: 100%;
             width: 100%;
+            color: #808080;
             -webkit-transition: all ease 0.3s;
             -moz-transition: all ease 0.3s;
             -o-transition: all ease 0.3s;
@@ -337,6 +350,9 @@ footer {
   .mobile-hide {
     display: block !important; }
 
+  .banner {
+    display: block; }
+
   header .container {
     margin: 0; }
 
@@ -376,7 +392,7 @@ footer {
     height: 120px;
     background-color: transparent; }
     header .logo {
-      width: auto;
+      width: 100px;
       height: 100px;
       float: left;
       margin: 10px;
@@ -403,11 +419,10 @@ footer {
                 color: #808080;
                 height: 120px !important; }
             header .container nav ul li a {
-              box-sizing: border-box;
               padding: 0px 10px 10px 10px;
               font-size: 14px;
               color: #fff;
-              height: 120px !important; }
+              height: 10px; }
 
   .act {
     background-color: #fff;
@@ -446,7 +461,8 @@ footer {
   margin: 40px 0 60px; }
   #home .container .noticias {
     text-align: center;
-    margin: 50px 0 60px 0; }
+    margin: 50px 0 60px 0;
+    position: relative; }
     #home .container .noticias .item {
       padding: 3px;
       -webkit-border-radius: 0;
@@ -455,14 +471,15 @@ footer {
       border-radius: 0;
       position: relative;
       width: 100%;
-      /* desired width */ }
+      /* desired width */
+      z-index: 100; }
       #home .container .noticias .item:before {
         content: "";
         display: block;
         padding-top: 100%;
         /* ratio of 1:1*/ }
-      #home .container .noticias .item:hover {
-        opacity: .6; }
+      #home .container .noticias .item:hover > .content .black {
+        opacity: .91; }
       #home .container .noticias .item .content {
         position: absolute;
         top: 0;
@@ -472,9 +489,69 @@ footer {
         width: 100%;
         height: 100%;
         padding: 2px; }
+        #home .container .noticias .item .content .black {
+          position: absolute;
+          height: 95%;
+          width: 95%;
+          top: 2.5%;
+          left: 2.5%;
+          background-color: #000;
+          opacity: 0;
+          -webkit-transition: all ease 0.3s;
+          -moz-transition: all ease 0.3s;
+          -o-transition: all ease 0.3s;
+          -ms-transition: all ease 0.3s;
+          transition: all ease 0.3s; }
+          #home .container .noticias .item .content .black span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-weight: 700; }
         #home .container .noticias .item .content img {
           width: 100%;
           height: 100%; }
+    #home .container .noticias a {
+      color: #4D4D4D;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 14px;
+      -webkit-transition: all ease 0.3s;
+      -moz-transition: all ease 0.3s;
+      -o-transition: all ease 0.3s;
+      -ms-transition: all ease 0.3s;
+      transition: all ease 0.3s; }
+      #home .container .noticias a:hover {
+        text-decoration: underline; }
+    #home .container .noticias .span a {
+      color: #4D4D4D;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 14px; }
+  #home .container .projetos-sociais {
+    text-align: center; }
+    #home .container .projetos-sociais img {
+      height: auto;
+      width: 100%;
+      margin-bottom: 10px;
+      z-index: 100;
+      -webkit-transition: all ease 0.3s;
+      -moz-transition: all ease 0.3s;
+      -o-transition: all ease 0.3s;
+      -ms-transition: all ease 0.3s;
+      transition: all ease 0.3s; }
+      #home .container .projetos-sociais img:hover {
+        opacity: .6; }
+    #home .container .projetos-sociais .span {
+      z-index: 30; }
+      #home .container .projetos-sociais .span a {
+        color: #4D4D4D;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 14px; }
+        #home .container .projetos-sociais .span a:hover {
+          text-decoration: underline; }
 
 @media (min-width: 768px) {
   #home .container .noticias {
@@ -543,9 +620,61 @@ footer {
     margin-bottom: 20px; }
 #certificacoes h5 {
   margin-top: 60px;
-  margin-bottom: 10px; }
+  margin-bottom: 0 !important;
+  font-size: 14px;
+  font-weight: 500; }
 #certificacoes p {
-  font-size: 12px; }
+  font-size: 11px !important;
+  margin-top: 0 !important; }
+
+#guaiba2 h3 {
+  margin-top: 0; }
+#guaiba2 .item {
+  padding: 3px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  position: relative;
+  width: 100%;
+  /* desired width */ }
+  #guaiba2 .item:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    /* ratio of 1:1*/ }
+  #guaiba2 .item .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2px; }
+    #guaiba2 .item .content img {
+      width: 100% !important;
+      height: 100% !important; }
+#guaiba2 ul {
+  list-style: circle;
+  margin-left: 15px; }
+  #guaiba2 ul li {
+    color: #4D4D4D;
+    font-size: 14px;
+    text-align: justify;
+    font-weight: 700; }
+
+#valores ul {
+  list-style: circle;
+  margin-left: 15px; }
+  #valores ul li {
+    color: #4D4D4D;
+    font-size: 14px;
+    text-align: justify;
+    font-weight: 700; }
+
+#historia h3 {
+  margin: 20px auto 0; }
 
 @media (min-width: 768px) {
   #sobre .esquema img {
@@ -587,78 +716,444 @@ footer {
     width: 40%;
     height: 40%; } }
 /* Produtos Area */
-#produtos .header {
-  margin: 30px 0 15px 0; }
 #produtos .descricao {
   text-align: justify;
   color: #A4A5A7;
   font-size: 14px;
   display: block; }
-#produtos .fluxograma ul li {
-  padding: 0; }
-  #produtos .fluxograma ul li img {
-    display: block;
-    margin-bottom: 5px; }
+  #produtos .descricao .col-xs-12 {
+    text-align: center; }
+    #produtos .descricao .col-xs-12 img {
+      height: 100%;
+      width: 100%; }
+#produtos .fluxograma h3 {
+  line-height: 19px;
+  margin-bottom: 0; }
+#produtos .fluxograma ul {
+  margin-left: 0; }
+  #produtos .fluxograma ul li {
+    margin-bottom: 20px;
+    text-align: center; }
+    #produtos .fluxograma ul li img {
+      display: block;
+      width: 80%;
+      margin: 0 auto 5px; }
+    #produtos .fluxograma ul li p {
+      font-size: 13px; }
 
-#noticias .news .col-xs-12 {
-  padding: 0; }
-  #noticias .news .col-xs-12 .item {
-    padding: 3px;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    border-radius: 0;
-    position: relative;
-    width: 100%;
-    /* desired width */ }
-    #noticias .news .col-xs-12 .item:before {
-      content: "";
+@media (min-width: 768px) {
+  #produtos .fluxograma ul li img {
+    width: 60%; }
+  #produtos .fluxograma ul li:not(:nth-child(4)) h3 {
+    margin-bottom: 20px !important; } }
+@media (min-width: 992px) {
+  #produtos .descricao {
+    text-align: justify;
+    color: #A4A5A7;
+    font-size: 14px;
+    display: block; }
+    #produtos .descricao .col-xs-12 {
+      text-align: center; }
+      #produtos .descricao .col-xs-12 img {
+        height: 100%;
+        width: 100%; }
+  #produtos .fluxograma ul li {
+    padding: 25px;
+    height: 500px; }
+    #produtos .fluxograma ul li img {
       display: block;
-      padding-top: 100%;
-      /* ratio of 1:1*/ }
-    #noticias .news .col-xs-12 .item .content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
       width: 100%;
-      height: 100%;
-      padding: 2px; }
-      #noticias .news .col-xs-12 .item .content img {
-        width: 100% !important;
-        height: 100% !important; }
-#noticias .veja-mais {
-  text-align: center;
-  margin: 50px 0 60px 0; }
-  #noticias .veja-mais .item {
-    padding: 3px;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    border-radius: 0;
-    position: relative;
-    width: 100%;
-    /* desired width */ }
-    #noticias .veja-mais .item:before {
-      content: "";
-      display: block;
-      padding-top: 100%;
-      /* ratio of 1:1*/ }
-    #noticias .veja-mais .item:hover {
-      opacity: .6; }
-    #noticias .veja-mais .item .content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      margin-bottom: 5px; }
+    #produtos .fluxograma ul li:not(:nth-child(4)) h3 {
+      margin-bottom: 35px !important; } }
+#responsabilidade {
+  display: inline; }
+  #responsabilidade p {
+    margin-top: 100px; }
+  #responsabilidade .links {
+    text-align: center; }
+    #responsabilidade .links ul {
+      margin: 0; }
+      #responsabilidade .links ul li {
+        height: 120px;
+        width: 120px;
+        background-color: #222;
+        margin: 2px;
+        cursor: pointer;
+        display: inline-block; }
+        #responsabilidade .links ul li a img {
+          width: 100%;
+          height: 100%; }
+        #responsabilidade .links ul li:hover {
+          opacity: .6; }
+
+section.responsabilidade-publicacoes .container .item .thumbs {
+  margin: 40px 0;
+  width: 100%;
+  text-align: center; }
+  section.responsabilidade-publicacoes .container .item .thumbs a, section.responsabilidade-publicacoes .container .item .thumbs a:visited {
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    width: 80px;
+    height: 20px;
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 20px;
+    border: 1px solid #64AF53;
+    margin: 15px auto; }
+    section.responsabilidade-publicacoes .container .item .thumbs a:hover, section.responsabilidade-publicacoes .container .item .thumbs a:visited:hover {
+      outline: 1px solid #64AF53; }
+section.responsabilidade-publicacoes .container #informativos {
+  padding: 0 15px; }
+  section.responsabilidade-publicacoes .container #informativos p {
+    margin-bottom: 40px; }
+  section.responsabilidade-publicacoes .container #informativos .lista {
+    margin: 0; }
+    section.responsabilidade-publicacoes .container #informativos .lista div {
+      padding: 0;
+      margin-bottom: 15px; }
+      section.responsabilidade-publicacoes .container #informativos .lista div .thumbs {
+        margin: 40px 0 0;
+        width: 100%;
+        text-align: center; }
+        section.responsabilidade-publicacoes .container #informativos .lista div .thumbs h5 {
+          margin-bottom: 15px; }
+        section.responsabilidade-publicacoes .container #informativos .lista div .thumbs img {
+          height: auto;
+          width: 40%; }
+        section.responsabilidade-publicacoes .container #informativos .lista div .thumbs a, section.responsabilidade-publicacoes .container #informativos .lista div .thumbs a:visited {
+          padding: 0px;
+          text-decoration: none;
+          text-align: center;
+          color: #000;
+          width: 80px;
+          height: 20px;
+          display: block;
+          font-size: 10px;
+          font-weight: 700;
+          text-transform: uppercase;
+          line-height: 20px;
+          border: 1px solid #64AF53;
+          margin: 15px auto; }
+          section.responsabilidade-publicacoes .container #informativos .lista div .thumbs a:hover, section.responsabilidade-publicacoes .container #informativos .lista div .thumbs a:visited:hover {
+            outline: 1px solid #64AF53; }
+
+.folha-menu {
+  margin-bottom: 50px;
+  width: 100%;
+  height: 90px;
+  display: block;
+  position: relative;
+  background: url("../img/folha-menu.jpg") no-repeat top left;
+  background-size: 100% 100%; }
+
+.folha-menu a {
+  float: left;
+  padding: 35px 15px 0px 2px;
+  margin: 0px;
+  color: transparent !important;
+  display: inline-block;
+  width: 33%;
+  height: 90px;
+  cursor: pointer; }
+
+.folha-menu a:hover, .folha-menu a.active {
+  background: url("../img/folha-menu-active.png") repeat;
+  color: #fff !important; }
+
+.folha-menu a {
+  vertical-align: center;
+  font-size: 11px;
+  line-height: 11px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold; }
+
+.folha-menu a span {
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold; }
+
+.folha-menu a[rel=metropolitana] {
+  width: 34%; }
+
+section.responsabilidade-industrial {
+  margin-top: 80px; }
+  section.responsabilidade-industrial h2 {
+    margin-top: 20px; }
+  section.responsabilidade-industrial ul {
+    margin: 30px 0;
+    display: block; }
+    section.responsabilidade-industrial ul li {
       width: 100%;
-      height: 100%;
-      padding: 2px; }
-      #noticias .veja-mais .item .content img {
-        width: 100% !important;
-        height: 100% !important; }
+      border: 1px solid #64AF53;
+      font-family: "Raleway", sans-serif;
+      font-weight: bold;
+      font-size: 9px;
+      height: 30px;
+      overflow: hidden;
+      display: inline-block; }
+      section.responsabilidade-industrial ul li span {
+        color: #fff;
+        background-color: #64AF53;
+        line-height: 30px;
+        display: block;
+        float: left;
+        text-align: center;
+        width: 21px; }
+      section.responsabilidade-industrial ul li a {
+        color: #4D4D4D;
+        float: left;
+        display: block;
+        line-height: 30px;
+        width: 7.7%;
+        text-align: center;
+        border-left: 1px solid #64AF53;
+        text-transform: uppercase; }
+        section.responsabilidade-industrial ul li a:hover {
+          color: #fff;
+          background-color: #64AF53; }
+        section.responsabilidade-industrial ul li a .line {
+          display: -webkit-inline-box; }
+        section.responsabilidade-industrial ul li a.none {
+          color: #ccc; }
+          section.responsabilidade-industrial ul li a.none:hover {
+            color: #ccc;
+            cursor: inherit;
+            background-color: inherit; }
+
+section.responsabilidade-sociais {
+  margin: 60px 0 60px; }
+  section.responsabilidade-sociais h3 {
+    margin-top: 0;
+    line-height: 19px; }
+  section.responsabilidade-sociais .content {
+    margin-top: 60px; }
+    section.responsabilidade-sociais .content .col-md-8 {
+      text-align: center;
+      border-right: none;
+      border-bottom: 1px solid #64AF53;
+      margin-bottom: 50px; }
+      section.responsabilidade-sociais .content .col-md-8 .lista {
+        margin-left: 0; }
+        section.responsabilidade-sociais .content .col-md-8 .lista li {
+          display: block;
+          margin: 15px; }
+          section.responsabilidade-sociais .content .col-md-8 .lista li h3 {
+            margin: 10px 0 5px;
+            font-size: 15px;
+            text-align: initial; }
+          section.responsabilidade-sociais .content .col-md-8 .lista li p {
+            font-size: 12px; }
+          section.responsabilidade-sociais .content .col-md-8 .lista li .last {
+            margin-right: 0; }
+          section.responsabilidade-sociais .content .col-md-8 .lista li img {
+            display: block;
+            margin-bottom: 5px;
+            width: 100%;
+            height: auto; }
+          section.responsabilidade-sociais .content .col-md-8 .lista li a, section.responsabilidade-sociais .content .col-md-8 .lista li a:visited {
+            padding: 0px;
+            text-decoration: none;
+            text-align: center;
+            color: #000;
+            width: 80px;
+            height: 20px;
+            display: block;
+            font-size: 9px;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 20px;
+            border: 1px solid #64AF53; }
+            section.responsabilidade-sociais .content .col-md-8 .lista li a:hover, section.responsabilidade-sociais .content .col-md-8 .lista li a:visited:hover {
+              outline: 1px solid #64AF53; }
+    section.responsabilidade-sociais .content .col-md-4 {
+      text-align: center; }
+      section.responsabilidade-sociais .content .col-md-4 .apoios {
+        margin-bottom: 40px; }
+        section.responsabilidade-sociais .content .col-md-4 .apoios .apoios-item {
+          margin-bottom: 20px; }
+          section.responsabilidade-sociais .content .col-md-4 .apoios .apoios-item h5 {
+            margin: 10px 0 5px;
+            font-size: 15px;
+            text-align: initial; }
+          section.responsabilidade-sociais .content .col-md-4 .apoios .apoios-item p {
+            font-size: 12px; }
+          section.responsabilidade-sociais .content .col-md-4 .apoios .apoios-item a, section.responsabilidade-sociais .content .col-md-4 .apoios .apoios-item a:visited {
+            padding: 0 5px;
+            text-decoration: none;
+            text-align: center;
+            color: #000;
+            width: 80px;
+            height: 20px;
+            display: block;
+            font-size: 8px;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 20px;
+            border: 1px solid #64AF53; }
+            section.responsabilidade-sociais .content .col-md-4 .apoios .apoios-item a:hover, section.responsabilidade-sociais .content .col-md-4 .apoios .apoios-item a:visited:hover {
+              outline: 1px solid #64AF53; }
+      section.responsabilidade-sociais .content .col-md-4 .apoios-form {
+        text-align: initial; }
+        section.responsabilidade-sociais .content .col-md-4 .apoios-form label {
+          text-align: initial;
+          font-weight: 900; }
+        section.responsabilidade-sociais .content .col-md-4 .apoios-form textarea {
+          min-width: 100% !important;
+          display: block; }
+        section.responsabilidade-sociais .content .col-md-4 .apoios-form span {
+          font-size: 11px;
+          font-weight: 900; }
+        section.responsabilidade-sociais .content .col-md-4 .apoios-form .center {
+          text-align: center; }
+
+@media (min-width: 768px) {
+  .folha-menu {
+    height: 240px; }
+    .folha-menu a {
+      height: 240px;
+      font-size: 25px;
+      line-height: 25px;
+      padding: 90px 15px 0px 15px; }
+      .folha-menu a span {
+        font-size: 30px;
+        line-height: 30px; }
+
+  section.responsabilidade-industrial ul li span {
+    width: 44px; }
+
+  section.responsabilidade-sociais {
+    margin: 60px 0 60px; }
+    section.responsabilidade-sociais h3 {
+      margin-top: 0;
+      line-height: 19px; }
+    section.responsabilidade-sociais .content {
+      margin-top: 60px; }
+      section.responsabilidade-sociais .content .col-md-8 {
+        border-right: 1px solid #64AF53;
+        border-bottom: none; } }
+@media (min-width: 992px) {
+  #responsabilidade .links ul li {
+    height: 90px;
+    width: 90px; }
+
+  section.responsabilidade-publicacoes .container #informativos .lista div .thumbs img {
+    height: auto;
+    width: 40%; }
+
+  section.responsabilidade-industrial ul li {
+    font-size: 11px; }
+    section.responsabilidade-industrial ul li span {
+      width: 64px; } }
+@media (min-width: 1200px) {
+  #responsabilidade .links ul li {
+    height: 120px;
+    width: 120px; }
+
+  section.responsabilidade-industrial ul li {
+    font-size: 12px; }
+    section.responsabilidade-industrial ul li span {
+      width: 84px; } }
+#noticias {
+  margin-bottom: 60px; }
+  #noticias .news {
+    margin: 60px auto 50px; }
+    #noticias .news .col-xs-12 {
+      padding: 0; }
+      #noticias .news .col-xs-12 .item {
+        padding: 3px;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0;
+        position: relative;
+        width: 100%;
+        /* desired width */ }
+        #noticias .news .col-xs-12 .item:before {
+          content: "";
+          display: block;
+          padding-top: 100%;
+          /* ratio of 1:1*/ }
+        #noticias .news .col-xs-12 .item .content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          padding: 2px; }
+          #noticias .news .col-xs-12 .item .content img {
+            width: 100% !important;
+            height: 100% !important; }
+      #noticias .news .col-xs-12 span {
+        margin: 20px auto 0; }
+      #noticias .news .col-xs-12 h3 {
+        margin: 5px auto 15px; }
+  #noticias .veja-mais {
+    text-align: center;
+    margin: 50px 0 60px 0; }
+    #noticias .veja-mais .item {
+      padding: 3px;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      border-radius: 0;
+      position: relative;
+      width: 100%;
+      /* desired width */
+      overflow: hidden;
+      z-index: 100; }
+      #noticias .veja-mais .item:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+        /* ratio of 1:1*/ }
+      #noticias .veja-mais .item:hover > .content .black {
+        opacity: .91; }
+      #noticias .veja-mais .item .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        padding: 2px;
+        overflow: hidden; }
+        #noticias .veja-mais .item .content .black {
+          position: absolute;
+          height: 95%;
+          width: 95%;
+          top: 2.5%;
+          left: 2.5%;
+          background-color: #000;
+          opacity: 0;
+          -webkit-transition: all ease 0.3s;
+          -moz-transition: all ease 0.3s;
+          -o-transition: all ease 0.3s;
+          -ms-transition: all ease 0.3s;
+          transition: all ease 0.3s; }
+          #noticias .veja-mais .item .content .black span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%) translate3d(0, 0, 0);
+            -moz-transform: translate(-50%, -50%) translate3d(0, 0, 0);
+            -webkit-transform: translate(-50%, -50%) translate3d(0, 0, 0);
+            -o-transform: translate(-50%, -50%) translate3d(0, 0, 0);
+            -ms-transform: translate(-50%, -50%) translate3d(0, 0, 0);
+            transform: translate(-50%, -50%) translate3d(0, 0, 0);
+            color: #fff;
+            font-weight: 700; }
+        #noticias .veja-mais .item .content img {
+          width: 100% !important;
+          height: 100% !important; }
 
 @media (min-width: 768px) {
   #noticias .news .col-xs-12 {
@@ -676,13 +1171,30 @@ footer {
   width: 400px; }
 #contato .formulario textarea {
   width: 100%;
-  height: 200px; }
+  height: 171px; }
+#contato .formulario .submit {
+  margin-top: 30px;
+  text-align: center; }
 #contato .contato-localizacao .descricao {
   color: #4D4D4D;
   font-size: 14px;
   text-align: left;
   display: block;
   margin-bottom: 20px; }
+
+#trabalhe-conosco {
+  margin: 100px 0 60px; }
+  #trabalhe-conosco .formulario {
+    margin-top: 100px; }
+    #trabalhe-conosco .formulario .line {
+      margin-right: 5px; }
+    #trabalhe-conosco .formulario .radio {
+      margin-top: 0 !important; }
+      #trabalhe-conosco .formulario .radio label {
+        margin-top: 0 !important; }
+    #trabalhe-conosco .formulario .submit {
+      margin-top: 30px;
+      text-align: center; }
 
 .formulario .legenda {
   color: #666666; }
@@ -695,7 +1207,6 @@ footer {
   font-size: 16px;
   line-height: 25px;
   color: #39b34a;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
   font-weight: normal; }
 
 section.trabalhe-conosco .descricao {
@@ -722,7 +1233,6 @@ section.contato-localizacao .box-google-maps h1 {
   margin: 0px 0px 3px 0px;
   color: #39b34a;
   text-transform: uppercase;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
   font-weight: normal; }
 
 section.contato-localizacao .descricao {
@@ -741,63 +1251,6 @@ section.contato-localizacao .descricao {
   min-height: 350px;
   display: block; }
 
-/* Tabs */
-section.page-tab {
-  display: block;
-  margin-top: 55px; }
-
-section.page-tab nav {
-  display: block;
-  text-align: center;
-  background: url("../img/tabs-background.png") repeat-x 0px 0px;
-  position: relative; }
-
-section.page-tab nav a {
-  position: relative;
-  margin: 0px -4px;
-  display: inline-block;
-  height: 33px;
-  background: url("../img/tabs.png") no-repeat left -165px;
-  z-index: 5; }
-
-section.page-tab nav a span {
-  font-size: 16px;
-  color: #006f52;
-  line-height: 25px;
-  margin-left: 7px;
-  padding: 8px 17px 0px 10px;
-  display: block;
-  background: url("../img/tabs.png") no-repeat right -132px;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif; }
-
-section.page-tab nav a.active, section.page-tab nav a.active:hover {
-  background-position: left -33px;
-  z-index: 10; }
-
-section.page-tab nav a.active span, section.page-tab nav a.active:hover span {
-  color: #fff;
-  background-position: right -0px; }
-
-section.page-tab nav a:hover {
-  background-position: left -99px; }
-
-section.page-tab nav a:hover span {
-  background-position: right -66px; }
-
-section.page-tab.extra nav a span {
-  padding: 8px 117px 0px 110px; }
-
-section.page-tab.big nav a span {
-  padding: 8px 57px 0px 50px; }
-
-section.page-tab.medium nav a span {
-  padding: 8px 47px 0px 40px; }
-
-section.page-tab .white-bar {
-  display: block;
-  height: 25px;
-  background-color: #fff; }
-
 /* Docs */
 section.docs {
   margin: 40px auto; }
@@ -811,201 +1264,6 @@ section.docs iframe {
 
 /* Contatos Area */
 /* Responsabilidade Area */
-section.responsabilidade-sociais .lista {
-  display: block;
-  margin: 50px 0px 30px 0px; }
-
-section.responsabilidade-sociais .lista li {
-  height: 350px;
-  width: 200px;
-  color: #a4a5a7;
-  font-size: 14px;
-  margin: 0 60px 10px 0;
-  display: block;
-  float: left;
-  text-align: justify; }
-
-section.responsabilidade-sociais .lista li.last {
-  margin-right: 0; }
-
-section.responsabilidade-sociais .lista h2 {
-  vertical-align: bottom;
-  height: 44px;
-  margin: 5px 0;
-  line-height: 22px;
-  display: block;
-  color: #39b14a;
-  font-size: 20px;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: 700;
-  text-align: left; }
-
-section.responsabilidade-sociais .lista img {
-  display: block;
-  margin-bottom: 5px; }
-
-section.responsabilidade-sociais p {
-  font-size: 16px;
-  color: #a4a5a7;
-  text-align: justify; }
-
-section.responsabilidade-publicacoes {
-  text-align: justify;
-  color: #A4A5A7;
-  font-size: 14px; }
-
-section.responsabilidade-publicacoes .descricao {
-  display: block;
-  position: relative;
-  margin: 35px 0px; }
-
-section.responsabilidade-publicacoes .texto {
-  top: 0px;
-  left: 120px;
-  color: #A4A5A7;
-  font-size: 14px;
-  text-align: justify;
-  position: absolute; }
-
-section.responsabilidade-publicacoes .thumb {
-  display: block; }
-
-section.responsabilidade-publicacoes .links {
-  bottom: 5px;
-  left: 120px;
-  right: 0px;
-  position: absolute; }
-
-section.responsabilidade-publicacoes .links a {
-  font-size: 16px;
-  padding: 2px 7px;
-  margin-right: 7px;
-  color: #fff;
-  border: solid 1px #c8c8c8;
-  background-color: #c8c8c8;
-  display: inline-block;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: normal; }
-
-section.responsabilidade-publicacoes .links a:hover {
-  border: solid 1px #666;
-  background-color: #666; }
-
-section.responsabilidade-publicacoes .links a.inverse {
-  color: #c8c8c8;
-  border: solid 1px #c8c8c8;
-  background-color: #fff; }
-
-section.responsabilidade-publicacoes .links a.inverse:hover {
-  color: #666;
-  border: solid 1px #666;
-  background-color: #fff; }
-
-section.responsabilidade-publicacoes .lista {
-  margin: 0px;
-  display: block; }
-
-section.responsabilidade-publicacoes .lista li {
-  margin: 0px 28px 30px 0;
-  text-align: center;
-  width: 140px;
-  height: 275px;
-  float: left; }
-
-section.responsabilidade-publicacoes .lista li.last {
-  margin-right: 0px; }
-
-section.responsabilidade-publicacoes .lista li span {
-  display: block;
-  font-size: 16px;
-  text-align: left;
-  height: 40px; }
-
-section.responsabilidade-publicacoes .lista li img {
-  display: block; }
-
-section.responsabilidade-publicacoes .lista li a {
-  margin-top: 5px;
-  font-size: 16px;
-  padding: 2px 7px;
-  margin-right: 7px;
-  color: #fff;
-  border: solid 2px #c8c8c8;
-  background-color: #c8c8c8;
-  display: inline-block;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: normal; }
-
-section.responsabilidade-publicacoes .lista li a:hover {
-  border: solid 2px #666;
-  background-color: #666; }
-
-section.responsabilidade-publicacoes .item {
-  display: block;
-  position: relative;
-  margin: 10px 0px; }
-
-section.responsabilidade-publicacoes .item .texto {
-  top: 0px;
-  left: 120px;
-  color: #A4A5A7;
-  font-size: 14px;
-  text-align: justify;
-  position: absolute; }
-
-section.responsabilidade-publicacoes .item .thumb {
-  display: block; }
-
-section.responsabilidade-publicacoes .item .links {
-  bottom: 5px;
-  left: 120px;
-  right: 0px;
-  position: absolute; }
-
-section.responsabilidade-publicacoes .item .links a {
-  font-size: 16px;
-  padding: 2px 7px;
-  margin-right: 7px;
-  color: #fff;
-  border: solid 1px #c8c8c8;
-  background-color: #c8c8c8;
-  display: inline-block;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: normal; }
-
-section.responsabilidade-publicacoes .item .links a:hover {
-  border: solid 1px #666;
-  background-color: #666; }
-
-section.responsabilidade-publicacoes .item .links a.inverse {
-  color: #c8c8c8;
-  border: solid 1px #c8c8c8;
-  background-color: #fff; }
-
-section.responsabilidade-publicacoes .item .links a.inverse:hover {
-  color: #666;
-  border: solid 1px #666;
-  background-color: #fff; }
-
-section.responsabilidade-publicacoes .plano-de-manejo .texto {
-  left: 195px; }
-
-section.responsabilidade-publicacoes .plano-de-manejo .links {
-  left: 195px; }
-
-section.responsabilidade-publicacoes a.link-folha {
-  color: #A4A5A7;
-  font-size: 14px; }
-
-section.responsabilidade-publicacoes a.link-folha {
-  color: #666; }
-
 section.responsabilidade-florestal {
   text-align: justify;
   color: #A4A5A7;
@@ -1051,8 +1309,8 @@ section.responsabilidade-florestal .item .links a {
   font-weight: normal; }
 
 section.responsabilidade-florestal .item .links a:hover {
-  border: solid 1px #666;
-  background-color: #666; }
+  border: solid 1px #000;
+  background-color: #000; }
 
 section.responsabilidade-florestal .item .links a.inverse {
   color: #c8c8c8;
@@ -1060,128 +1318,9 @@ section.responsabilidade-florestal .item .links a.inverse {
   background-color: #fff; }
 
 section.responsabilidade-florestal .item .links a.inverse:hover {
-  color: #666;
-  border: solid 1px #666;
+  color: #000;
+  border: solid 1px #000;
   background-color: #fff; }
-
-section.responsabilidade-industrial .texto {
-  text-align: justify;
-  color: #A4A5A7;
-  font-size: 14px;
-  margin-bottom: 20px; }
-
-section.responsabilidade-industrial h2 {
-  margin-top: 20px; }
-
-section.responsabilidade-industrial ul {
-  margin: 30px 0;
-  display: block; }
-
-section.responsabilidade-industrial ul li {
-  margin-bottom: 7px;
-  width: 978px;
-  border: 1px solid #1C674B;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  height: 30px;
-  overflow: hidden; }
-
-section.responsabilidade-industrial ul li span {
-  color: #fff;
-  background-color: #1C674B;
-  line-height: 30px;
-  display: block;
-  float: left;
-  width: 50px;
-  text-align: center; }
-
-section.responsabilidade-industrial ul li a {
-  color: #1C674B;
-  float: left;
-  display: block;
-  line-height: 30px;
-  width: 77px;
-  text-align: center; }
-
-section.responsabilidade-industrial ul li a.last {
-  width: 81px; }
-
-section.responsabilidade-industrial ul li a:hover {
-  color: #fff;
-  background-color: #1C674B; }
-
-section.responsabilidade-industrial ul li a.none {
-  color: #ccc; }
-
-section.responsabilidade-industrial ul li a.none:hover {
-  color: #ccc;
-  cursor: inherit;
-  background-color: inherit; }
-
-section.responsabilidade-empregos .texto {
-  text-align: justify;
-  color: #A4A5A7;
-  font-size: 14px;
-  margin: 30px 0; }
-
-section.responsabilidade-empregos table {
-  padding: 0;
-  margin: 0px auto 35px auto;
-  width: 750px;
-  border: 1px solid #1C674B;
-  -webkit-border-radius: 5px;
-  border-radius: 5px; }
-
-section.responsabilidade-empregos thead td {
-  line-height: 20px;
-  text-align: center;
-  background-color: #1C674B;
-  color: #fff;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: normal;
-  font-size: 16px; }
-
-section.responsabilidade-empregos thead th {
-  line-height: 20px;
-  font-size: 16px;
-  color: #39B14A;
-  border-bottom: solid 1px #39B14A; }
-
-section.responsabilidade-empregos tbody td {
-  line-height: 20px;
-  text-align: center;
-  font-size: 14px;
-  color: #A4A5A7;
-  border-right: solid 1px #39B14A;
-  border-bottom: dashed 1px #d9d9d9; }
-
-section.responsabilidade-empregos tbody td.last {
-  border-right: none; }
-
-section.responsabilidade-empregos tbody td.title {
-  width: 210px;
-  text-align: left;
-  padding-left: 10px;
-  color: #6c6c6c; }
-
-section.responsabilidade-empregos tfoot td {
-  padding: 0px 10px;
-  line-height: 30px;
-  background-color: #1C674B;
-  color: #fff;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: normal;
-  font-size: 16px; }
-
-section.responsabilidade-empregos tfoot th {
-  padding: 0px 10px;
-  line-height: 30px;
-  font-size: 16px;
-  color: #39B14A;
-  border-top: solid 1px #39B14A; }
 
 section.responsabilidade-fiscal {
   text-align: justify;
@@ -1228,8 +1367,8 @@ section.responsabilidade-fiscal .item .links a {
   font-weight: normal; }
 
 section.responsabilidade-fiscal .item .links a:hover {
-  border: solid 1px #666;
-  background-color: #666; }
+  border: solid 1px #000;
+  background-color: #000; }
 
 section.responsabilidade-fiscal .item .links a.inverse {
   color: #c8c8c8;
@@ -1237,8 +1376,8 @@ section.responsabilidade-fiscal .item .links a.inverse {
   background-color: #fff; }
 
 section.responsabilidade-florestal .item .links a.inverse:hover {
-  color: #666;
-  border: solid 1px #666;
+  color: #000;
+  border: solid 1px #000;
   background-color: #fff; }
 
 section.responsabilidade-barbaNegra .descricao {
@@ -1277,8 +1416,8 @@ section.responsabilidade-barbaNegra .links a {
   font-weight: normal; }
 
 section.responsabilidade-barbaNegra .links a:hover {
-  border: solid 1px #666;
-  background-color: #666; }
+  border: solid 1px #000;
+  background-color: #000; }
 
 section.responsabilidade-barbaNegra .links a.inverse {
   color: #c8c8c8;
@@ -1286,189 +1425,9 @@ section.responsabilidade-barbaNegra .links a.inverse {
   background-color: #fff; }
 
 section.responsabilidade-barbaNegra .links a.inverse:hover {
-  color: #666;
-  border: solid 1px #666;
+  color: #000;
+  border: solid 1px #000;
   background-color: #fff; }
-
-/* Noticias Area */
-section.noticias {
-  margin: 50px auto;
-  min-height: 1000px; }
-
-section.noticias .block {
-  display: block;
-  position: relative;
-  margin: 20px 0px 50px 0px;
-  width: 660px;
-  height: auto; }
-
-section.noticias .block .data {
-  height: 20px;
-  width: 200px;
-  color: #a4a5a7;
-  font-size: 18px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  display: block;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: 700; }
-
-section.noticias .block .titulo {
-  height: 25px;
-  width: 660px;
-  color: #1c674b;
-  font-size: 22px;
-  position: absolute;
-  top: 25px;
-  left: 0px;
-  display: block;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: 700; }
-
-section.noticias .block .body {
-  color: #A4A5A7;
-  font-size: 14px;
-  padding-top: 60px;
-  display: block;
-  text-align: justify; }
-
-section.noticias .block .body a {
-  color: #1c674b; }
-
-section.noticias .block .body a:hover {
-  text-decoration: underline;
-  cursor: pointer; }
-
-section.noticias .block .body img {
-  margin: 10px; }
-
-/* Home Area */
-section.column {
-  display: table; }
-
-section.column .left {
-  width: 310px;
-  float: left;
-  display: table; }
-
-section.column .center {
-  width: 310px;
-  float: left;
-  margin-left: 25px;
-  display: table; }
-
-section.column .right {
-  background-color: #eee;
-  padding: 10px 0px 0px 0px;
-  width: 310px;
-  float: right;
-  display: table; }
-
-section.column .right ul {
-  margin: 0; }
-
-section.column .right ul li {
-  display: block;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  border-bottom: solid 1px #1c674b;
-  padding-bottom: 10px; }
-
-section.column .right ul li.last {
-  border-bottom: none; }
-
-section.column .right ul li .data {
-  color: #a4a5a7;
-  font-size: 18px;
-  height: 22px;
-  display: block;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: 700; }
-
-section.column .right ul li .titulo {
-  padding-right: 10px;
-  color: #1c674b;
-  display: block;
-  font-size: 16px; }
-
-section.column .right ul li .titulo.bold {
-  font-size: 22px;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: 700; }
-
-section.column .right ul li .texto {
-  padding-right: 10px;
-  padding-top: 5px;
-  text-align: justify;
-  color: #A4A5A7;
-  font-size: 14px;
-  display: block; }
-
-section.column .right ul li .img {
-  display: block;
-  text-align: center;
-  margin: 5px 0; }
-
-section.column .right ul li .img img {
-  width: 300px;
-  display: block; }
-
-section.column .right ul li a {
-  display: table; }
-
-section.column .parse ul {
-  margin: 10px 0px; }
-
-section.column .parse ul li {
-  color: #A4A5A7;
-  font-size: 14px;
-  display: block;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: solid 1px #1c674b;
-  text-align: justify; }
-
-section.column .parse ul li a {
-  color: #A4A5A7;
-  display: table; }
-
-section.column .parse ul li .titulo {
-  text-align: left;
-  letter-spacing: 0px;
-  line-height: 20px;
-  font-size: 24px;
-  padding: 0px;
-  color: #1e674c;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: 700; }
-
-section.column .parse ul li .data {
-  text-align: left;
-  letter-spacing: 0px;
-  line-height: 30px;
-  font-size: 24px;
-  padding: 0px;
-  color: #a4a5a7;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: 700; }
-
-section.column .parse ul li.last {
-  border-bottom: none; }
-
-section.column .parse ul li img {
-  display: block;
-  width: 310px;
-  margin: 8px 0px 10px 0px; }
-
-section.column .parse ul li.green {
-  color: #1e674c !important; }
-
-section.column .right .banner-bndes {
-  display: block;
-  background-color: #fff;
-  padding: 10px 0px;
-  height: 38px; }
 
 #box {
   display: none;
@@ -1507,43 +1466,6 @@ section.column .right .banner-bndes {
   color: #999; }
 
 /*  Folha Area */
-.folha-menu {
-  width: 980px;
-  height: 260px;
-  display: block;
-  position: relative;
-  background: url("../img/folha-menu.jpg") no-repeat top left; }
-
-.folha-menu a {
-  float: left;
-  padding: 70px 15px 0px 15px;
-  margin: 0px;
-  color: transparent !important;
-  display: inline-block;
-  width: 297px;
-  height: 190px;
-  cursor: pointer; }
-
-.folha-menu a:hover, .folha-menu a.active {
-  background: url("../img/folha-menu-active.png") repeat;
-  color: #fff !important; }
-
-.folha-menu a {
-  vertical-align: center;
-  font-size: 25px;
-  line-height: 30px;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: bold; }
-
-.folha-menu a span {
-  font-size: 60px;
-  line-height: 60px;
-  font-family: "Yanone Kaffeesatz", Arial, sans-serif;
-  font-weight: bold; }
-
-.folha-menu a[rel=metropolitana] {
-  width: 296px; }
-
 .folha-container {
   width: 980px;
   display: table; }
@@ -1818,8 +1740,8 @@ section.erro h1 {
   width: 200px;
   margin-top: 300px;
   display: block;
-  color: #666666;
-  border: solid 1px #666666;
+  color: #000666;
+  border: solid 1px #000666;
   display: block;
   background-color: #eeeeee;
   font-size: 16px;
@@ -1829,8 +1751,8 @@ section.erro h1 {
 
 #box-form .container a {
   width: 80px;
-  color: #666666;
-  border: solid 1px #666666;
+  color: #000666;
+  border: solid 1px #000666;
   display: inline-block;
   background-color: #eeeeee;
   font-size: 14px;

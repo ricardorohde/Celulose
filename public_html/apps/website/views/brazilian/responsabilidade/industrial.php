@@ -3,17 +3,19 @@
 </div>
 
 <section class="responsabilidade-industrial">
-	<h2 class="title"><?=lang('defualt_menu_ambiente_industrial'); ?></h2>
 	<div class="container">
 		<div class="col-md-offset-1 col-md-10">
 
-
-
 			<h3>Dados Ambientais de monitoramento de acordo com a Licença de Operação emitida pela FEPAM.</h3>
-
 			<p>Para baixar os relatórios clique abaixo no mês desejado.</p>
+		</div>
+		<div class="col-md-12">
+			
 
-			<ul>
+
+			<div class="clear"></div>
+		</div>
+		<ul>
 				<?php
 				foreach($lista as $y => $ano){
 					echo '<li><span>',$y,'</span>';
@@ -29,9 +31,5 @@
 				}
 				?>
 			</ul>
-
-
-			<div class="clear"></div>
-		</div>
 	</div>
 </section>

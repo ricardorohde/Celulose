@@ -8,9 +8,6 @@
 		<div class="col-md-offset-1 col-md-10">
 
 
-			<h2><?=lang('defualt_menu_noticias'); ?></h2>
-
-
 			<div class="news">
 				<div class="col-xs-12">
 					<div class="col-xs-12 col-sm-6">
@@ -25,27 +22,28 @@
 
 					</div>
 					<div class="col-xs-12 col-sm-6">
-						<div class="data"><?=sql_site($noticia->data); ?></div>
-						<h3 class="titulo"><?=$noticia->titulo; ?></h3>
+						<span><?=sql_site($noticia->data); ?></span>
+						<h3><?=$noticia->titulo; ?></h3>
 
 						<p><?php echo $noticiatexto; ?></p>
 
 						<div class="clear"></div>
 					</div>
 				</div>
+				<div class="clear"></div>
 			</div>
 			
 			
 
 			<div class="veja-mais">
-				<h2>Notícias</h2>
+				<h2>Leia outras notícias</h2>
 
 				<?php
 				$i = 1;
 
 
 				foreach ($listaNoticias as $rows) {
-					if($i>4){
+					if($i>3){
 						$auxClass = "mobile-hide";
 					}else{
 						$auxClass = "";
@@ -58,9 +56,12 @@
 							<div class="item">
 								<div class="content">
 									<a href="<?= $rows['link']; ?>">
+										<div class="black"><span><?= $rows['titulo']; ?></span></div>
 										<?php 
-										if (isset($rows["img"])){
+										if ($rows["img"] == 0){
 											echo $rows["img"]; 
+										}else{
+											echo '<img src="' . base_url('assets/img/noticias/noticia.jpg') .'" alt="">';
 										}
 										?>
 									</a>
@@ -69,10 +70,21 @@
 						</div>
 					</div>
 					<?php $i++; } ?>
+					<div class="col-xs-6 col-sm-3">
+						<div class="row">
+							<div class="item">
+								<div class="content">
+									<a href="#">
+										<img src="<?= base_url('assets/img/noticias/vejamais.jpg') ?>" alt="Veja mais noticias">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
 
-					<span>Veja mais +</span>
 				</div>
 			</div>
 		</div>
-		<div class="clear"></div>
+		
 	</section>
+	<div class="clear"></div>

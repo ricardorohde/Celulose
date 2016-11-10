@@ -110,5 +110,5 @@ if(!isset($js)){ $js = array(); }
 	</header>
 
 	<div class="menu-button">
-		<img src="assets/img/menu-icon.svg" alt="">
+		<img src="<?=base_url('assets/img/menu-icon.svg') ?>" alt="">
 	</div>
