@@ -15,21 +15,20 @@
 			</p>
 			
 			
-			<table class="table table-responsive" cellpadding="0" cellspacing="0">
+			<table class="table table-striped table-condensed table-responsive">
 				<thead>
 					<tr>
-						<td class="col-md-8" colspan="4">Prestadores de Serviços</td>
-						<td class="col-md-4" colspan="4">Próprios*</td>
+						<td colspan="4" style="width:60%">Prestadores de Serviços</td>
+						<td colspan="3" style="width:40%">Próprios*</td>
 					</tr>
 					<tr>
-						<th class="col-xs-3">Município de Lotação</th>
-						<th class="col-xs-1">Masculino</th>
-						<th class="col-xs-1">Feminino</th>
-						<th class="col-xs-2">Total</th>
-						<th class="col-xs-1">&nbsp;</th>
-						<th class="col-xs-1">Masculino</th>
-						<th class="col-xs-1">Feminino</th>
-						<th class="col-xs-2">Total</th>
+						<th class="col-sm-4">Município de Lotação</th>
+						<th class="col-sm-1">Masculino</th>
+						<th class="col-sm-1">Feminino</th>
+						<th class="col-sm-2">Total</th>
+						<th class="col-sm-1">Masculino</th>
+						<th class="col-sm-1">Feminino</th>
+						<th class="col-sm-2">Total</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -60,12 +59,11 @@
 						<tr>
 							<td align="left">',$rows->municipio,'</td>
 							<td>',($rows->masculino == 0 ? ' -- ' : $rows->masculino),'</td>
-							<td class="col-xs-1">',($rows->feminino == 0 ? ' -- ' : $rows->feminino),'</td>
-							<td class="col-xs-2">',$auxTotalOne,'</td>
-							<td class="col-xs-1">&nbsp;</td>
-							<td class="col-xs-1">',($rows->pmasculino == 0 ? ' -- ' : $rows->pmasculino),'</td>
-							<td class="col-xs-1">',($rows->pfeminino == 0 ?' -- ' : $rows->pfeminino),'</td>
-							<td class="col-xs-2">',$auxTotalTwo,'</td>
+							<td>',($rows->feminino == 0 ? ' -- ' : $rows->feminino),'</td>
+							<td>',$auxTotalOne,'</td>
+							<td>',($rows->pmasculino == 0 ? ' -- ' : $rows->pmasculino),'</td>
+							<td>',($rows->pfeminino == 0 ?' -- ' : $rows->pfeminino),'</td>
+							<td>',$auxTotalTwo,'</td>
 						</tr>		
 						';
 					}
@@ -80,14 +78,13 @@
 						<th><?=number_format($masculino,0,',','.'); ?></th>
 						<th><?=number_format($feminino,0,',','.'); ?></th>
 						<th><?=number_format($totalOne,0,',','.'); ?></th>
-						<th>&nbsp;</th>
 						<th><?=number_format($pmasculino,0,',','.'); ?></th>
 						<th><?=number_format($pfeminino,0,',','.'); ?></th>
 						<th><?=number_format($totalTwo,0,',','.'); ?></th>
 					</tr>
 					<tr>
 						<td align="left">Total:</td>
-						<td align="right" colspan="7"><?=number_format($total,0,',','.'); ?></td>
+						<td align="right" colspan="6"><?=number_format($total,0,',','.'); ?></td>
 					</tr>
 				</tfoot>
 			</table>

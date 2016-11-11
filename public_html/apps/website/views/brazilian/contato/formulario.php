@@ -66,6 +66,8 @@ $to = ($to > 0) ? $to : 0;
 						</div>
 					</form>
 
+					<span>* Não use este formulário para envio de currículos ou solicitações de emprego. Clique no link Trabalhe Conosco.</span>
+
 					<div class="submit">
 						<button type="submit" value="<?=lang('contato_form_enviar'); ?>">Enviar</button>
 					</div>

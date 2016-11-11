@@ -311,9 +311,11 @@ section.responsabilidade-empregos {
 	
 	table { 
 		padding: 0; 
-		border: 1px solid #1C674B;
-		 table-layout:fixed;
-    width:100%;
+		display: block;
+		width: 100%;
+
+		border: none;
+		margin: 60px auto;
 
 		thead {
 			td { 
@@ -322,13 +324,14 @@ section.responsabilidade-empregos {
 				background-color: $verde; 
 				color: #fff; 
 				font-size: 13px; 
+				border: 1px solid $verde;
+
 			}
 			th { 
 				line-height: 20px; 
 				font-size: 13px; 
 				color: $verde; 
-				border-bottom: 
-				solid 1px $verde; 
+				border: 1px solid $verde;
 			}
 		}
 
@@ -339,8 +342,7 @@ section.responsabilidade-empregos {
 				font-size: 11px; 
 				color: $cinza-escuro;
 				font-weight: 700; 
-				border-right: solid 1px $verde; 
-				border-bottom: dashed 1px #d9d9d9;
+				border: 1px solid $verde;
 
 				.last { border-right: none; } 
 				.title {  text-align: left; padding-left: 10px; color: #6c6c6c; }
@@ -351,9 +353,11 @@ section.responsabilidade-empregos {
 			td { 
 				padding: 0px 10px; 
 				line-height: 30px; 
-				background-color: #1C674B; 
+				background-color: $verde; 
 				color: #fff; 
 				font-size: 14px; 
+				border: 1px solid $verde;
+
 			}
 
 			th { 
@@ -361,7 +365,80 @@ section.responsabilidade-empregos {
 				line-height: 30px; 
 				font-size: 14px; 
 				color: $verde; 
-				border-top: solid 1px $verde; 
+				border: 1px solid $verde;
+			}
+		}
+	}
+}
+
+section.responsabilidade-fiscal{
+	.container{
+		.item{
+			.thumbs{
+				margin: 40px 0;
+				width: 100%;
+				text-align: center;
+
+				p{
+				text-align: center;
+				margin: 20px;
+			}
+
+				a, a:visited{
+					padding:0px;
+					text-decoration: none;
+					text-align:center;
+					color:#000;
+					width:80px;  
+					height:20px;	
+					display:block;
+
+					font-size: 10px;
+					font-weight: 700;
+					text-transform: uppercase;
+					line-height: 20px;
+					border: 1px solid $verde;
+					margin: 15px auto;
+
+					&:hover{
+						outline: 1px solid $verde;
+					}
+				}
+			}
+		}
+	}
+}
+
+section.responsabilidade-barbaNegra{
+	.container{
+		.item{
+				margin: 40px 0;
+
+			.thumbs{
+				margin: 40px 0;
+				width: 100%;
+				text-align: center;
+
+				a, a:visited{
+					padding:0px;
+					text-decoration: none;
+					text-align:center;
+					color:#000;
+					width:80px;  
+					height:20px;	
+					display:block;
+
+					font-size: 10px;
+					font-weight: 700;
+					text-transform: uppercase;
+					line-height: 20px;
+					border: 1px solid $verde;
+					margin: 15px auto;
+
+					&:hover{
+						outline: 1px solid $verde;
+					}
+				}
 			}
 		}
 	}

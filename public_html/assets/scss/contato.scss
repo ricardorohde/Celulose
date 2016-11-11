@@ -44,6 +44,28 @@
 
 } 
 
+section.contato-telefones{
+	margin-left: -15px!important;
+	margin-right: -15px!important;
+
+	font-size: 13px;
+	font-weight: 700;
+
+	text-align: center;
+
+	color: $cinza-escuro;
+
+	.item{
+		margin-left: 0!important;
+		
+		margin-top: 7px;
+
+		span{
+			font-size: 11px;
+		}
+	}
+}
+
 #trabalhe-conosco{
 	margin: 100px 0 60px;
 	.formulario{
@@ -75,20 +97,72 @@
 section.trabalhe-conosco .descricao { color: #a4a5a7; font-size: 14px; text-align: justify; display: block; margin-top: 20px; }
 
 
-section.contato-localizacao {}
-section.contato-localizacao .google-maps { width: 978px; height: 313px; border: solid 1px #1d7d0d; display: block; margin: 10px auto 15px auto; }
+section.contato-localizacao {
+	p{margin-bottom: 30px;}
+}
+section.contato-localizacao .google-maps { width: 100%; height: 313px;  display: block; margin: 10px auto 60px auto; outline: none;}
 section.contato-localizacao .box-google-maps { font-size: 12px; }
 section.contato-localizacao .box-google-maps h1 { letter-spacing: 0px; font-size: 15px; padding: 0px; margin: 0px 0px 3px 0px; color: #39b34a; text-transform: uppercase; font-weight: normal; }
 section.contato-localizacao .descricao { color: #a4a5a7; font-size: 14px; text-align: left; display: block; margin-bottom: 20px; }
 
 @media (min-width: 768px) {
 
+	section.contato-telefones{
+		font-size: 14px;
+		.fones{
+
+
+
+			.item{
+
+				white-space: nowrap;
+
+				span{
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
 }
 
 @media (min-width: 992px) {
+	section.contato-telefones{
+		font-size: 13px;
+
+		.fones{
+			text-align: initial;
+
+			.item{
+				margin-top: 0;
+
+				span{
+					font-size: 11px;
+				}
+			}
+		}
+	}
+
 
 }
 
 @media (min-width: 1200px) {
+
+	section.contato-telefones{
+		font-size: 14px;
+
+		.fones{
+			
+
+			.item{
+				
+
+				span{
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
 
 }

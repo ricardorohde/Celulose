@@ -1012,6 +1012,54 @@ section.responsabilidade-sociais {
         section.responsabilidade-sociais .content .col-md-4 .apoios-form .center {
           text-align: center; }
 
+section.responsabilidade-empregos .texto {
+  text-align: justify;
+  color: #A4A5A7;
+  font-size: 14px;
+  margin: 30px 0; }
+section.responsabilidade-empregos table {
+  padding: 0;
+  border: 1px solid #1C674B;
+  table-layout: fixed;
+  width: 100%; }
+  section.responsabilidade-empregos table thead td {
+    line-height: 20px;
+    text-align: center;
+    background-color: #64AF53;
+    color: #fff;
+    font-size: 13px; }
+  section.responsabilidade-empregos table thead th {
+    line-height: 20px;
+    font-size: 13px;
+    color: #64AF53;
+    border-bottom: solid 1px #64AF53; }
+  section.responsabilidade-empregos table tbody td {
+    line-height: 20px;
+    text-align: center;
+    font-size: 11px;
+    color: #4D4D4D;
+    font-weight: 700;
+    border-right: solid 1px #64AF53;
+    border-bottom: dashed 1px #d9d9d9; }
+    section.responsabilidade-empregos table tbody td .last {
+      border-right: none; }
+    section.responsabilidade-empregos table tbody td .title {
+      text-align: left;
+      padding-left: 10px;
+      color: #6c6c6c; }
+  section.responsabilidade-empregos table tfoot td {
+    padding: 0px 10px;
+    line-height: 30px;
+    background-color: #1C674B;
+    color: #fff;
+    font-size: 14px; }
+  section.responsabilidade-empregos table tfoot th {
+    padding: 0px 10px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #64AF53;
+    border-top: solid 1px #64AF53; }
+
 @media (min-width: 768px) {
   .folha-menu {
     height: 240px; }
@@ -1182,6 +1230,19 @@ section.responsabilidade-sociais {
   display: block;
   margin-bottom: 20px; }
 
+section.contato-telefones {
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  color: #4D4D4D; }
+  section.contato-telefones .item {
+    margin-left: 0 !important;
+    margin-top: 7px; }
+    section.contato-telefones .item span {
+      font-size: 11px; }
+
 #trabalhe-conosco {
   margin: 100px 0 60px; }
   #trabalhe-conosco .formulario {
@@ -1216,12 +1277,15 @@ section.trabalhe-conosco .descricao {
   display: block;
   margin-top: 20px; }
 
+section.contato-localizacao p {
+  margin-bottom: 30px; }
+
 section.contato-localizacao .google-maps {
-  width: 978px;
+  width: 100%;
   height: 313px;
-  border: solid 1px #1d7d0d;
   display: block;
-  margin: 10px auto 15px auto; }
+  margin: 10px auto 15px auto;
+  outline: solid 1px #64AF53; }
 
 section.contato-localizacao .box-google-maps {
   font-size: 12px; }
@@ -1242,6 +1306,27 @@ section.contato-localizacao .descricao {
   display: block;
   margin-bottom: 20px; }
 
+@media (min-width: 768px) {
+  section.contato-telefones {
+    font-size: 14px; }
+    section.contato-telefones .fones .item {
+      white-space: nowrap; }
+      section.contato-telefones .fones .item span {
+        font-size: 12px; } }
+@media (min-width: 992px) {
+  section.contato-telefones {
+    font-size: 13px; }
+    section.contato-telefones .fones {
+      text-align: initial; }
+      section.contato-telefones .fones .item {
+        margin-top: 0; }
+        section.contato-telefones .fones .item span {
+          font-size: 11px; } }
+@media (min-width: 1200px) {
+  section.contato-telefones {
+    font-size: 14px; }
+    section.contato-telefones .fones .item span {
+      font-size: 12px; } }
 #main-frame {
   position: relative;
   margin: 0px;
