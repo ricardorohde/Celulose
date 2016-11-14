@@ -39,19 +39,26 @@
 				<h2>Leia outras notícias</h2>
 
 				<?php
-				$i = 1;
-
-
-				foreach ($listaNoticias as $rows) {
+				$i = 1;	foreach ($listaNoticias as $rows) {
+							
 					if($i>3){
 						$auxClass = "mobile-hide";
 					}else{
-						$auxClass = "";
+							if("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" == $rows['link']){
+								
+
+								$auxClass = "' style='display:none;";
+							}else{
+								$auxClass = "";
+								var_dump("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
+							
+							var_dump($rows['link']);
+							}
 					}
 
 					?>
 
-					<div class="col-xs-6 col-sm-3 <?= $auxClass ?>">
+					<div class='col-xs-6 col-sm-3 <?= $auxClass ?>'>
 						<div class="row">
 							<div class="item">
 								<div class="content">
